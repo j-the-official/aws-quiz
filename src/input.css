@@ -1,0 +1,328 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f4f4f5;
+  --color-sep: #e4e4e7;
+  --color-sep-hover: #a1a1aa;
+  --color-ring: #71717a;
+  --color-ring-offset: #ffffff;
+  --color-fg: #18181b;
+  --color-fg-muted: #52525b;
+  --color-fg-dim: #a1a1aa;
+  --color-primary: #f97316;
+  --color-primary-fg: #fff;
+  --color-primary-hover: #ea580c;
+  --color-primary-subtle: #fef3e6;
+  --color-success: #16a34a;
+  --color-success-subtle: #e9f7ef;
+  --color-success-fg: #16a34a;
+  --color-danger: #dc2626;
+  --color-danger-subtle: #fdeced;
+  --color-danger-fg: #dc2626;
+  --color-info: #2563eb;
+  --color-info-subtle: #eaeffc;
+  --color-info-fg: #2563eb;
+  --color-purple: #7c3aed;
+  --color-purple-subtle: #f0eafc;
+  --color-skip: #f59e0b;
+  --color-skip-hover: #fefce8;
+  --color-skip-dark: #fbbf24;
+  --color-skip-border-dark: #b45309;
+  --color-skip-hover-dark: #342a10;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+  --radius-DEFAULT: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
+  --shadow-DEFAULT: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+  --animate-spin: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* === Dark mode variable overrides === */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-fg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  body { min-height: 100vh; background: var(--color-bg); }
+  #app { max-width: 680px; margin: 0 auto; padding: 16px 16px 80px; }
+
+  html.dark {
+    --color-bg: #232b37;
+    --color-surface: #2a3344;
+    --color-surface-hover: #323d50;
+    --color-sep: #3b4758;
+    --color-sep-hover: #5a6a80;
+    --color-ring: #8899aa;
+    --color-ring-offset: #232b37;
+    --color-fg: #e8ecf1;
+    --color-fg-muted: #9aa8b8;
+    --color-fg-dim: #6b7b8d;
+    --color-primary-hover: #fb923c;
+    --color-primary-subtle: #3d2f1f;
+    --color-success: #22c55e;
+    --color-success-subtle: #1e3328;
+    --color-success-fg: #4ade80;
+    --color-danger: #ef4444;
+    --color-danger-subtle: #3a2222;
+    --color-danger-fg: #f87171;
+    --color-info: #3b82f6;
+    --color-info-subtle: #222d3f;
+    --color-info-fg: #60a5fa;
+    --color-purple: #a78bfa;
+    --color-purple-subtle: #2e273d;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
+    --shadow-DEFAULT: 0 1px 3px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.2);
+  }
+}
+
+/* === Component classes === */
+@layer components {
+  /* BUTTONS */
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 py-2 px-4 text-sm font-medium leading-5 rounded-[var(--radius)] cursor-pointer whitespace-nowrap outline-none;
+    border: 1px solid transparent;
+    font-family: var(--font-sans);
+    transition: all 150ms cubic-bezier(.4,0,.2,1);
+  }
+  .btn:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-ring-offset), 0 0 0 4px var(--color-ring);
+  }
+  .btn-primary {
+    @apply bg-primary text-primary-fg border-primary;
+  }
+  .btn-primary:hover { @apply bg-primary-hover; }
+  .btn-outline {
+    @apply bg-transparent text-fg border-sep;
+  }
+  .btn-outline:hover {
+    @apply bg-surface-hover border-sep-hover;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-fg-muted border-transparent;
+  }
+  .btn-ghost:hover {
+    @apply bg-surface text-fg;
+  }
+  .btn-sm { @apply py-1.5 px-3 text-[.8rem]; }
+  .btn[disabled] { @apply opacity-40 cursor-not-allowed pointer-events-none; }
+
+  .btn-skip {
+    background: transparent;
+    color: var(--color-skip);
+    border: 1px solid var(--color-skip);
+    @apply text-xs py-1 px-2 gap-1;
+  }
+  .btn-skip:hover { background: var(--color-skip-hover); }
+
+  /* CARD */
+  .card {
+    @apply bg-surface border border-sep rounded-lg overflow-hidden shadow-sm;
+  }
+  .card-header {
+    @apply py-4 px-5 border-b border-sep;
+  }
+  .card-body { @apply p-5; }
+  .card-footer {
+    @apply py-3 px-5 border-t border-sep flex gap-2 items-center;
+  }
+
+  /* BADGE */
+  .badge {
+    @apply inline-flex items-center py-0.5 px-2 text-xs font-medium rounded-full leading-[1.4];
+    border: 1px solid transparent;
+  }
+  .badge-primary {
+    background: #ffffff;
+    @apply text-primary border-primary;
+  }
+  .badge-success {
+    @apply bg-success-subtle text-success-fg;
+    border-color: #b3e6c7;
+  }
+  .badge-danger {
+    @apply bg-danger-subtle text-danger-fg;
+    border-color: #f5b5b5;
+  }
+  .badge-muted {
+    background: #f0f0f1;
+    @apply text-fg-muted;
+    border-color: #d9d9dd;
+  }
+  .badge-purple {
+    @apply bg-purple-subtle text-purple;
+    border-color: #cdb3f5;
+  }
+
+  /* PROGRESS */
+  .progress {
+    @apply h-1 bg-sep rounded-full overflow-hidden;
+  }
+  .progress-bar {
+    @apply h-full bg-primary rounded-full;
+    transition: width .4s ease;
+  }
+
+  /* OPTION (Radio/Checkbox card) */
+  .opt {
+    @apply flex items-start gap-3 py-3 px-4 border border-sep rounded-[var(--radius)] cursor-pointer select-none;
+    transition: all 150ms cubic-bezier(.4,0,.2,1);
+  }
+  .opt:hover:not(.opt-disabled) {
+    @apply border-sep-hover bg-surface-hover;
+  }
+  .opt-indicator {
+    @apply shrink-0 w-5 h-5 flex items-center justify-center mt-px text-[.7rem] text-transparent;
+    border: 2px solid var(--color-fg-dim);
+    border-radius: 4px;
+    transition: all 150ms cubic-bezier(.4,0,.2,1);
+  }
+  .opt-radio .opt-indicator { @apply rounded-full; }
+  .opt-selected {
+    @apply border-primary bg-primary-subtle;
+  }
+  .opt-selected .opt-indicator {
+    @apply border-primary bg-primary text-white;
+  }
+  .opt-correct {
+    @apply border-success bg-success-subtle;
+  }
+  .opt-correct .opt-indicator {
+    @apply border-success bg-success text-white;
+  }
+  .opt-wrong {
+    @apply border-danger bg-danger-subtle;
+  }
+  .opt-wrong .opt-indicator {
+    @apply border-danger bg-danger text-white;
+  }
+  .opt-disabled { @apply cursor-default opacity-85; }
+  .opt-label {
+    @apply text-sm leading-6 flex-1;
+    letter-spacing: -.01em;
+  }
+  .opt-letter {
+    @apply text-sm font-semibold text-fg-dim mr-1;
+  }
+
+  /* BREADCRUMB */
+  .breadcrumb {
+    @apply flex items-center gap-1.5 text-[.8rem] text-fg-dim mb-4 flex-wrap;
+  }
+  .breadcrumb a {
+    @apply text-fg-muted cursor-pointer no-underline;
+    transition: color 150ms cubic-bezier(.4,0,.2,1);
+  }
+  .breadcrumb a:hover { @apply text-fg; }
+  .bc-sep { @apply text-fg-dim text-[.65rem]; }
+
+  /* EXAM CARD */
+  .exam-card {
+    @apply bg-surface border border-sep rounded-lg p-4 cursor-pointer;
+    transition: all 150ms cubic-bezier(.4,0,.2,1);
+  }
+  .exam-card:hover:not(.exam-disabled) {
+    @apply border-sep-hover bg-surface-hover;
+    transform: translateY(-1px);
+  }
+  .exam-disabled { @apply opacity-40 cursor-not-allowed; }
+
+  /* CHIP / TOGGLE GROUP */
+  .chip-group { @apply flex flex-wrap gap-1.5; }
+  .chip {
+    @apply py-[5px] px-3 text-[.8rem] border border-sep rounded-[var(--radius)] cursor-pointer text-fg-muted bg-transparent;
+    transition: all 150ms cubic-bezier(.4,0,.2,1);
+  }
+  .chip:hover { @apply border-sep-hover text-fg; }
+  .chip.active { @apply bg-primary text-white border-primary; }
+
+  /* EXPLANATION */
+  .explanation {
+    @apply bg-primary-subtle border border-primary rounded-[var(--radius)] mt-4;
+    padding: 14px 16px;
+  }
+  .explanation h4 {
+    @apply text-[.8rem] font-semibold text-primary mb-1.5 flex items-center gap-1.5;
+  }
+  .explanation p {
+    @apply text-[.85rem] text-fg-muted leading-relaxed;
+  }
+
+  /* SCORE RING */
+  .score-ring {
+    @apply w-30 h-30 rounded-full flex flex-col items-center justify-center mx-auto mb-4;
+    border: 4px solid var(--color-sep);
+  }
+  .score-ring.pass { @apply border-success bg-success-subtle; }
+  .score-ring.fail { @apply border-danger bg-danger-subtle; }
+  .score-ring .pct {
+    @apply text-2xl font-bold;
+    letter-spacing: -.03em;
+  }
+  .score-ring .sub { @apply text-xs text-fg-muted; }
+  .score-ring.pass .pct { @apply text-success; }
+  .score-ring.fail .pct { @apply text-danger; }
+
+  /* REVIEW */
+  .review {
+    @apply border border-sep rounded-[var(--radius)] overflow-hidden;
+  }
+  .review-item {
+    @apply py-3 px-4 border-b border-sep;
+  }
+  .review-item:last-child { @apply border-b-0; }
+
+  /* SPINNER */
+  .spinner {
+    @apply w-6 h-6 rounded-full animate-spin;
+    border: 2px solid var(--color-sep);
+    border-top-color: var(--color-primary);
+  }
+
+  /* AWS TIER BADGES */
+  .badge-foundational { background: transparent; color: #2e3947; border-color: transparent; }
+  .badge-associate { background: transparent; color: #0d1e91; border-color: transparent; }
+  .badge-professional { background: transparent; color: #01607f; border-color: transparent; }
+  .badge-specialty { background: transparent; color: #3c1c8d; border-color: transparent; }
+
+  /* THEME TOGGLE */
+  .theme-toggle {
+    @apply fixed top-3 right-3 z-50 w-9 h-9 rounded-[var(--radius)] border border-sep bg-surface text-fg-muted items-center justify-center cursor-pointer shadow-sm;
+    display: none;
+    transition: all 150ms cubic-bezier(.4,0,.2,1);
+  }
+  .theme-toggle:hover {
+    @apply border-sep-hover text-fg bg-surface-hover;
+  }
+}
+
+/* === Dark-mode-only overrides that can't be done via variable swapping === */
+@layer components {
+  html.dark .badge-danger { border-color: #6b3333; }
+  html.dark .badge-success { border-color: #2a5e3f; }
+  html.dark .badge-purple { border-color: #4a3a6b; }
+  html.dark .badge-muted { @apply bg-surface-hover text-fg-muted border-sep; }
+  html.dark .badge-primary { @apply bg-surface text-primary border-primary; }
+
+  html.dark .btn-skip {
+    background: transparent;
+    border-color: var(--color-skip-border-dark);
+    color: var(--color-skip-dark);
+  }
+  html.dark .btn-skip:hover { background: var(--color-skip-hover-dark); }
+
+  html.dark .badge-foundational { background: transparent; color: #8a9bab; border-color: transparent; }
+  html.dark .badge-associate { background: transparent; color: #7b8ef5; border-color: transparent; }
+  html.dark .badge-professional { background: transparent; color: #4db8d4; border-color: transparent; }
+  html.dark .badge-specialty { background: transparent; color: #9b7be6; border-color: transparent; }
+}
+
+/* === Responsive === */
+@media (max-width: 480px) {
+  .grid-cols-2 { grid-template-columns: 1fr; }
+}

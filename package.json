@@ -1,0 +1,25 @@
+{
+  "name": "aws-quiz",
+  "version": "1.0.0",
+  "description": "一個簡潔、現代化的 AWS 認證考試練習平台，支援多種 AWS 認證考試，提供完整的題庫管理和學習追蹤功能。",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i src/input.css -o style.css --minify",
+    "dev": "npx @tailwindcss/cli -i src/input.css -o style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-the-official/aws-quiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/j-the-official/aws-quiz/issues"
+  },
+  "homepage": "https://github.com/j-the-official/aws-quiz#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18"
+  }
+}

@@ -333,7 +333,7 @@ function renderAILoading(app){
       <div class="card-body text-center" style="padding:48px 20px">
         <div class="spinner" style="margin:0 auto 16px"></div>
         <div class="font-semibold mb-2">${I.bot} AI 正在為你量身出題</div>
-        <div class="text-sm text-muted">正在分析弱項類別並生成針對性題目...</div>
+        <div class="text-sm text-fg-muted">正在分析弱項類別並生成針對性題目...</div>
         <div class="flex justify-center gap-2 mt-3">${(S.aiWeakCats||[]).map(c=>`<span class="badge badge-purple">${c}</span>`).join('')}</div>
       </div>
     </div>`;
@@ -345,7 +345,7 @@ function renderLanding(app){
     <div class="text-center" style="padding:32px 0 24px">
       <div style="font-size:2rem;margin-bottom:8px">${I.cloud}</div>
       <h1 style="font-size:1.35rem;font-weight:700;letter-spacing:-.02em">AWS 認證模擬考</h1>
-      <p class="text-sm text-muted mt-2">選擇考試，開始練習</p>
+      <p class="text-sm text-fg-muted mt-2">選擇考試，開始練習</p>
     </div>
     ${tiers.map(t=>{
       const te=exams.filter(e=>e.tier===t);
@@ -353,14 +353,14 @@ function renderLanding(app){
         <div class="mb-4">
           <div class="flex items-center gap-2 mb-3">
             <span class="badge badge-${t}">${tierLabels[t]}</span>
-            <div style="flex:1;height:1px;background:var(--border)"></div>
+            <div style="flex:1;height:1px;background:var(--color-sep)"></div>
           </div>
-          <div class="grid grid-2 gap-3">
+          <div class="grid grid-cols-2 gap-3">
             ${te.map(e=>{
               const qc=(questionBanks[e.id]||[]).length;
               return`<div class="exam-card ${e.hasQuestions?'':'exam-disabled'}" onclick="selectExam('${e.id}')" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
                 <div style="min-width:0">
-                  <div class="text-xs font-semibold text-muted" style="letter-spacing:.06em">${e.code}</div>
+                  <div class="text-xs font-semibold text-fg-muted" style="letter-spacing:.06em">${e.code}</div>
                   <div class="font-medium text-sm mt-1" style="line-height:1.4">${e.name}</div>
                 </div>
                 <div style="flex-shrink:0;text-align:right">
@@ -387,17 +387,17 @@ function renderStart(app){
     <div class="card mb-4">
       <div class="card-header">
         <div>
-          <div class="text-xs font-semibold text-muted" style="letter-spacing:.06em">${e.code}</div>
+          <div class="text-xs font-semibold text-fg-muted" style="letter-spacing:.06em">${e.code}</div>
           <div class="font-semibold mt-1">${e.name}</div>
         </div>
       </div>
       <div class="card-body flex-col gap-4" style="display:flex">
         <div>
-          <div class="text-xs font-medium text-dim mb-2" style="letter-spacing:.06em;text-transform:uppercase">類別</div>
-          <div class="chip-group">${cats.map(c=>`<div class="chip ${S.category===c?'active':''}" onclick="setCategory('${c}')">${c}${c!=='全部'?` <span class="text-dim">${b.filter(q=>q.category===c).length}</span>`:''}</div>`).join('')}</div>
+          <div class="text-xs font-medium text-fg-dim mb-2" style="letter-spacing:.06em;text-transform:uppercase">類別</div>
+          <div class="chip-group">${cats.map(c=>`<div class="chip ${S.category===c?'active':''}" onclick="setCategory('${c}')">${c}${c!=='全部'?` <span class="text-fg-dim">${b.filter(q=>q.category===c).length}</span>`:''}</div>`).join('')}</div>
         </div>
         <div>
-          <div class="text-xs font-medium text-dim mb-2" style="letter-spacing:.06em;text-transform:uppercase">題數</div>
+          <div class="text-xs font-medium text-fg-dim mb-2" style="letter-spacing:.06em;text-transform:uppercase">題數</div>
           <div class="chip-group">${[...new Set([10,30,65].map(n=>Math.min(n,mx)))].map(v=>`<div class="chip ${S.questionCount===v?'active':''}" onclick="setCount(${v})">${v}</div>`).join('')}</div>
           <div class="flex mt-3" style="justify-content:flex-end">
             <button class="btn btn-primary btn-sm" onclick="startQuiz()">${I.play} 開始測驗</button>
@@ -412,7 +412,7 @@ function renderStart(app){
           <span style="font-size:1.3rem">${I.book}</span>
           <div>
             <div class="font-medium text-sm">錯題本 · ${wl.length} 題</div>
-            <div class="text-xs text-muted">答對會自動移除</div>
+            <div class="text-xs text-fg-muted">答對會自動移除</div>
           </div>
         </div>
         <div class="flex gap-2">
@@ -420,13 +420,21 @@ function renderStart(app){
         </div>
       </div>
       ${hasHistory?`<div class="card-footer flex items-center gap-3" style="font-size:.75rem">
-        <span class="text-dim">累計作答</span>
-        <span style="color:var(--success-fg)">✓ ${weaknesses.reduce((s,w)=>s+w.correct,0)}</span>
-        <span style="color:var(--danger-fg)">✗ ${weaknesses.reduce((s,w)=>s+w.total-w.correct,0)}</span>
-        <span class="text-dim">${(()=>{const t=weaknesses.reduce((s,w)=>s+w.total,0),c=weaknesses.reduce((s,w)=>s+w.correct,0);return t?Math.round(c/t*100):0})()}%</span>
+        <span class="text-fg-dim">累計作答</span>
+        <span style="color:var(--color-success-fg)">✓ ${weaknesses.reduce((s,w)=>s+w.correct,0)}</span>
+        <span style="color:var(--color-danger-fg)">✗ ${weaknesses.reduce((s,w)=>s+w.total-w.correct,0)}</span>
+        <span class="text-fg-dim">${(()=>{const t=weaknesses.reduce((s,w)=>s+w.total,0),c=weaknesses.reduce((s,w)=>s+w.correct,0);return t?Math.round(c/t*100):0})()}%</span>
       </div>`:''}
     </div>`:''}
-    <div class="card"><div class="card-body flex items-center justify-between flex-wrap gap-3"><div class="flex items-center gap-3"><span style="font-size:1.3rem">${I.bot}</span><div><div class="font-medium text-sm">AI 弱點補強</div><div class="text-xs text-muted">根據作答記錄生成針對性題目</div></div></div><span class="badge badge-muted">即將推出</span></div></div>`;
+    <div class="exam-card exam-disabled" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+      <div style="min-width:0">
+        <div class="text-xs font-semibold text-fg-muted" style="letter-spacing:.06em">AI</div>
+        <div class="font-medium text-sm mt-1" style="line-height:1.4">弱點補強</div>
+      </div>
+      <div style="flex-shrink:0;text-align:right">
+        <span class="badge badge-muted">即將推出</span>
+      </div>
+    </div>`;
 }
 
 function renderQuiz(app){
@@ -441,10 +449,10 @@ function renderQuiz(app){
     <div class="breadcrumb"><a onclick="goHome()">首頁</a><span class="bc-sep">›</span><a onclick="goConfig()">${e.code}</a><span class="bc-sep">›</span><span>${modeLabel}</span></div>
 
     <div class="flex items-center gap-2 mb-2">
-      <span class="text-xs text-dim">${S.currentQ+1} / ${tot}</span>
+      <span class="text-xs text-fg-dim">${S.currentQ+1} / ${tot}</span>
       <div style="flex:1"></div>
-      <span class="text-xs" style="color:var(--success-fg)">✓ ${S.correctCount}</span>
-      <span class="text-xs" style="color:var(--danger-fg)">✗ ${S.wrongCount}</span>
+      <span class="text-xs" style="color:var(--color-success-fg)">✓ ${S.correctCount}</span>
+      <span class="text-xs" style="color:var(--color-danger-fg)">✗ ${S.wrongCount}</span>
       <span class="text-xs" style="color:#f59e0b;display:inline-flex;align-items:center;gap:2px">⚠ ${S.skipCount}</span>
     </div>
     <div class="progress mb-3"><div class="progress-bar" style="width:${prog}%"></div></div>
@@ -452,12 +460,12 @@ function renderQuiz(app){
     <div class="card mb-3">
       <div class="card-header flex items-center justify-between">
         <div class="flex items-center gap-2">
-          <span class="text-xs text-dim font-semibold">Q${S.currentQ+1}</span>
+          <span class="text-xs text-fg-dim font-semibold">Q${S.currentQ+1}</span>
           <span class="badge badge-muted">${q.category}</span>
           ${S.mode==='ai'?'<span class="badge badge-purple">AI</span>':''}
         </div>
         <div class="flex items-center gap-2">
-          ${!S.answered?`<button class="btn btn-sm btn-skip" onclick="skipToWrong()">⚠ 跳過</button>`:''}
+          <button class="btn btn-sm btn-skip" onclick="skipToWrong()" ${S.answered?'style="visibility:hidden"':''}>${S.answered?'':'⚠ '}跳過</button>
         </div>
       </div>
       <div class="card-body">
@@ -491,7 +499,7 @@ function renderQuiz(app){
         </div>
         ${multi&&!S.answered?`<button class="btn btn-primary w-full mt-3" onclick="submitMulti()" ${S.selectedOpts.length!==reqCount?'disabled':''}>確認答案（${S.selectedOpts.length}/${reqCount}）</button>`:''}
         ${S.answered?`<div class="explanation"><h4>${I.info} 解析</h4><p>${q.explanation}</p></div>`:''}
-        <div class="flex items-center mt-4" style="padding-top:12px;border-top:1px solid var(--border)">
+        <div class="flex items-center mt-4" style="padding-top:12px;border-top:1px solid var(--color-sep)">
           ${S.currentQ>0?`<button class="btn btn-ghost btn-sm" onclick="prevQuestion()">${I.arrowLeft} 上一題</button>`:''}
           <div style="flex:1"></div>
           ${S.answered?`<button class="btn btn-ghost btn-sm" onclick="nextQuestion()">${S.currentQ+1>=tot?'查看結果':'下一題 '+I.arrowRight}</button>`:''}
@@ -512,7 +520,7 @@ function renderResult(app){
       <div class="card-body text-center" style="padding:32px 20px">
         <div class="score-ring ${pass?'pass':'fail'}"><div class="pct">${pct}%</div><div class="sub">${S.correctCount} / ${tot}</div></div>
         <div class="font-semibold text-lg">${pass?I.trophy+' 恭喜通過！':I.flame+' 繼續加油！'}</div>
-        <p class="text-sm text-muted mt-2">${isWrongMode
+        <p class="text-sm text-fg-muted mt-2">${isWrongMode
           ?(wrongStillLeft>0?`錯題本還剩 ${wrongStillLeft} 題待加強`:'所有錯題都答對了！')
           :S.mode==='ai'
           ?(pass?'AI 出題表現優異！':'建議再練一輪加強弱項')
@@ -538,11 +546,11 @@ function renderResult(app){
           const badgeText=a.correct?'✓ 正確':skipped?'跳過':'✗ 錯誤';
           return`<div class="review-item">
             <div class="flex items-center justify-between mb-1">
-              <span class="text-xs text-dim">Q${i+1} · ${qq.category}</span>
+              <span class="text-xs text-fg-dim">Q${i+1} · ${qq.category}</span>
               <span class="badge ${badgeCls}">${badgeText}</span>
             </div>
             <div class="text-sm mb-1" style="line-height:1.5">${qq.question.length>80?qq.question.slice(0,80)+'...':qq.question}</div>
-            <div class="text-xs text-muted">${!a.correct?`<span style="color:var(--danger-fg)">你：${userAns}</span> · `:''}正確：${correctAns}</div>
+            <div class="text-xs text-fg-muted">${!a.correct?`<span style="color:var(--color-danger-fg)">你：${userAns}</span> · `:''}正確：${correctAns}</div>
           </div>`;
         }).join('')}
       </div>
