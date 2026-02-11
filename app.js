@@ -453,7 +453,7 @@ function renderQuiz(app){
       <div style="flex:1"></div>
       <span class="text-xs" style="color:var(--color-success-fg)">✓ ${S.correctCount}</span>
       <span class="text-xs" style="color:var(--color-danger-fg)">✗ ${S.wrongCount}</span>
-      <span class="text-xs" style="color:#f59e0b;display:inline-flex;align-items:center;gap:2px">⚠ ${S.skipCount}</span>
+      <span class="text-xs" style="color:var(--color-skip);display:inline-flex;align-items:center;gap:2px">⚠ ${S.skipCount}</span>
     </div>
     <div class="progress mb-3"><div class="progress-bar" style="width:${prog}%"></div></div>
 
