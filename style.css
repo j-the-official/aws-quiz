@@ -62,7 +62,7 @@ body{min-height:100vh;background:var(--bg)}
 .opt-wrong .opt-indicator{border-color:var(--danger);background:var(--danger);color:#fff}
 .opt-disabled{cursor:default;opacity:.85}
 .opt-label{font-size:.875rem;line-height:1.5;letter-spacing:-.01em;flex:1}
-.opt-letter{font-size:.7rem;font-weight:600;color:var(--fg-dim);margin-right:4px}
+.opt-letter{font-size:.875rem;font-weight:600;color:var(--fg-dim);margin-right:4px}
 
 /* === LAYOUT HELPERS === */
 .flex{display:flex}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}

@@ -9,7 +9,8 @@
       "降低了安全性標準"
     ],
     "answer": 1,
-    "explanation": "雲端運算的主要優勢之一是將資本支出 (CapEx) 轉換為營運支出 (OpEx)，用戶只需按使用量付費。"
+    "explanation": "雲端運算的主要優勢之一是將資本支出 (CapEx) 轉換為營運支出 (OpEx)，用戶只需按使用量付費。",
+    "id": "clf-c02-001"
   },
   {
     "category": "雲端概念",
@@ -21,7 +22,8 @@
       "虛擬化基礎設施的管理"
     ],
     "answer": 1,
-    "explanation": "在共享責任模型中，AWS 負責「雲端的安全」（基礎設施），客戶負責「雲端中的安全」，包括資料加密、存取控制等。"
+    "explanation": "在共享責任模型中，AWS 負責「雲端的安全」（基礎設施），客戶負責「雲端中的安全」，包括資料加密、存取控制等。",
+    "id": "clf-c02-002"
   },
   {
     "category": "雲端概念",
@@ -33,7 +35,8 @@
       "保證 100% 正常運行時間"
     ],
     "answer": 2,
-    "explanation": "六大優勢：將資本支出轉為可變費用、大規模經濟效益、停止猜測容量、提高速度與敏捷性、停止花錢維運資料中心、幾分鐘內全球部署。"
+    "explanation": "六大優勢：將資本支出轉為可變費用、大規模經濟效益、停止猜測容量、提高速度與敏捷性、停止花錢維運資料中心、幾分鐘內全球部署。",
+    "id": "clf-c02-003"
   },
   {
     "category": "雲端概念",
@@ -45,7 +48,8 @@
       "敏捷性"
     ],
     "answer": 1,
-    "explanation": "五大支柱：營運卓越、安全性、可靠性、效能效率、成本優化。後來增加了第六支柱：永續性。"
+    "explanation": "五大支柱：營運卓越、安全性、可靠性、效能效率、成本優化。後來增加了第六支柱：永續性。",
+    "id": "clf-c02-004"
   },
   {
     "category": "雲端概念",
@@ -57,7 +61,8 @@
       "社群雲"
     ],
     "answer": 2,
-    "explanation": "混合雲結合了公有雲和本地基礎設施，允許企業在雲端和本地之間共享資料和應用程式。"
+    "explanation": "混合雲結合了公有雲和本地基礎設施，允許企業在雲端和本地之間共享資料和應用程式。",
+    "id": "clf-c02-005"
   },
   {
     "category": "雲端概念",
@@ -69,7 +74,8 @@
       "系統使用最少的資源"
     ],
     "answer": 1,
-    "explanation": "高可用性意味著系統在某些元件發生故障時仍能持續運作。AWS 通過多可用區部署來實現。"
+    "explanation": "高可用性意味著系統在某些元件發生故障時仍能持續運作。AWS 通過多可用區部署來實現。",
+    "id": "clf-c02-006"
   },
   {
     "category": "雲端概念",
@@ -81,7 +87,8 @@
       "使用 GUI 管理雲端資源"
     ],
     "answer": 1,
-    "explanation": "IaC 是透過程式碼（如 CloudFormation）來自動化佈建和管理基礎設施的做法。"
+    "explanation": "IaC 是透過程式碼（如 CloudFormation）來自動化佈建和管理基礎設施的做法。",
+    "id": "clf-c02-007"
   },
   {
     "category": "安全性",
@@ -93,7 +100,8 @@
       "AWS Config"
     ],
     "answer": 1,
-    "explanation": "AWS IAM 是用於管理用戶身分、群組、角色及其對 AWS 資源存取權限的核心服務。"
+    "explanation": "AWS IAM 是用於管理用戶身分、群組、角色及其對 AWS 資源存取權限的核心服務。",
+    "id": "clf-c02-008"
   },
   {
     "category": "安全性",
@@ -105,7 +113,8 @@
       "給予所有用戶管理員權限"
     ],
     "answer": 2,
-    "explanation": "啟用 MFA 是 IAM 最佳實踐之一。其他包括：不使用根帳戶、遵循最小權限原則、定期輪換憑證。"
+    "explanation": "啟用 MFA 是 IAM 最佳實踐之一。其他包括：不使用根帳戶、遵循最小權限原則、定期輪換憑證。",
+    "id": "clf-c02-009"
   },
   {
     "category": "安全性",
@@ -117,7 +126,8 @@
       "中間人攻擊"
     ],
     "answer": 2,
-    "explanation": "AWS Shield 是託管型 DDoS 防護服務。Standard 免費提供基本防護，Advanced 提供進階緩解。"
+    "explanation": "AWS Shield 是託管型 DDoS 防護服務。Standard 免費提供基本防護，Advanced 提供進階緩解。",
+    "id": "clf-c02-010"
   },
   {
     "category": "安全性",
@@ -129,7 +139,8 @@
       "Amazon Macie"
     ],
     "answer": 1,
-    "explanation": "Amazon Inspector 是自動化安全評估服務，可檢測 EC2 和容器中的軟體漏洞。"
+    "explanation": "Amazon Inspector 是自動化安全評估服務，可檢測 EC2 和容器中的軟體漏洞。",
+    "id": "clf-c02-011"
   },
   {
     "category": "安全性",
@@ -141,7 +152,8 @@
       "Amazon GuardDuty"
     ],
     "answer": 1,
-    "explanation": "CloudTrail 記錄所有 API 呼叫，提供審計追蹤。CloudWatch 監控效能，Config 追蹤組態變更。"
+    "explanation": "CloudTrail 記錄所有 API 呼叫，提供審計追蹤。CloudWatch 監控效能，Config 追蹤組態變更。",
+    "id": "clf-c02-012"
   },
   {
     "category": "安全性",
@@ -153,7 +165,8 @@
       "Amazon Cognito"
     ],
     "answer": 1,
-    "explanation": "AWS KMS 是託管式加密金鑰服務，可建立和管理加密金鑰。"
+    "explanation": "AWS KMS 是託管式加密金鑰服務，可建立和管理加密金鑰。",
+    "id": "clf-c02-013"
   },
   {
     "category": "技術",
@@ -165,7 +178,8 @@
       "資料庫儲存"
     ],
     "answer": 1,
-    "explanation": "S3 是物件儲存服務。區塊儲存對應 EBS，檔案儲存對應 EFS。"
+    "explanation": "S3 是物件儲存服務。區塊儲存對應 EBS，檔案儲存對應 EFS。",
+    "id": "clf-c02-014"
   },
   {
     "category": "技術",
@@ -177,7 +191,8 @@
       "AWS Elastic Beanstalk"
     ],
     "answer": 1,
-    "explanation": "Lambda 是無伺服器運算服務，無需管理伺服器即可執行程式碼，按使用時間付費。"
+    "explanation": "Lambda 是無伺服器運算服務，無需管理伺服器即可執行程式碼，按使用時間付費。",
+    "id": "clf-c02-015"
   },
   {
     "category": "技術",
@@ -189,7 +204,8 @@
       "Elastic Load Balancing"
     ],
     "answer": 2,
-    "explanation": "CloudFront 是全球 CDN 服務，在邊緣節點快取內容以低延遲分發。"
+    "explanation": "CloudFront 是全球 CDN 服務，在邊緣節點快取內容以低延遲分發。",
+    "id": "clf-c02-016"
   },
   {
     "category": "技術",
@@ -201,7 +217,8 @@
       "Redis"
     ],
     "answer": 2,
-    "explanation": "RDS 支援 MySQL、PostgreSQL、MariaDB、Oracle、SQL Server 和 Aurora。"
+    "explanation": "RDS 支援 MySQL、PostgreSQL、MariaDB、Oracle、SQL Server 和 Aurora。",
+    "id": "clf-c02-017"
   },
   {
     "category": "技術",
@@ -213,7 +230,8 @@
       "AWS Transit Gateway"
     ],
     "answer": 0,
-    "explanation": "VPC 讓您在 AWS 雲端中建立邏輯上隔離的虛擬網路。"
+    "explanation": "VPC 讓您在 AWS 雲端中建立邏輯上隔離的虛擬網路。",
+    "id": "clf-c02-018"
   },
   {
     "category": "技術",
@@ -225,7 +243,8 @@
       "Amazon Aurora"
     ],
     "answer": 2,
-    "explanation": "DynamoDB 是完全託管的 NoSQL 資料庫，提供毫秒級延遲。"
+    "explanation": "DynamoDB 是完全託管的 NoSQL 資料庫，提供毫秒級延遲。",
+    "id": "clf-c02-019"
   },
   {
     "category": "技術",
@@ -237,7 +256,8 @@
       "專用主機"
     ],
     "answer": 2,
-    "explanation": "Spot 執行個體利用閒置容量，價格最多低 90%，但可能隨時被收回。"
+    "explanation": "Spot 執行個體利用閒置容量，價格最多低 90%，但可能隨時被收回。",
+    "id": "clf-c02-020"
   },
   {
     "category": "技術",
@@ -249,7 +269,8 @@
       "Amazon RDS"
     ],
     "answer": 1,
-    "explanation": "EC2 提供可調整大小的運算容量，可隨需求擴展或縮減。"
+    "explanation": "EC2 提供可調整大小的運算容量，可隨需求擴展或縮減。",
+    "id": "clf-c02-021"
   },
   {
     "category": "技術",
@@ -261,7 +282,8 @@
       "AWS CloudFormation"
     ],
     "answer": 0,
-    "explanation": "Snowball 適合將大量資料（TB 到 PB 級別）從本地遷移到 AWS。"
+    "explanation": "Snowball 適合將大量資料（TB 到 PB 級別）從本地遷移到 AWS。",
+    "id": "clf-c02-022"
   },
   {
     "category": "技術",
@@ -273,7 +295,8 @@
       "Redis 和 Memcached"
     ],
     "answer": 1,
-    "explanation": "Aurora 與 MySQL 和 PostgreSQL 相容，效能最高達標準 MySQL 的 5 倍。"
+    "explanation": "Aurora 與 MySQL 和 PostgreSQL 相容，效能最高達標準 MySQL 的 5 倍。",
+    "id": "clf-c02-023"
   },
   {
     "category": "技術",
@@ -285,7 +308,8 @@
       "AWS Step Functions"
     ],
     "answer": 1,
-    "explanation": "SQS 是完全託管的訊息佇列服務。SNS 是通知服務，SES 是郵件服務。"
+    "explanation": "SQS 是完全託管的訊息佇列服務。SNS 是通知服務，SES 是郵件服務。",
+    "id": "clf-c02-024"
   },
   {
     "category": "技術",
@@ -297,7 +321,8 @@
       "監控 AWS 資源效能"
     ],
     "answer": 1,
-    "explanation": "ELB 自動將流量分配到多個目標，提高可用性和容錯能力。"
+    "explanation": "ELB 自動將流量分配到多個目標，提高可用性和容錯能力。",
+    "id": "clf-c02-025"
   },
   {
     "category": "計費與定價",
@@ -309,7 +334,8 @@
       "AWS Billing Dashboard"
     ],
     "answer": 1,
-    "explanation": "Pricing Calculator 用來估算月費用。Cost Explorer 分析過去費用，Budgets 設定預算警報。"
+    "explanation": "Pricing Calculator 用來估算月費用。Cost Explorer 分析過去費用，Budgets 設定預算警報。",
+    "id": "clf-c02-026"
   },
   {
     "category": "計費與定價",
@@ -321,7 +347,8 @@
       "Enterprise"
     ],
     "answer": 3,
-    "explanation": "Enterprise 方案提供 24/7 支援、15 分鐘回應時間和指定 TAM。"
+    "explanation": "Enterprise 方案提供 24/7 支援、15 分鐘回應時間和指定 TAM。",
+    "id": "clf-c02-027"
   },
   {
     "category": "計費與定價",
@@ -333,7 +360,8 @@
       "50 GB"
     ],
     "answer": 1,
-    "explanation": "免費方案前 12 個月提供 5 GB S3 標準儲存空間。"
+    "explanation": "免費方案前 12 個月提供 5 GB S3 標準儲存空間。",
+    "id": "clf-c02-028"
   },
   {
     "category": "計費與定價",
@@ -345,7 +373,8 @@
       "AWS Trusted Advisor"
     ],
     "answer": 1,
-    "explanation": "Organizations 提供整合帳單功能，可合併多帳戶帳單並享受批量折扣。"
+    "explanation": "Organizations 提供整合帳單功能，可合併多帳戶帳單並享受批量折扣。",
+    "id": "clf-c02-029"
   },
   {
     "category": "計費與定價",
@@ -357,6 +386,7 @@
       "僅效能建議"
     ],
     "answer": 1,
-    "explanation": "Trusted Advisor 提供五大類別最佳實踐建議：成本優化、效能、安全性、容錯和服務限額。"
+    "explanation": "Trusted Advisor 提供五大類別最佳實踐建議：成本優化、效能、安全性、容錯和服務限額。",
+    "id": "clf-c02-030"
   }
 ]

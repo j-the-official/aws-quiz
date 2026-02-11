@@ -47,14 +47,23 @@ function loadWrong(examId){try{return JSON.parse(localStorage.getItem(getWrongKe
 function saveWrong(examId,list){localStorage.setItem(getWrongKey(examId),JSON.stringify(list))}
 function addWrong(examId,q){
   const list=loadWrong(examId);
-  // Use question text as unique key
-  if(!list.find(x=>x.question===q.question)){list.push(q);saveWrong(examId,list)}
+  if(!list.find(x=>x.id===q.id)){list.push(q);saveWrong(examId,list)}
 }
 function removeWrong(examId,q){
   let list=loadWrong(examId);
-  list=list.filter(x=>x.question!==q.question);
+  list=list.filter(x=>x.id!==q.id);
   saveWrong(examId,list);
 }
+
+// === Seen Question Tracking ===
+function getSeenKey(examId){return 'aws_seen_'+examId}
+function loadSeen(examId){try{return JSON.parse(localStorage.getItem(getSeenKey(examId)))||[]}catch(e){return[]}}
+function saveSeen(examId,list){localStorage.setItem(getSeenKey(examId),JSON.stringify(list))}
+function addSeen(examId,qId){
+  const list=loadSeen(examId);
+  if(!list.includes(qId)){list.push(qId);saveSeen(examId,list)}
+}
+function clearSeen(examId){localStorage.removeItem(getSeenKey(examId))}
 
 // === History & Weakness Tracking ===
 function getHistKey(examId){return 'aws_hist_'+examId}
@@ -188,10 +197,20 @@ function shuffleOpts(questions){
 }
 
 function startQuiz(){
-  const b=questionBanks[S.selectedExam.id]||[];
-  let p=S.category==='全部'?[...b]:b.filter(q=>q.category===S.category);
-  p=shuffle(p);
-  S.filteredQuestions=shuffleOpts(p.slice(0,Math.min(S.questionCount,p.length)));
+  const examId=S.selectedExam.id;
+  const b=questionBanks[examId]||[];
+  let pool=S.category==='全部'?[...b]:b.filter(q=>q.category===S.category);
+  const seen=loadSeen(examId);
+  let unseen=pool.filter(q=>!seen.includes(q.id));
+  if(unseen.length===0){clearSeen(examId);unseen=pool}
+  unseen=shuffle(unseen);
+  const need=Math.min(S.questionCount,unseen.length);
+  let picked=unseen.slice(0,need);
+  if(picked.length<S.questionCount&&pool.length>unseen.length){
+    const extra=shuffle(pool.filter(q=>!picked.find(p=>p.id===q.id)));
+    picked=picked.concat(extra.slice(0,S.questionCount-picked.length));
+  }
+  S.filteredQuestions=shuffleOpts(picked);
   S.currentQ=0;S.answered=false;S.selectedOpt=null;S.selectedOpts=[];S.correctCount=0;S.wrongCount=0;S.skipCount=0;S.answers=[];S.mode='normal';S.screen='quiz';render();
 }
 
@@ -218,6 +237,7 @@ function submitMulti(){
   const sorted2=[...q.answer].sort();
   const c=JSON.stringify(sorted1)===JSON.stringify(sorted2);
   recordAnswer(S.selectedExam.id,orig.category,c);
+  if(orig.id) addSeen(S.selectedExam.id,orig.id);
   if(c){S.correctCount++;if(S.mode==='wrong')removeWrong(S.selectedExam.id,orig)}
   else{S.wrongCount++;addWrong(S.selectedExam.id,orig)}
   S.answers.push({question:q,selected:S.selectedOpts,correct:c});
@@ -231,6 +251,7 @@ function selectOption(i){
   const orig=q._orig||q;
   const c=i===q.answer;
   recordAnswer(S.selectedExam.id,orig.category,c);
+  if(orig.id) addSeen(S.selectedExam.id,orig.id);
   if(c){
     S.correctCount++;
     if(S.mode==='wrong') removeWrong(S.selectedExam.id,orig);
@@ -265,6 +286,7 @@ function skipToWrong(){
   S.skipCount++;
   addWrong(S.selectedExam.id,orig);
   recordAnswer(S.selectedExam.id,orig.category,false);
+  if(orig.id) addSeen(S.selectedExam.id,orig.id);
   S.answers.push({question:q,selected:multi?[]:-1,correct:false,skipped:true});
   render();
 }

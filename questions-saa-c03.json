@@ -9,7 +9,8 @@
       "建立一個允許從 AWS Lambda 中存取的 IAM 角色，並將該角色指派給 DynamoDB 資料表"
     ],
     "answer": 0,
-    "explanation": "IAM 角色定義一組權限以發出 AWS 服務請求，由受信任的實體（如 Lambda）擔任角色，是最安全的做法。"
+    "explanation": "IAM 角色定義一組權限以發出 AWS 服務請求，由受信任的實體（如 Lambda）擔任角色，是最安全的做法。",
+    "id": "saa-c03-001"
   },
   {
     "category": "運算",
@@ -21,7 +22,8 @@
       "修改 CloudWatch 指標以便啟動執行個體"
     ],
     "answer": 1,
-    "explanation": "「EC2 超出配額」表示已達到服務的當前限制。需使用 Service Quotas 請求提高限制。"
+    "explanation": "「EC2 超出配額」表示已達到服務的當前限制。需使用 Service Quotas 請求提高限制。",
+    "id": "saa-c03-002"
   },
   {
     "category": "應用程式整合",
@@ -33,7 +35,8 @@
       "Amazon SQS 中的標準佇列"
     ],
     "answer": 2,
-    "explanation": "SQS FIFO 佇列按訊息進入佇列的順序處理，確保等待最久的人獲得下一個空桌。"
+    "explanation": "SQS FIFO 佇列按訊息進入佇列的順序處理，確保等待最久的人獲得下一個空桌。",
+    "id": "saa-c03-003"
   },
   {
     "category": "網路",
@@ -45,7 +48,8 @@
       "在每個可用區中建立一個 NAT 閘道，並更新每個私有子網的路由表"
     ],
     "answer": 3,
-    "explanation": "NAT 閘道與單個可用區相關聯。在每個可用區建立 NAT 閘道可確保各可用區獨立進行網際網路路由。"
+    "explanation": "NAT 閘道與單個可用區相關聯。在每個可用區建立 NAT 閘道可確保各可用區獨立進行網際網路路由。",
+    "id": "saa-c03-004"
   },
   {
     "category": "資料庫",
@@ -57,7 +61,8 @@
       "設定加密的唯讀複本，將其提升為主要執行個體"
     ],
     "answer": 2,
-    "explanation": "您無法直接加密未加密的資料庫。但可以對未加密快照的副本進行加密，然後從加密快照還原。"
+    "explanation": "您無法直接加密未加密的資料庫。但可以對未加密快照的副本進行加密，然後從加密快照還原。",
+    "id": "saa-c03-005"
   },
   {
     "category": "網路",
@@ -69,7 +74,8 @@
       "增加 VPN 組態中的通道數"
     ],
     "answer": 2,
-    "explanation": "中轉閘道上的 VPN 連線支援 ECMP 路由，可聚合多個 VPN 連線以實現更高的吞吐量。"
+    "explanation": "中轉閘道上的 VPN 連線支援 ECMP 路由，可聚合多個 VPN 連線以實現更高的吞吐量。",
+    "id": "saa-c03-006"
   },
   {
     "category": "應用程式整合",
@@ -81,7 +87,8 @@
       "使用 Amazon Textract，建立自訂詞典，為每個部分使用 StartTranscriptionJob API"
     ],
     "answer": 0,
-    "explanation": "Amazon Polly 可將文字轉換為語音。自訂詞典適合處理產品手冊中的各種自訂詞彙。"
+    "explanation": "Amazon Polly 可將文字轉換為語音。自訂詞典適合處理產品手冊中的各種自訂詞彙。",
+    "id": "saa-c03-007"
   },
   {
     "category": "應用程式整合",
@@ -93,7 +100,8 @@
       "使用 Amazon SNS 接收資料，並轉發到 Lambda 函數處理"
     ],
     "answer": 1,
-    "explanation": "在將資料發送到持久性儲存之前就提供查詢，Kinesis Data Analytics 可即時查詢串流資料。"
+    "explanation": "在將資料發送到持久性儲存之前就提供查詢，Kinesis Data Analytics 可即時查詢串流資料。",
+    "id": "saa-c03-008"
   },
   {
     "category": "成本優化",
@@ -105,7 +113,8 @@
       "將 Auto Scaling 與目標追蹤擴縮策略結合使用"
     ],
     "answer": 3,
-    "explanation": "目標追蹤擴縮策略會根據指標和目標值自動計算擴縮調整，適合可變需求。"
+    "explanation": "目標追蹤擴縮策略會根據指標和目標值自動計算擴縮調整，適合可變需求。",
+    "id": "saa-c03-009"
   },
   {
     "category": "應用程式整合",
@@ -117,7 +126,8 @@
       "AWS CloudTrail"
     ],
     "answer": 0,
-    "explanation": "Kinesis Data Streams 專為處理大量即時點擊流分析而設計，支援多個消費者。"
+    "explanation": "Kinesis Data Streams 專為處理大量即時點擊流分析而設計，支援多個消費者。",
+    "id": "saa-c03-010"
   },
   {
     "category": "網路",
@@ -129,7 +139,8 @@
       "AWS Direct Connect"
     ],
     "answer": 2,
-    "explanation": "VPC 端點無需使用公共網際網路即可在 VPC 和受支援的 AWS 服務之間建立通訊。"
+    "explanation": "VPC 端點無需使用公共網際網路即可在 VPC 和受支援的 AWS 服務之間建立通訊。",
+    "id": "saa-c03-011"
   },
   {
     "category": "安全性",
@@ -141,7 +152,8 @@
       "使用 SAML 2.0 聯合設定 AWS SSO"
     ],
     "answer": 0,
-    "explanation": "AWS Managed Microsoft AD 由 AWS 託管，減少管理開銷並提升安全性。"
+    "explanation": "AWS Managed Microsoft AD 由 AWS 託管，減少管理開銷並提升安全性。",
+    "id": "saa-c03-012"
   },
   {
     "category": "安全性",
@@ -153,7 +165,8 @@
       "將子網 CIDR 區塊作為來源或目的地建立安全群組規則"
     ],
     "answer": 1,
-    "explanation": "將安全群組 ID 作為來源或目的地可確保正確實施最低權限原則，僅允許特定應用程式層之間通訊。"
+    "explanation": "將安全群組 ID 作為來源或目的地可確保正確實施最低權限原則，僅允許特定應用程式層之間通訊。",
+    "id": "saa-c03-013"
   },
   {
     "category": "高可用性",
@@ -165,7 +178,8 @@
       "為 DynamoDB 資料表建立 DynamoDB 串流"
     ],
     "answer": 2,
-    "explanation": "RDS 預設部署在單一可用區。多可用區設定提供高可用性和故障轉移支援。DynamoDB 和 S3 預設就具有高可用性。"
+    "explanation": "RDS 預設部署在單一可用區。多可用區設定提供高可用性和故障轉移支援。DynamoDB 和 S3 預設就具有高可用性。",
+    "id": "saa-c03-014"
   },
   {
     "category": "安全性",
@@ -177,7 +191,8 @@
       "使用 Amazon API Gateway 並要求伺服器端加密"
     ],
     "answer": 0,
-    "explanation": "Amazon Cognito 用戶集區提供註冊和登入功能，可輕鬆新增 MFA 進行輔助驗證。"
+    "explanation": "Amazon Cognito 用戶集區提供註冊和登入功能，可輕鬆新增 MFA 進行輔助驗證。",
+    "id": "saa-c03-015"
   },
   {
     "category": "儲存",
@@ -189,7 +204,8 @@
       "Amazon EC2 執行個體存放區"
     ],
     "answer": 1,
-    "explanation": "Amazon EFS 提供可擴展的 NFS 檔案系統，多個 EC2 執行個體可同時讀取和寫入。"
+    "explanation": "Amazon EFS 提供可擴展的 NFS 檔案系統，多個 EC2 執行個體可同時讀取和寫入。",
+    "id": "saa-c03-016"
   },
   {
     "category": "資料庫",
@@ -201,7 +217,8 @@
       "Amazon Aurora"
     ],
     "answer": 2,
-    "explanation": "DynamoDB 是快速靈活的 NoSQL 資料庫，可支援數百萬並行使用者的遊戲平台。"
+    "explanation": "DynamoDB 是快速靈活的 NoSQL 資料庫，可支援數百萬並行使用者的遊戲平台。",
+    "id": "saa-c03-017"
   },
   {
     "category": "部署與管理",
@@ -213,7 +230,8 @@
       "AWS Trusted Advisor"
     ],
     "answer": 1,
-    "explanation": "AWS Config 一致性包是規則和修復措施集合，可作為單一實體部署到組織中。"
+    "explanation": "AWS Config 一致性包是規則和修復措施集合，可作為單一實體部署到組織中。",
+    "id": "saa-c03-018"
   },
   {
     "category": "儲存",
@@ -225,7 +243,8 @@
       "S3 One Zone-Infrequent Access"
     ],
     "answer": 1,
-    "explanation": "S3 Intelligent-Tiering 根據存取頻率自動遷移資料到最經濟的存取層，適合存取模式未知的資料。"
+    "explanation": "S3 Intelligent-Tiering 根據存取頻率自動遷移資料到最經濟的存取層，適合存取模式未知的資料。",
+    "id": "saa-c03-019"
   },
   {
     "category": "安全性",
@@ -237,7 +256,8 @@
       "使用 AWS WAF Web ACL 建立 CloudFront 分佈"
     ],
     "answer": 1,
-    "explanation": "OAC 與 CloudFront 分佈配合使用，使用者只能透過 CloudFront 存取，無法直接從 S3 存取。"
+    "explanation": "OAC 與 CloudFront 分佈配合使用，使用者只能透過 CloudFront 存取，無法直接從 S3 存取。",
+    "id": "saa-c03-020"
   },
   {
     "category": "應用程式整合",
@@ -249,7 +269,8 @@
       "將報告發佈到 S3 並透過 CloudFront 下載"
     ],
     "answer": 0,
-    "explanation": "使用 SQS 和 Lambda 將報告生成從 Web 伺服器分流，不再佔用連線資源。"
+    "explanation": "使用 SQS 和 Lambda 將報告生成從 Web 伺服器分流，不再佔用連線資源。",
+    "id": "saa-c03-021"
   },
   {
     "category": "高可用性",
@@ -261,7 +282,8 @@
       "在另一個區域部署應用程式，在主網站上使用伺服器端重新導向"
     ],
     "answer": 0,
-    "explanation": "S3 適合託管靜態備用網站，Route 53 故障轉移策略在主終端節點不可用時將使用者導向備用網站。"
+    "explanation": "S3 適合託管靜態備用網站，Route 53 故障轉移策略在主終端節點不可用時將使用者導向備用網站。",
+    "id": "saa-c03-022"
   },
   {
     "category": "成本優化",
@@ -273,7 +295,8 @@
       "使用 S3 PutBucketPolicy 將快照遷移到 S3 Glacier"
     ],
     "answer": 1,
-    "explanation": "使用 CloudWatch 指標確定 io2 卷是否可改為低成本的 gp3，再用 ModifyVolume 變更，不會導致停機。"
+    "explanation": "使用 CloudWatch 指標確定 io2 卷是否可改為低成本的 gp3，再用 ModifyVolume 變更，不會導致停機。",
+    "id": "saa-c03-023"
   },
   {
     "category": "資料庫",
@@ -285,7 +308,8 @@
       "Amazon SQS"
     ],
     "answer": 0,
-    "explanation": "直寫策略在每次寫入資料庫時都會更新快取，確保快取資料永不過時。"
+    "explanation": "直寫策略在每次寫入資料庫時都會更新快取，確保快取資料永不過時。",
+    "id": "saa-c03-024"
   },
   {
     "category": "成本優化",
@@ -297,7 +321,8 @@
       "轉換為 Amazon Aurora Serverless"
     ],
     "answer": 3,
-    "explanation": "Aurora Serverless 只需按秒為使用的資料庫資源付費，適合不經常使用的工作負載。"
+    "explanation": "Aurora Serverless 只需按秒為使用的資料庫資源付費，適合不經常使用的工作負載。",
+    "id": "saa-c03-025"
   },
   {
     "category": "儲存",
@@ -309,7 +334,8 @@
       "Amazon Aurora"
     ],
     "answer": 0,
-    "explanation": "Athena 可直接對 S3 中的資料執行 SQL 查詢，無需預置基礎架構，只需為執行的查詢付費。"
+    "explanation": "Athena 可直接對 S3 中的資料執行 SQL 查詢，無需預置基礎架構，只需為執行的查詢付費。",
+    "id": "saa-c03-026"
   },
   {
     "category": "資料庫",
@@ -321,7 +347,8 @@
       "更改分區鍵以包含產品鍵和產品類型的雜湊值"
     ],
     "answer": 1,
-    "explanation": "DAX 為讀取密集型工作負載提供更高的吞吐量，特別適合需要反覆讀取熱門產品的應用程式。"
+    "explanation": "DAX 為讀取密集型工作負載提供更高的吞吐量，特別適合需要反覆讀取熱門產品的應用程式。",
+    "id": "saa-c03-027"
   },
   {
     "category": "應用程式整合",
@@ -333,7 +360,8 @@
       "在 S3 上部署前端，透過 API Gateway 寫入 SQS 佇列，後端 Auto Scaling"
     ],
     "answer": 3,
-    "explanation": "S3 託管前端、API Gateway 和 SQS 實現解耦，後端 Auto Scaling 組提供可擴展性。"
+    "explanation": "S3 託管前端、API Gateway 和 SQS 實現解耦，後端 Auto Scaling 組提供可擴展性。",
+    "id": "saa-c03-028"
   },
   {
     "category": "網路",
@@ -345,7 +373,8 @@
       "為 DynamoDB 建立 VPC 端點並設定端點策略"
     ],
     "answer": 3,
-    "explanation": "VPC 端點使流量不會離開 AWS 網路，為 DynamoDB 建立 VPC 端點是正確做法。"
+    "explanation": "VPC 端點使流量不會離開 AWS 網路，為 DynamoDB 建立 VPC 端點是正確做法。",
+    "id": "saa-c03-029"
   },
   {
     "category": "部署與管理",
@@ -357,7 +386,8 @@
       "使用 CloudFormation 部署具有快照刪除策略的暫存環境"
     ],
     "answer": 1,
-    "explanation": "Route 53 加權路由可逐步增加流量到新環境，CloudFormation 建立獨立暫存環境進行測試。"
+    "explanation": "Route 53 加權路由可逐步增加流量到新環境，CloudFormation 建立獨立暫存環境進行測試。",
+    "id": "saa-c03-030"
   },
   {
     "category": "安全性",
@@ -369,7 +399,8 @@
       "在入站網路 ACL 中拒絕來自公司網路的所有 SSH 流量"
     ],
     "answer": 1,
-    "explanation": "堡壘主機配合安全群組限制，確保只有公司網路可以 SSH 到堡壘主機，再從堡壘主機連線到 Web 伺服器。"
+    "explanation": "堡壘主機配合安全群組限制，確保只有公司網路可以 SSH 到堡壘主機，再從堡壘主機連線到 Web 伺服器。",
+    "id": "saa-c03-031"
   },
   {
     "category": "資料庫",
@@ -381,7 +412,8 @@
       "使用 Amazon SQS 將交易排隊"
     ],
     "answer": 0,
-    "explanation": "隨需模式使 DynamoDB 能自動擴展以滿足突然增長的需求。DAX 僅改善讀取效能。"
+    "explanation": "隨需模式使 DynamoDB 能自動擴展以滿足突然增長的需求。DAX 僅改善讀取效能。",
+    "id": "saa-c03-032"
   },
   {
     "category": "安全性",
@@ -393,7 +425,8 @@
       "使用代理執行個體"
     ],
     "answer": 1,
-    "explanation": "PrivateLink 不需要公有 IP，流量保留在 VPC 區域中，是最安全的選項。"
+    "explanation": "PrivateLink 不需要公有 IP，流量保留在 VPC 區域中，是最安全的選項。",
+    "id": "saa-c03-033"
   },
   {
     "category": "應用程式整合",
@@ -405,7 +438,8 @@
       "使用一個 SQS 標準佇列，將付費使用者的可見性逾時設為零"
     ],
     "answer": 2,
-    "explanation": "需要兩個獨立佇列區分付費和免費請求，在應用程式中設定優先級。"
+    "explanation": "需要兩個獨立佇列區分付費和免費請求，在應用程式中設定優先級。",
+    "id": "saa-c03-034"
   },
   {
     "category": "網路",
@@ -417,7 +451,8 @@
       "在多個 DX 位置中設定 DX 連線"
     ],
     "answer": 3,
-    "explanation": "在多個位置使用不同設備終止的連線，可為關鍵工作負載實現最大彈性。"
+    "explanation": "在多個位置使用不同設備終止的連線，可為關鍵工作負載實現最大彈性。",
+    "id": "saa-c03-035"
   },
   {
     "category": "安全性",
@@ -429,7 +464,8 @@
       "更新 ECS 叢集的安全群組以允許存取 SQS"
     ],
     "answer": 2,
-    "explanation": "建立新的 IAM 角色作為任務角色，確保僅使用該任務建立的容器有權存取 SQS。"
+    "explanation": "建立新的 IAM 角色作為任務角色，確保僅使用該任務建立的容器有權存取 SQS。",
+    "id": "saa-c03-036"
   },
   {
     "category": "網路",
@@ -441,7 +477,8 @@
       "驗證 Internet 閘道是否連接到每個 VPC"
     ],
     "answer": 1,
-    "explanation": "路由表中的路由決定了網路流量的傳輸方向，需要設定路由才能在對等連線上路由流量。"
+    "explanation": "路由表中的路由決定了網路流量的傳輸方向，需要設定路由才能在對等連線上路由流量。",
+    "id": "saa-c03-037"
   },
   {
     "category": "儲存",
@@ -453,7 +490,8 @@
       "Amazon EC2 執行個體存放區"
     ],
     "answer": 0,
-    "explanation": "預置 IOPS 卷支援高速隨機讀寫，在 99.9% 的時間內提供預置效能，適合 I/O 密集型工作負載。"
+    "explanation": "預置 IOPS 卷支援高速隨機讀寫，在 99.9% 的時間內提供預置效能，適合 I/O 密集型工作負載。",
+    "id": "saa-c03-038"
   },
   {
     "category": "儲存",
@@ -465,7 +503,8 @@
       "使用至少三個預置 IOPS EBS 卷搭配 RAID 5"
     ],
     "answer": 1,
-    "explanation": "S3 Standard 是區域性服務，文件儲存具高可用性，可供跨多個可用區的 EC2 存取且立即返回。"
+    "explanation": "S3 Standard 是區域性服務，文件儲存具高可用性，可供跨多個可用區的 EC2 存取且立即返回。",
+    "id": "saa-c03-039"
   },
   {
     "category": "成本優化",
@@ -477,7 +516,8 @@
       "只有區域資料傳輸"
     ],
     "answer": 1,
-    "explanation": "停止的 EC2 不產生運算費用，但關聯的彈性 IP（未使用時）和附加的 EBS 卷仍會收費。"
+    "explanation": "停止的 EC2 不產生運算費用，但關聯的彈性 IP（未使用時）和附加的 EBS 卷仍會收費。",
+    "id": "saa-c03-040"
   },
   {
     "category": "運算",
@@ -489,7 +529,8 @@
       "Amazon S3 事件和 AWS Lambda"
     ],
     "answer": 3,
-    "explanation": "S3 事件通知觸發 Lambda 函數，Lambda 自動擴展來執行距離計算。"
+    "explanation": "S3 事件通知觸發 Lambda 函數，Lambda 自動擴展來執行距離計算。",
+    "id": "saa-c03-041"
   },
   {
     "category": "高可用性",
@@ -501,7 +542,8 @@
       "熱備用"
     ],
     "answer": 2,
-    "explanation": "Pilot Light 策略不會大幅增加成本，可實現 10 分鐘級的 RTO，且不會在備用區域保留不必要的資源。"
+    "explanation": "Pilot Light 策略不會大幅增加成本，可實現 10 分鐘級的 RTO，且不會在備用區域保留不必要的資源。",
+    "id": "saa-c03-042"
   },
   {
     "category": "成本優化",
@@ -513,7 +555,8 @@
       "減少到 256 MB，如果運行時間少於 5 分鐘"
     ],
     "answer": 0,
-    "explanation": "Lambda 成本 = 記憶體 × 時間。增加 100% 記憶體需減少 >100% 時間，或減少 50% 記憶體需增加 <200% 時間才能降低成本。"
+    "explanation": "Lambda 成本 = 記憶體 × 時間。增加 100% 記憶體需減少 >100% 時間，或減少 50% 記憶體需增加 <200% 時間才能降低成本。",
+    "id": "saa-c03-043"
   },
   {
     "category": "資料庫",
@@ -525,7 +568,8 @@
       "使用 RDS 預留執行個體搭配預置 IOPS"
     ],
     "answer": 1,
-    "explanation": "DynamoDB 搭配全域次要索引支援多種查詢，Auto Scaling 管理容量，TTL 自動刪除過期項目以降低成本。"
+    "explanation": "DynamoDB 搭配全域次要索引支援多種查詢，Auto Scaling 管理容量，TTL 自動刪除過期項目以降低成本。",
+    "id": "saa-c03-044"
   },
   {
     "category": "應用程式整合",
@@ -537,7 +581,8 @@
       "使用 ElastiCache for Redis 快取外部服務回應"
     ],
     "answer": 1,
-    "explanation": "SQS 將長時間執行的呼叫從互動式請求路徑移出，由單獨資源非同步完成。"
+    "explanation": "SQS 將長時間執行的呼叫從互動式請求路徑移出，由單獨資源非同步完成。",
+    "id": "saa-c03-045"
   },
   {
     "category": "儲存",
@@ -549,7 +594,8 @@
       "採用預置吞吐量模式的 Amazon EFS"
     ],
     "answer": 3,
-    "explanation": "EFS 預置吞吐量模式可立即預置吞吐量，與儲存量無關，提供最高吞吐量。"
+    "explanation": "EFS 預置吞吐量模式可立即預置吞吐量，與儲存量無關，提供最高吞吐量。",
+    "id": "saa-c03-046"
   },
   {
     "category": "部署與管理",
@@ -561,7 +607,8 @@
       "使用 AWS DMS 遷移資料庫到 RDS Multi-AZ，將應用程式遷移到 Elastic Beanstalk"
     ],
     "answer": 3,
-    "explanation": "AWS DMS 可在背景執行資料庫遷移並保持同步，切換時間極短。Elastic Beanstalk 自動處理部署和擴展。"
+    "explanation": "AWS DMS 可在背景執行資料庫遷移並保持同步，切換時間極短。Elastic Beanstalk 自動處理部署和擴展。",
+    "id": "saa-c03-047"
   },
   {
     "category": "應用程式整合",
@@ -573,7 +620,8 @@
       "設定獨立 SQS 佇列從主佇列提取失敗訊息"
     ],
     "answer": 1,
-    "explanation": "在主 SQS 佇列上設定重新驅動策略，自動將處理失敗達指定次數的訊息發送至死信佇列。"
+    "explanation": "在主 SQS 佇列上設定重新驅動策略，自動將處理失敗達指定次數的訊息發送至死信佇列。",
+    "id": "saa-c03-048"
   },
   {
     "category": "運算",
@@ -585,7 +633,8 @@
       "終止所有執行個體中最接近下一個計費小時的執行個體"
     ],
     "answer": 2,
-    "explanation": "預設終止策略首先確定哪個可用區有最多執行個體，以確保可用區之間平均分配。"
+    "explanation": "預設終止策略首先確定哪個可用區有最多執行個體，以確保可用區之間平均分配。",
+    "id": "saa-c03-049"
   },
   {
     "category": "安全性",
@@ -597,7 +646,8 @@
       "儲存在 Amazon EFS 上的密鑰檔案中"
     ],
     "answer": 1,
-    "explanation": "Parameter Store 提供安全的分層儲存，可將密鑰作為加密資料儲存，並提供存取控制和變更通知。"
+    "explanation": "Parameter Store 提供安全的分層儲存，可將密鑰作為加密資料儲存，並提供存取控制和變更通知。",
+    "id": "saa-c03-050"
   },
   {
     "category": "資料庫",
@@ -609,7 +659,8 @@
       "建立加密的唯讀複本，提升為主要執行個體"
     ],
     "answer": 2,
-    "explanation": "只能在建立時設定加密。但可以建立未加密快照的加密副本，再從中還原新的加密執行個體。"
+    "explanation": "只能在建立時設定加密。但可以建立未加密快照的加密副本，再從中還原新的加密執行個體。",
+    "id": "saa-c03-051"
   },
   {
     "category": "儲存",
@@ -621,7 +672,8 @@
       "在批處理期間使用 Kinesis Data Analytics 執行查詢"
     ],
     "answer": 1,
-    "explanation": "分區減少掃描資料量，Parquet 列式格式提高壓縮比和查詢效能。"
+    "explanation": "分區減少掃描資料量，Parquet 列式格式提高壓縮比和查詢效能。",
+    "id": "saa-c03-052"
   },
   {
     "category": "安全性",
@@ -633,7 +685,8 @@
       "使用 AWS KMS 託管金鑰進行 SSE-KMS"
     ],
     "answer": 3,
-    "explanation": "SSE-KMS 使用 AWS KMS 建立、管理和輪換加密金鑰，使用者可控制金鑰存取權限。"
+    "explanation": "SSE-KMS 使用 AWS KMS 建立、管理和輪換加密金鑰，使用者可控制金鑰存取權限。",
+    "id": "saa-c03-053"
   },
   {
     "category": "成本優化",
@@ -645,7 +698,8 @@
       "在子網上設定網路 ACL 以授權 S3 存取"
     ],
     "answer": 2,
-    "explanation": "S3 VPC 端點（閘道端點）不會產生到 S3 的流量費用，可取代 NAT 閘道降低成本。"
+    "explanation": "S3 VPC 端點（閘道端點）不會產生到 S3 的流量費用，可取代 NAT 閘道降低成本。",
+    "id": "saa-c03-054"
   },
   {
     "category": "高可用性",
@@ -657,7 +711,8 @@
       "具有跨區域快照副本的 Amazon RDS for MySQL"
     ],
     "answer": 0,
-    "explanation": "Aurora 全域資料庫提供 1 秒的有效 RPO 和低於 1 分鐘的 RTO，適合多區域災難復原。"
+    "explanation": "Aurora 全域資料庫提供 1 秒的有效 RPO 和低於 1 分鐘的 RTO，適合多區域災難復原。",
+    "id": "saa-c03-055"
   },
   {
     "category": "網路",
@@ -669,7 +724,8 @@
       "使用 ElastiCache for Redis 進行快取"
     ],
     "answer": 2,
-    "explanation": "CloudFront CDN 可將提供內容（影片和圖片）的負載從來源伺服器分流，立即減輕負載。"
+    "explanation": "CloudFront CDN 可將提供內容（影片和圖片）的負載從來源伺服器分流，立即減輕負載。",
+    "id": "saa-c03-056"
   },
   {
     "category": "成本優化",
@@ -681,7 +737,8 @@
       "使用 EFS Standard-IA，RDS Multi-AZ 保留中繼資料"
     ],
     "answer": 2,
-    "explanation": "S3 Standard-IA 適合不常存取但需立即返回的文件。DynamoDB 比 RDS 更經濟高效地儲存和檢索中繼資料。"
+    "explanation": "S3 Standard-IA 適合不常存取但需立即返回的文件。DynamoDB 比 RDS 更經濟高效地儲存和檢索中繼資料。",
+    "id": "saa-c03-057"
   },
   {
     "category": "安全性",
@@ -693,7 +750,8 @@
       "向策略中新增 Principal 元素以宣告哪些帳戶具有存取權限"
     ],
     "answer": 3,
-    "explanation": "基於資源的策略必須包含 Principal 元素來指定哪些帳戶或使用者具有存取權限。"
+    "explanation": "基於資源的策略必須包含 Principal 元素來指定哪些帳戶或使用者具有存取權限。",
+    "id": "saa-c03-058"
   },
   {
     "category": "成本優化",
@@ -705,7 +763,8 @@
       "公司需要為夜間和週末的 EBS 儲存付費"
     ],
     "answer": 3,
-    "explanation": "停止 EC2 時不收取運算費用，但附加的 EBS 卷在停止期間仍會持續收費。"
+    "explanation": "停止 EC2 時不收取運算費用，但附加的 EBS 卷在停止期間仍會持續收費。",
+    "id": "saa-c03-059"
   },
   {
     "category": "成本優化",
@@ -717,7 +776,8 @@
       "建立 Lambda 函數在無連線時停止執行個體"
     ],
     "answer": 1,
-    "explanation": "Aurora Serverless 根據需求自動啟動和關閉，適合不經常使用的工作負載，只在使用時付費。"
+    "explanation": "Aurora Serverless 根據需求自動啟動和關閉，適合不經常使用的工作負載，只在使用時付費。",
+    "id": "saa-c03-060"
   },
   {
     "category": "安全性",
@@ -729,7 +789,8 @@
       "兩條語句：Allow dynamodb:* 和 Deny dynamodb:*:* 都指向 table/Books"
     ],
     "answer": 0,
-    "explanation": "僅授予特定操作（Put、Update、Delete）到特定資料表（Books）的權限，實現最低存取權限。"
+    "explanation": "僅授予特定操作（Put、Update、Delete）到特定資料表（Books）的權限，實現最低存取權限。",
+    "id": "saa-c03-061"
   },
   {
     "category": "網路",
@@ -741,7 +802,8 @@
       "在提供者 VPC 中建立代理伺服器"
     ],
     "answer": 0,
-    "explanation": "VPC 端點服務（PrivateLink）可私密連接 VPC，流量不離開 Amazon 網路，具有容錯能力。"
+    "explanation": "VPC 端點服務（PrivateLink）可私密連接 VPC，流量不離開 Amazon 網路，具有容錯能力。",
+    "id": "saa-c03-062"
   },
   {
     "category": "網路",
@@ -753,7 +815,8 @@
       "設定 Route 53 基於延遲的路由策略"
     ],
     "answer": 0,
-    "explanation": "Global Accelerator 透過 AWS 全球網路優化路徑，提高 TCP 和 UDP 效能，無需在多個區域部署。"
+    "explanation": "Global Accelerator 透過 AWS 全球網路優化路徑，提高 TCP 和 UDP 效能，無需在多個區域部署。",
+    "id": "saa-c03-063"
   },
   {
     "category": "安全性",
@@ -765,7 +828,8 @@
       "在 Web 伺服器安全群組上開啟 MySQL 埠，在資料庫安全群組上開啟 HTTPS 埠"
     ],
     "answer": 1,
-    "explanation": "Web 伺服器安全群組開放 HTTPS（0.0.0.0/0），資料庫安全群組僅允許來自 Web 伺服器安全群組的 MySQL 流量。"
+    "explanation": "Web 伺服器安全群組開放 HTTPS（0.0.0.0/0），資料庫安全群組僅允許來自 Web 伺服器安全群組的 MySQL 流量。",
+    "id": "saa-c03-064"
   },
   {
     "category": "安全性",
@@ -777,7 +841,8 @@
       "建立 CloudFront 分佈以分配和快取檔案"
     ],
     "answer": 0,
-    "explanation": "S3 預簽名 URL 可將下載負載從 Web 伺服器轉移到 S3，且每個 URL 與特定操作和到期日關聯，確保使用者僅下載自己的檔案。"
+    "explanation": "S3 預簽名 URL 可將下載負載從 Web 伺服器轉移到 S3，且每個 URL 與特定操作和到期日關聯，確保使用者僅下載自己的檔案。",
+    "id": "saa-c03-065"
   },
   {
     "category": "網路",
@@ -789,7 +854,8 @@
       "對 ELB 的 AWS 帳戶操作歷史"
     ],
     "answer": 1,
-    "explanation": "ELB 存取日誌會記錄發送到 ELB 的請求，並將日誌儲存到 Amazon S3。日誌包含用戶端的存取時間、來源 IP 位址、連接埠號、狀態碼等連線資訊。其他選項：目標數量由 CloudWatch 指標監控；帳戶操作歷史由 CloudTrail 記錄；系統日誌則存放在各目標內部。"
+    "explanation": "ELB 存取日誌會記錄發送到 ELB 的請求，並將日誌儲存到 Amazon S3。日誌包含用戶端的存取時間、來源 IP 位址、連接埠號、狀態碼等連線資訊。其他選項：目標數量由 CloudWatch 指標監控；帳戶操作歷史由 CloudTrail 記錄；系統日誌則存放在各目標內部。",
+    "id": "saa-c03-066"
   },
   {
     "category": "運算",
@@ -801,7 +867,8 @@
       "啟動 EC2 執行個體所需的 OS 和中介軟體等範本"
     ],
     "answer": 3,
-    "explanation": "AMI 是啟動 EC2 執行個體所需的 OS、中介軟體等範本。其他選項分別是：執行個體類型（CPU/記憶體組合）、密鑰對（加密金鑰）、執行個體存放區（暫時性儲存）的說明。"
+    "explanation": "AMI 是啟動 EC2 執行個體所需的 OS、中介軟體等範本。其他選項分別是：執行個體類型（CPU/記憶體組合）、密鑰對（加密金鑰）、執行個體存放區（暫時性儲存）的說明。",
+    "id": "saa-c03-067"
   },
   {
     "category": "運算",
@@ -813,7 +880,8 @@
       "虛擬伺服器"
     ],
     "answer": 3,
-    "explanation": "Amazon EC2 是在 AWS 上提供虛擬伺服器的服務。其他選項對應的服務：儲存為 S3/EBS/EFS、虛擬網路為 VPC、無伺服器運算為 Lambda/Fargate。"
+    "explanation": "Amazon EC2 是在 AWS 上提供虛擬伺服器的服務。其他選項對應的服務：儲存為 S3/EBS/EFS、虛擬網路為 VPC、無伺服器運算為 Lambda/Fargate。",
+    "id": "saa-c03-068"
   },
   {
     "category": "安全性",
@@ -825,7 +893,8 @@
       "AWS 安全防護責任由 AWS 與使用者分擔的模型"
     ],
     "answer": 3,
-    "explanation": "共享責任模型是將安全防護責任由 AWS 和使用者分擔。AWS 負責其提供的服務範圍的安全，使用者負責自行設定和管理範圍的安全。"
+    "explanation": "共享責任模型是將安全防護責任由 AWS 和使用者分擔。AWS 負責其提供的服務範圍的安全，使用者負責自行設定和管理範圍的安全。",
+    "id": "saa-c03-069"
   },
   {
     "category": "儲存",
@@ -837,7 +906,8 @@
       "S3 Intelligent-Tiering"
     ],
     "answer": 1,
-    "explanation": "S3 Glacier Flexible Retrieval 適合低存取頻率且可接受數分鐘至數小時取出延遲的歸檔資料，保存費用低廉。S3 Standard-IA 和 Glacier Instant Retrieval 可即時取出但費用較高；Intelligent-Tiering 適合存取頻率不可預測的資料。"
+    "explanation": "S3 Glacier Flexible Retrieval 適合低存取頻率且可接受數分鐘至數小時取出延遲的歸檔資料，保存費用低廉。S3 Standard-IA 和 Glacier Instant Retrieval 可即時取出但費用較高；Intelligent-Tiering 適合存取頻率不可預測的資料。",
+    "id": "saa-c03-070"
   },
   {
     "category": "網路",
@@ -849,7 +919,8 @@
       "虛擬伺服器"
     ],
     "answer": 0,
-    "explanation": "ELB 是 AWS 提供的負載分散服務，屬於託管服務。ELB 將請求路由到目標群組中的目標（執行個體、IP 位址、Lambda 函數），通常採用多可用區部署以提高可用性。"
+    "explanation": "ELB 是 AWS 提供的負載分散服務，屬於託管服務。ELB 將請求路由到目標群組中的目標（執行個體、IP 位址、Lambda 函數），通常採用多可用區部署以提高可用性。",
+    "id": "saa-c03-071"
   },
   {
     "category": "運算",
@@ -861,7 +932,8 @@
       "根據需求自動擴大/縮小 AWS 資源的效能"
     ],
     "answer": 0,
-    "explanation": "Auto Scaling 根據負載狀況或排程自動進行水平擴展（增加資源）和水平縮減（減少資源）。注意 Auto Scaling 是調整數量（Scale Out/In），不是調整效能（Scale Up/Down）。請求分配是 ELB 的功能；網路存取控制是安全群組/網路 ACL 的功能。"
+    "explanation": "Auto Scaling 根據負載狀況或排程自動進行水平擴展（增加資源）和水平縮減（減少資源）。注意 Auto Scaling 是調整數量（Scale Out/In），不是調整效能（Scale Up/Down）。請求分配是 ELB 的功能；網路存取控制是安全群組/網路 ACL 的功能。",
+    "id": "saa-c03-072"
   },
   {
     "category": "網路",
@@ -873,7 +945,8 @@
       "虛擬伺服器"
     ],
     "answer": 1,
-    "explanation": "Amazon VPC 是在 AWS 上提供虛擬網路環境的服務。VPC 可在一個區域內建立多個，每個 VPC 橫跨該區域內所有可用區，預設與其他 VPC 和網際網路隔離。"
+    "explanation": "Amazon VPC 是在 AWS 上提供虛擬網路環境的服務。VPC 可在一個區域內建立多個，每個 VPC 橫跨該區域內所有可用區，預設與其他 VPC 和網際網路隔離。",
+    "id": "saa-c03-073"
   },
   {
     "category": "安全性",
@@ -885,7 +958,8 @@
       "AWS 內的身分驗證與授權"
     ],
     "answer": 3,
-    "explanation": "AWS IAM 是管理 AWS 資源存取的服務，定義「誰」可以「對哪些資源」執行「哪些操作」，提供身分驗證和授權。其他選項對應：負載分散為 ELB、虛擬網路為 VPC、資源監控為 CloudWatch。"
+    "explanation": "AWS IAM 是管理 AWS 資源存取的服務，定義「誰」可以「對哪些資源」執行「哪些操作」，提供身分驗證和授權。其他選項對應：負載分散為 ELB、虛擬網路為 VPC、資源監控為 CloudWatch。",
+    "id": "saa-c03-074"
   },
   {
     "category": "網路",
@@ -897,7 +971,8 @@
       "記錄存取 ELB 下執行個體的用戶端連線資訊"
     ],
     "answer": 0,
-    "explanation": "SNI（Server Name Indication）是根據網域名稱（而非 IP 位址）判斷使用哪張伺服器憑證的技術。支援 SNI 的 ELB（ALB 和 NLB）可安裝多張憑證，根據目標網域選擇適當憑證進行轉發。"
+    "explanation": "SNI（Server Name Indication）是根據網域名稱（而非 IP 位址）判斷使用哪張伺服器憑證的技術。支援 SNI 的 ELB（ALB 和 NLB）可安裝多張憑證，根據目標網域選擇適當憑證進行轉發。",
+    "id": "saa-c03-075"
   },
   {
     "category": "部署與管理",
@@ -909,7 +984,8 @@
       "telnet"
     ],
     "answer": 2,
-    "explanation": "AWS CLI 是從命令列操作 AWS 資源的工具，提供 Windows/Mac/Linux 版本。AWS 管理主控台是透過瀏覽器操作的 GUI 工具；SSH 和 telnet 是遠端連線工具但非 AWS 提供。"
+    "explanation": "AWS CLI 是從命令列操作 AWS 資源的工具，提供 Windows/Mac/Linux 版本。AWS 管理主控台是透過瀏覽器操作的 GUI 工具；SSH 和 telnet 是遠端連線工具但非 AWS 提供。",
+    "id": "saa-c03-076"
   },
   {
     "category": "成本優化",
@@ -921,7 +997,8 @@
       "長期執行個體"
     ],
     "answer": 2,
-    "explanation": "預留執行個體透過 1 年或 3 年的長期合約，以低於隨需執行個體的價格使用。合約期越長、預付越多，折扣越大。Spot 執行個體可能被中斷，不適合需穩定運行的系統；長期執行個體不存在。"
+    "explanation": "預留執行個體透過 1 年或 3 年的長期合約，以低於隨需執行個體的價格使用。合約期越長、預付越多，折扣越大。Spot 執行個體可能被中斷，不適合需穩定運行的系統；長期執行個體不存在。",
+    "id": "saa-c03-077"
   },
   {
     "category": "成本優化",
@@ -933,7 +1010,8 @@
       "臨時執行個體"
     ],
     "answer": 0,
-    "explanation": "Spot 執行個體使用 AWS 閒置的 EC2 容量，折扣最高。但需求增加或供應不足時可能被中斷，適合可容忍中斷的工作負載（如平行批次處理）。預留執行個體不適合臨時使用；臨時執行個體不存在。"
+    "explanation": "Spot 執行個體使用 AWS 閒置的 EC2 容量，折扣最高。但需求增加或供應不足時可能被中斷，適合可容忍中斷的工作負載（如平行批次處理）。預留執行個體不適合臨時使用；臨時執行個體不存在。",
+    "id": "saa-c03-078"
   },
   {
     "category": "運算",
@@ -949,7 +1027,8 @@
       0,
       3
     ],
-    "explanation": "T 系列屬於通用型，適合暫時性 CPU 高負載的中小型伺服器；I 系列屬於儲存優化型，適合需要高磁碟吞吐量的伺服器。C 系列是運算優化型（非通用）；P 系列是加速運算型（非記憶體優化）；R 系列是記憶體優化型（非運算優化）。"
+    "explanation": "T 系列屬於通用型，適合暫時性 CPU 高負載的中小型伺服器；I 系列屬於儲存優化型，適合需要高磁碟吞吐量的伺服器。C 系列是運算優化型（非通用）；P 系列是加速運算型（非記憶體優化）；R 系列是記憶體優化型（非運算優化）。",
+    "id": "saa-c03-079"
   },
   {
     "category": "網路",
@@ -961,7 +1040,8 @@
       "私有 IP 位址"
     ],
     "answer": 1,
-    "explanation": "公有 IP 位址在執行個體建立於公有子網時自動指派，可與網際網路通訊。非 Elastic IP 的公有 IP 在資源停止時會被釋放，重新啟動時會指派新的 IP。Elastic IP 不會在停止時釋放；私有 IP 無法與網際網路通訊。"
+    "explanation": "公有 IP 位址在執行個體建立於公有子網時自動指派，可與網際網路通訊。非 Elastic IP 的公有 IP 在資源停止時會被釋放，重新啟動時會指派新的 IP。Elastic IP 不會在停止時釋放；私有 IP 無法與網際網路通訊。",
+    "id": "saa-c03-080"
   },
   {
     "category": "運算",
@@ -973,7 +1053,8 @@
       "Amazon Machine Image（AMI）"
     ],
     "answer": 0,
-    "explanation": "執行個體類型定義了 EC2 的 CPU 核心數、記憶體容量、儲存類型和網路容量的組合。使用者依需求選擇合適的類型建立執行個體。其他選項分別是：購買選項、暫時性儲存、OS 範本。"
+    "explanation": "執行個體類型定義了 EC2 的 CPU 核心數、記憶體容量、儲存類型和網路容量的組合。使用者依需求選擇合適的類型建立執行個體。其他選項分別是：購買選項、暫時性儲存、OS 範本。",
+    "id": "saa-c03-081"
   },
   {
     "category": "儲存",
@@ -985,7 +1066,8 @@
       "跨區域複寫"
     ],
     "answer": 3,
-    "explanation": "跨區域複寫（Cross-Region Replication）設定後，會自動將物件非同步複製到其他區域的儲存貯體。版本控制是物件版本管理；預簽名 URL 是提供限時存取的 URL；Transfer Acceleration 是加速資料傳輸。"
+    "explanation": "跨區域複寫（Cross-Region Replication）設定後，會自動將物件非同步複製到其他區域的儲存貯體。版本控制是物件版本管理；預簽名 URL 是提供限時存取的 URL；Transfer Acceleration 是加速資料傳輸。",
+    "id": "saa-c03-082"
   },
   {
     "category": "運算",
@@ -997,7 +1079,8 @@
       "執行個體"
     ],
     "answer": 3,
-    "explanation": "AWS 服務提供的虛擬伺服器稱為「執行個體」。EC2 的虛擬伺服器稱為「EC2 執行個體」，RDS 的則稱為「DB 執行個體」。"
+    "explanation": "AWS 服務提供的虛擬伺服器稱為「執行個體」。EC2 的虛擬伺服器稱為「EC2 執行個體」，RDS 的則稱為「DB 執行個體」。",
+    "id": "saa-c03-083"
   },
   {
     "category": "運算",
@@ -1009,7 +1092,8 @@
       "提供包含應用程式在內所有功能的服務"
     ],
     "answer": 1,
-    "explanation": "PaaS（Platform as a Service）提供包含 OS、中介軟體、執行環境等的平台，使用者無需管理基礎設施即可開發部署應用程式。IaaS 提供伺服器功能；SaaS 提供完整應用程式；CaaS 提供容器環境。"
+    "explanation": "PaaS（Platform as a Service）提供包含 OS、中介軟體、執行環境等的平台，使用者無需管理基礎設施即可開發部署應用程式。IaaS 提供伺服器功能；SaaS 提供完整應用程式；CaaS 提供容器環境。",
+    "id": "saa-c03-084"
   },
   {
     "category": "運算",
@@ -1021,7 +1105,8 @@
       "全域"
     ],
     "answer": 0,
-    "explanation": "可用區（Availability Zone, AZ）由一個或多個資料中心組成，多個 AZ 組成一個區域。全域是指全球通用的 AWS 服務範圍；邊緣站點是用於 CloudFront 等服務的資料中心；本地是自建機房環境。"
+    "explanation": "可用區（Availability Zone, AZ）由一個或多個資料中心組成，多個 AZ 組成一個區域。全域是指全球通用的 AWS 服務範圍；邊緣站點是用於 CloudFront 等服務的資料中心；本地是自建機房環境。",
+    "id": "saa-c03-085"
   },
   {
     "category": "運算",
@@ -1033,7 +1118,8 @@
       "全球"
     ],
     "answer": 2,
-    "explanation": "全域（Global）是全球通用的 AWS 服務提供範圍。全域服務包括 CloudFront、AWS WAF 等。區域是地理區域劃分；可用區是區域內的資料中心群；「全球」不是 AWS 基礎設施的術語。"
+    "explanation": "全域（Global）是全球通用的 AWS 服務提供範圍。全域服務包括 CloudFront、AWS WAF 等。區域是地理區域劃分；可用區是區域內的資料中心群；「全球」不是 AWS 基礎設施的術語。",
+    "id": "saa-c03-086"
   },
   {
     "category": "運算",
@@ -1045,7 +1131,8 @@
       "「5」是執行個體大小"
     ],
     "answer": 1,
-    "explanation": "執行個體類型名稱由三部分組成：m（執行個體系列）、5（世代）、xlarge（大小）。因此「m」是執行個體系列。「5」是世代而非大小；「xlarge」是大小而非世代；「執行個體類別」不是 AWS 術語。"
+    "explanation": "執行個體類型名稱由三部分組成：m（執行個體系列）、5（世代）、xlarge（大小）。因此「m」是執行個體系列。「5」是世代而非大小；「xlarge」是大小而非世代；「執行個體類別」不是 AWS 術語。",
+    "id": "saa-c03-087"
   },
   {
     "category": "安全性",
@@ -1061,7 +1148,8 @@
       0,
       3
     ],
-    "explanation": "AWS 負責其服務所運行的硬體安全和資料中心安全，包括資料中心進出管理及網路設備韌體更新。資料庫存取權限管理、帳戶管理和資料加密都屬於使用者的責任範圍。"
+    "explanation": "AWS 負責其服務所運行的硬體安全和資料中心安全，包括資料中心進出管理及網路設備韌體更新。資料庫存取權限管理、帳戶管理和資料加密都屬於使用者的責任範圍。",
+    "id": "saa-c03-088"
   },
   {
     "category": "儲存",
@@ -1073,7 +1161,8 @@
       "變更為 S3 Glacier Flexible Retrieval"
     ],
     "answer": 1,
-    "explanation": "S3 Standard-IA 保存費用低於 S3 Standard，雖有取出費用但可低延遲存取，適合存取頻率低但需即時取出的資料。S3 One Zone-IA 只存放在單一 AZ 有資料遺失風險；Glacier 取出有延遲；Intelligent-Tiering 適合存取頻率不可預測的情況。"
+    "explanation": "S3 Standard-IA 保存費用低於 S3 Standard，雖有取出費用但可低延遲存取，適合存取頻率低但需即時取出的資料。S3 One Zone-IA 只存放在單一 AZ 有資料遺失風險；Glacier 取出有延遲；Intelligent-Tiering 適合存取頻率不可預測的情況。",
+    "id": "saa-c03-089"
   },
   {
     "category": "儲存",
@@ -1085,7 +1174,8 @@
       "S3 Intelligent-Tiering"
     ],
     "answer": 3,
-    "explanation": "S3 Intelligent-Tiering 會根據實際存取模式自動在高頻/低頻/歸檔階層間移動物件，適合存取頻率不可預測的資料。有月額監控費用但無取出手續費。其他類別適合存取頻率可預測的情況。"
+    "explanation": "S3 Intelligent-Tiering 會根據實際存取模式自動在高頻/低頻/歸檔階層間移動物件，適合存取頻率不可預測的資料。有月額監控費用但無取出手續費。其他類別適合存取頻率可預測的情況。",
+    "id": "saa-c03-090"
   },
   {
     "category": "儲存",
@@ -1097,7 +1187,8 @@
       "加速使用者與 S3 儲存貯體間資料傳輸的功能"
     ],
     "answer": 3,
-    "explanation": "S3 Transfer Acceleration 透過距離使用者最近的邊緣站點，經由 AWS 全球網路加速與 S3 儲存貯體間的資料傳輸。跨區域儲存是跨區域複寫的功能；專用網路傳輸是 Direct Connect 的功能。"
+    "explanation": "S3 Transfer Acceleration 透過距離使用者最近的邊緣站點，經由 AWS 全球網路加速與 S3 儲存貯體間的資料傳輸。跨區域儲存是跨區域複寫的功能；專用網路傳輸是 Direct Connect 的功能。",
+    "id": "saa-c03-091"
   },
   {
     "category": "儲存",
@@ -1109,7 +1200,8 @@
       "指定「快速取出」選項執行還原請求"
     ],
     "answer": 3,
-    "explanation": "快速取出選項可在 1～5 分鐘內取出 250MB 以下的資料（僅 S3 Glacier Flexible Retrieval 支援）。標準取出需數分鐘至數小時；Glacier 資料只能還原到 S3 儲存貯體，無法直接下載。"
+    "explanation": "快速取出選項可在 1～5 分鐘內取出 250MB 以下的資料（僅 S3 Glacier Flexible Retrieval 支援）。標準取出需數分鐘至數小時；Glacier 資料只能還原到 S3 儲存貯體，無法直接下載。",
+    "id": "saa-c03-092"
   },
   {
     "category": "安全性",
@@ -1121,7 +1213,8 @@
       "MFA Delete"
     ],
     "answer": 3,
-    "explanation": "MFA Delete 啟用後，刪除版本化物件時需要根使用者進行 MFA 驗證，可防止誤刪和未授權刪除。儲存貯體策略、IAM 策略和 ACL 都是存取管理功能，但無法限制為僅根使用者可刪除版本化資料。"
+    "explanation": "MFA Delete 啟用後，刪除版本化物件時需要根使用者進行 MFA 驗證，可防止誤刪和未授權刪除。儲存貯體策略、IAM 策略和 ACL 都是存取管理功能，但無法限制為僅根使用者可刪除版本化資料。",
+    "id": "saa-c03-093"
   },
   {
     "category": "安全性",
@@ -1133,7 +1226,8 @@
       "儲存貯體策略"
     ],
     "answer": 0,
-    "explanation": "ACL 是以 AWS 帳戶為單位設定存取權限的功能，允許其他帳戶讀取/寫入儲存貯體或物件，但不支援 IP 位址或網域的存取控制。儲存貯體策略可依 IP 控制；IAM 策略無法設定其他帳戶權限；預簽名 URL 是提供臨時存取的功能。"
+    "explanation": "ACL 是以 AWS 帳戶為單位設定存取權限的功能，允許其他帳戶讀取/寫入儲存貯體或物件，但不支援 IP 位址或網域的存取控制。儲存貯體策略可依 IP 控制；IAM 策略無法設定其他帳戶權限；預簽名 URL 是提供臨時存取的功能。",
+    "id": "saa-c03-094"
   },
   {
     "category": "安全性",
@@ -1145,7 +1239,8 @@
       "生命週期"
     ],
     "answer": 2,
-    "explanation": "儲存貯體策略是以儲存貯體為單位設定存取權限的資源型策略，可對本帳戶 IAM 使用者和其他帳戶設定權限，並支援 IP 位址存取控制。IAM 策略無法對其他帳戶設定；ACL 不支援 IP 控制；生命週期是自動化儲存類別變更的功能。"
+    "explanation": "儲存貯體策略是以儲存貯體為單位設定存取權限的資源型策略，可對本帳戶 IAM 使用者和其他帳戶設定權限，並支援 IP 位址存取控制。IAM 策略無法對其他帳戶設定；ACL 不支援 IP 控制；生命週期是自動化儲存類別變更的功能。",
+    "id": "saa-c03-095"
   },
   {
     "category": "安全性",
@@ -1161,7 +1256,8 @@
       1,
       4
     ],
-    "explanation": "SSE-S3 是伺服器端加密的一種，S3 在儲存資料時自動加密，取出時自動解密。金鑰由 S3 管理。其他兩種伺服器端加密：SSE-KMS（金鑰由 KMS 管理）、SSE-C（金鑰由使用者管理）。"
+    "explanation": "SSE-S3 是伺服器端加密的一種，S3 在儲存資料時自動加密，取出時自動解密。金鑰由 S3 管理。其他兩種伺服器端加密：SSE-KMS（金鑰由 KMS 管理）、SSE-C（金鑰由使用者管理）。",
+    "id": "saa-c03-096"
   },
   {
     "category": "儲存",
@@ -1173,7 +1269,8 @@
       "生命週期"
     ],
     "answer": 3,
-    "explanation": "生命週期可根據指定的時間自動將資料移至更具成本效益的儲存類別，或刪除過期資料。版本控制是版本管理；儲存貯體策略是存取權限設定；MFA Delete 是刪除時需 MFA 驗證的功能。"
+    "explanation": "生命週期可根據指定的時間自動將資料移至更具成本效益的儲存類別，或刪除過期資料。版本控制是版本管理；儲存貯體策略是存取權限設定；MFA Delete 是刪除時需 MFA 驗證的功能。",
+    "id": "saa-c03-097"
   },
   {
     "category": "儲存",
@@ -1185,7 +1282,8 @@
       "存入 S3 Standard，30 天後移至 S3 One Zone-IA"
     ],
     "answer": 0,
-    "explanation": "前 1 個月用 S3 Standard（高頻存取免取出費），之後移至 S3 Standard-IA（低頻但可即時取出）。Glacier 有取出延遲不符需求；One Zone-IA 僅存於單一 AZ 有資料遺失風險。"
+    "explanation": "前 1 個月用 S3 Standard（高頻存取免取出費），之後移至 S3 Standard-IA（低頻但可即時取出）。Glacier 有取出延遲不符需求；One Zone-IA 僅存於單一 AZ 有資料遺失風險。",
+    "id": "saa-c03-098"
   },
   {
     "category": "儲存",
@@ -1197,7 +1295,8 @@
       "儲存貯體名稱可以變更"
     ],
     "answer": 2,
-    "explanation": "S3 儲存貯體名稱必須在全球範圍內唯一，且建立後無法變更。單一儲存貯體可儲存的物件數量無限制。URL 是指派給物件而非儲存貯體。"
+    "explanation": "S3 儲存貯體名稱必須在全球範圍內唯一，且建立後無法變更。單一儲存貯體可儲存的物件數量無限制。URL 是指派給物件而非儲存貯體。",
+    "id": "saa-c03-099"
   },
   {
     "category": "安全性",
@@ -1213,7 +1312,8 @@
       0,
       3
     ],
-    "explanation": "使用者負責：資料庫稽核日誌管理和客體 OS 安全修補。AWS 負責：網路設備韌體更新、Hypervisor 修補和實體磁碟銷毀，這些屬於基礎設施層的安全。"
+    "explanation": "使用者負責：資料庫稽核日誌管理和客體 OS 安全修補。AWS 負責：網路設備韌體更新、Hypervisor 修補和實體磁碟銷毀，這些屬於基礎設施層的安全。",
+    "id": "saa-c03-100"
   },
   {
     "category": "儲存",
@@ -1225,7 +1325,8 @@
       "S3 Glacier Flexible Retrieval"
     ],
     "answer": 0,
-    "explanation": "S3 Glacier Deep Archive 是所有 S3 儲存類別中保存費用最低的，適合幾乎不存取且可接受長時間取出延遲的長期歸檔資料。Glacier Flexible Retrieval 取出較快但保存費較高；Standard-IA 和 Instant Retrieval 保存費更高。"
+    "explanation": "S3 Glacier Deep Archive 是所有 S3 儲存類別中保存費用最低的，適合幾乎不存取且可接受長時間取出延遲的長期歸檔資料。Glacier Flexible Retrieval 取出較快但保存費較高；Standard-IA 和 Instant Retrieval 保存費更高。",
+    "id": "saa-c03-101"
   },
   {
     "category": "運算",
@@ -1237,7 +1338,8 @@
       "資源數最多的 AZ 中，啟動時間最新的資源"
     ],
     "answer": 2,
-    "explanation": "預設終止策略會先選擇資源數最多的 AZ，然後刪除使用最舊啟動範本（或啟動組態）建立的資源。可透過「執行個體保護」防止特定資源被終止。"
+    "explanation": "預設終止策略會先選擇資源數最多的 AZ，然後刪除使用最舊啟動範本（或啟動組態）建立的資源。可透過「執行個體保護」防止特定資源被終止。",
+    "id": "saa-c03-102"
   },
   {
     "category": "運算",
@@ -1249,7 +1351,8 @@
       "目標追蹤擴縮"
     ],
     "answer": 1,
-    "explanation": "排程擴縮可根據預定的日期時間進行一次性或定期的執行個體增減，適合可預測的負載變化。目標追蹤依指標維持目標值；簡單/步進擴縮依閾值觸發；這些都不適合按時段擴縮。"
+    "explanation": "排程擴縮可根據預定的日期時間進行一次性或定期的執行個體增減，適合可預測的負載變化。目標追蹤依指標維持目標值；簡單/步進擴縮依閾值觸發；這些都不適合按時段擴縮。",
+    "id": "saa-c03-103"
   },
   {
     "category": "運算",
@@ -1261,7 +1364,8 @@
       "想在執行高負載作業前先水平擴展時"
     ],
     "answer": 3,
-    "explanation": "手動擴縮適合在批次處理等高負載作業前，手動增加資源數量，作業後再減少。維持 CPU 使用率用目標追蹤擴縮；依歷史資料用預測擴縮；定期排程用排程擴縮。"
+    "explanation": "手動擴縮適合在批次處理等高負載作業前，手動增加資源數量，作業後再減少。維持 CPU 使用率用目標追蹤擴縮；依歷史資料用預測擴縮；定期排程用排程擴縮。",
+    "id": "saa-c03-104"
   },
   {
     "category": "網路",
@@ -1273,7 +1377,8 @@
       "使用 ALB 的路徑型路由"
     ],
     "answer": 1,
-    "explanation": "主機型路由根據請求的 FQDN（網域名稱）決定路由目標，僅 ALB 支援。CLB 不支援主機型路由；路徑型路由是依 URL 路徑決定；多 AZ 部署是提高可用性而非路由功能。"
+    "explanation": "主機型路由根據請求的 FQDN（網域名稱）決定路由目標，僅 ALB 支援。CLB 不支援主機型路由；路徑型路由是依 URL 路徑決定；多 AZ 部署是提高可用性而非路由功能。",
+    "id": "saa-c03-105"
   },
   {
     "category": "運算",
@@ -1285,7 +1390,8 @@
       "Auto Scaling 自動擴縮的閾值"
     ],
     "answer": 2,
-    "explanation": "健康檢查寬限期是資源啟動後到首次健康檢查的等待時間，防止應用程式尚未完全啟動就被健康檢查判定為異常。檢查間隔、終止策略和擴縮閾值是不同的概念。"
+    "explanation": "健康檢查寬限期是資源啟動後到首次健康檢查的等待時間，防止應用程式尚未完全啟動就被健康檢查判定為異常。檢查間隔、終止策略和擴縮閾值是不同的概念。",
+    "id": "saa-c03-106"
   },
   {
     "category": "網路",
@@ -1297,7 +1403,8 @@
       "變更各執行個體的類型"
     ],
     "answer": 0,
-    "explanation": "ALB 支援路徑型路由，可根據 URL 路徑將請求路由到不同目標群組，因此可用 1 台 ALB 取代 5 台 CLB。ELB 本身會自動擴縮，不會造成效能問題。減少執行個體或變更類型可能影響效能。"
+    "explanation": "ALB 支援路徑型路由，可根據 URL 路徑將請求路由到不同目標群組，因此可用 1 台 ALB 取代 5 台 CLB。ELB 本身會自動擴縮，不會造成效能問題。減少執行個體或變更類型可能影響效能。",
+    "id": "saa-c03-107"
   },
   {
     "category": "網路",
@@ -1313,7 +1420,8 @@
       0,
       2
     ],
-    "explanation": "全程加密有兩種方式：1) ALB + 執行個體都裝憑證，ALB 指定 HTTPS（ALB 終止並重新加密）；2) 僅執行個體裝憑證，NLB 指定 TCP（NLB 直通不解密）。NLB 不支援 HTTPS 協定；僅 ALB 裝憑證則 ALB 到執行個體為明文。"
+    "explanation": "全程加密有兩種方式：1) ALB + 執行個體都裝憑證，ALB 指定 HTTPS（ALB 終止並重新加密）；2) 僅執行個體裝憑證，NLB 指定 TCP（NLB 直通不解密）。NLB 不支援 HTTPS 協定；僅 ALB 裝憑證則 ALB 到執行個體為明文。",
+    "id": "saa-c03-108"
   },
   {
     "category": "網路",
@@ -1325,7 +1433,8 @@
       "子網屬於單一 AZ"
     ],
     "answer": 3,
-    "explanation": "子網是 VPC 內網路空間的邏輯劃分，每個子網屬於單一 AZ，但一個 AZ 內可建立多個子網。子網不能跨越 VPC 或區域。有 Internet 閘道路由的是公有子網，沒有的是私有子網。"
+    "explanation": "子網是 VPC 內網路空間的邏輯劃分，每個子網屬於單一 AZ，但一個 AZ 內可建立多個子網。子網不能跨越 VPC 或區域。有 Internet 閘道路由的是公有子網，沒有的是私有子網。",
+    "id": "saa-c03-109"
   },
   {
     "category": "網路",
@@ -1337,7 +1446,8 @@
       "在私有子網建立 VPC 端點，設定路由指向 VPC 端點"
     ],
     "answer": 0,
-    "explanation": "NAT 閘道需建立在公有子網中，並將私有子網的路由表設定指向 NAT 閘道。NAT 會將私有 IP 轉換為 Elastic IP 以存取網際網路，但不允許從網際網路發起連線。VPC 端點是用於存取 AWS 服務而非網際網路。"
+    "explanation": "NAT 閘道需建立在公有子網中，並將私有子網的路由表設定指向 NAT 閘道。NAT 會將私有 IP 轉換為 Elastic IP 以存取網際網路，但不允許從網際網路發起連線。VPC 端點是用於存取 AWS 服務而非網際網路。",
+    "id": "saa-c03-110"
   },
   {
     "category": "網路",
@@ -1349,7 +1459,8 @@
       "無需操作"
     ],
     "answer": 3,
-    "explanation": "NAT 閘道是託管服務，AWS 負責其高可用性和自動復原，發生故障時會自動替換。不需要使用者額外設定 Auto Scaling、CloudWatch 或 Elastic IP 來處理故障復原。"
+    "explanation": "NAT 閘道是託管服務，AWS 負責其高可用性和自動復原，發生故障時會自動替換。不需要使用者額外設定 Auto Scaling、CloudWatch 或 Elastic IP 來處理故障復原。",
+    "id": "saa-c03-111"
   },
   {
     "category": "網路",
@@ -1361,7 +1472,8 @@
       "虛擬私有閘道"
     ],
     "answer": 2,
-    "explanation": "VPC 端點（Gateway 型）可讓 VPC 內的資源透過 AWS 私有網路存取 S3 和 DynamoDB，無需經過網際網路。Internet 閘道和 NAT 閘道都需經過網際網路；虛擬私有閘道用於 VPN 連線。"
+    "explanation": "VPC 端點（Gateway 型）可讓 VPC 內的資源透過 AWS 私有網路存取 S3 和 DynamoDB，無需經過網際網路。Internet 閘道和 NAT 閘道都需經過網際網路；虛擬私有閘道用於 VPN 連線。",
+    "id": "saa-c03-112"
   },
   {
     "category": "網路",
@@ -1373,7 +1485,8 @@
       "地理位置路由"
     ],
     "answer": 3,
-    "explanation": "地理位置路由根據使用者的地理位置將 DNS 查詢路由到最近的資源。可搭配健康檢查自動偵測故障並重新導向。單純路由無法控制路由；加權路由按比例分配；延遲路由依網路延遲選擇。"
+    "explanation": "地理位置路由根據使用者的地理位置將 DNS 查詢路由到最近的資源。可搭配健康檢查自動偵測故障並重新導向。單純路由無法控制路由；加權路由按比例分配；延遲路由依網路延遲選擇。",
+    "id": "saa-c03-113"
   },
   {
     "category": "網路",
@@ -1385,7 +1498,8 @@
       "跨區域的高速資料傳輸"
     ],
     "answer": 2,
-    "explanation": "Direct Connect 在本地與 AWS 之間建立專用網路連線，提供穩定的頻寬和一致的低延遲。不是 VPN（VPN 走網際網路加密）；不是實體設備傳輸（那是 Snowball）；也不是跨區域傳輸。"
+    "explanation": "Direct Connect 在本地與 AWS 之間建立專用網路連線，提供穩定的頻寬和一致的低延遲。不是 VPN（VPN 走網際網路加密）；不是實體設備傳輸（那是 Snowball）；也不是跨區域傳輸。",
+    "id": "saa-c03-114"
   },
   {
     "category": "網路",
@@ -1397,7 +1511,8 @@
       "延遲路由"
     ],
     "answer": 1,
-    "explanation": "加權路由可設定各資源的權重比例來分配流量，適合 A/B 測試或逐步遷移。地理位置路由依使用者位置；故障轉移路由在主伺服器故障時切換；延遲路由選擇延遲最低的資源。"
+    "explanation": "加權路由可設定各資源的權重比例來分配流量，適合 A/B 測試或逐步遷移。地理位置路由依使用者位置；故障轉移路由在主伺服器故障時切換；延遲路由選擇延遲最低的資源。",
+    "id": "saa-c03-115"
   },
   {
     "category": "網路",
@@ -1409,7 +1524,8 @@
       "VPC 對等"
     ],
     "answer": 1,
-    "explanation": "Internet 閘道可連接 VPC 資源與網際網路，是讓外部存取 VPC 內執行個體的必要元件。NAT 閘道僅允許私有子網向外連線；VPC 端點用於存取 AWS 服務；VPC 對等連接不同 VPC。"
+    "explanation": "Internet 閘道可連接 VPC 資源與網際網路，是讓外部存取 VPC 內執行個體的必要元件。NAT 閘道僅允許私有子網向外連線；VPC 端點用於存取 AWS 服務；VPC 對等連接不同 VPC。",
+    "id": "saa-c03-116"
   },
   {
     "category": "網路",
@@ -1421,7 +1537,8 @@
       "網路 ACL 未設定允許規則"
     ],
     "answer": 1,
-    "explanation": "私有子網的路由表需要設定指向 NAT 閘道的路由才能存取網際網路。安全群組預設允許所有出站；網路 ACL 預設允許所有流量；私有子網透過 NAT 閘道不需要公有 IP。"
+    "explanation": "私有子網的路由表需要設定指向 NAT 閘道的路由才能存取網際網路。安全群組預設允許所有出站；網路 ACL 預設允許所有流量；私有子網透過 NAT 閘道不需要公有 IP。",
+    "id": "saa-c03-117"
   },
   {
     "category": "網路",
@@ -1433,7 +1550,8 @@
       "VPC 內 ENI 的網路流量資訊"
     ],
     "answer": 3,
-    "explanation": "VPC Flow Logs 記錄 VPC 內 ENI（彈性網路介面）的網路流量資訊，包括來源/目的 IP、連接埠號、協定和允許/拒絕結果。帳戶操作紀錄用 CloudTrail；執行個體狀態用 CloudWatch 監控。"
+    "explanation": "VPC Flow Logs 記錄 VPC 內 ENI（彈性網路介面）的網路流量資訊，包括來源/目的 IP、連接埠號、協定和允許/拒絕結果。帳戶操作紀錄用 CloudTrail；執行個體狀態用 CloudWatch 監控。",
+    "id": "saa-c03-118"
   },
   {
     "category": "網路",
@@ -1445,7 +1563,8 @@
       "Internet 閘道"
     ],
     "answer": 0,
-    "explanation": "Egress-Only Internet 閘道是 IPv6 專用功能，結合 NAT 閘道和 Internet 閘道的特性，允許 VPC 向外連線但阻擋外部連入。NAT 閘道不支援 IPv6；Internet 閘道允許雙向連線。"
+    "explanation": "Egress-Only Internet 閘道是 IPv6 專用功能，結合 NAT 閘道和 Internet 閘道的特性，允許 VPC 向外連線但阻擋外部連入。NAT 閘道不支援 IPv6；Internet 閘道允許雙向連線。",
+    "id": "saa-c03-119"
   },
   {
     "category": "網路",
@@ -1457,7 +1576,8 @@
       "使用 ALB 的路徑型路由"
     ],
     "answer": 3,
-    "explanation": "路徑型路由根據 URL 路徑決定路由目標，僅 ALB 支援。NLB 和 CLB 都不支援路徑型路由；主機型路由是根據網域名稱而非路徑。"
+    "explanation": "路徑型路由根據 URL 路徑決定路由目標，僅 ALB 支援。NLB 和 CLB 都不支援路徑型路由；主機型路由是根據網域名稱而非路徑。",
+    "id": "saa-c03-120"
   },
   {
     "category": "安全性",
@@ -1469,7 +1589,8 @@
       "建立與 AWS 帳戶完全相同權限的 IAM 使用者，盡量不使用 AWS 帳戶"
     ],
     "answer": 2,
-    "explanation": "AWS 最佳實踐建議日常操作使用設定適當權限的 IAM 使用者，盡量不使用根使用者。根使用者無法停用；無法建立與根使用者完全相同權限的 IAM 使用者。"
+    "explanation": "AWS 最佳實踐建議日常操作使用設定適當權限的 IAM 使用者，盡量不使用根使用者。根使用者無法停用；無法建立與根使用者完全相同權限的 IAM 使用者。",
+    "id": "saa-c03-121"
   },
   {
     "category": "安全性",
@@ -1485,7 +1606,8 @@
       2,
       4
     ],
-    "explanation": "根使用者應啟用 MFA 並刪除存取金鑰以防止不當使用。根使用者不應作為日常操作帳戶；密碼策略是針對 IAM 使用者；根使用者不能設定不同權限。"
+    "explanation": "根使用者應啟用 MFA 並刪除存取金鑰以防止不當使用。根使用者不應作為日常操作帳戶；密碼策略是針對 IAM 使用者；根使用者不能設定不同權限。",
+    "id": "saa-c03-122"
   },
   {
     "category": "安全性",
@@ -1497,7 +1619,8 @@
       "為監察部門建立新的 AWS 帳戶，設定 S3 儲存貯體的唯讀權限"
     ],
     "answer": 2,
-    "explanation": "應建立專用 IAM 使用者並僅授予必要的 S3 唯讀權限（最小權限原則）。不應共享根使用者或現有 IAM 使用者的密碼；建立新 AWS 帳戶沒有必要。"
+    "explanation": "應建立專用 IAM 使用者並僅授予必要的 S3 唯讀權限（最小權限原則）。不應共享根使用者或現有 IAM 使用者的密碼；建立新 AWS 帳戶沒有必要。",
+    "id": "saa-c03-123"
   },
   {
     "category": "安全性",
@@ -1509,7 +1632,8 @@
       "所有入站流量被拒絕，所有出站流量被允許"
     ],
     "answer": 3,
-    "explanation": "安全群組預設拒絕所有入站流量、允許所有出站流量。需要明確新增入站允許規則才能接收流量。安全群組是有狀態的，允許的出站流量對應的回傳入站流量會自動被允許。"
+    "explanation": "安全群組預設拒絕所有入站流量、允許所有出站流量。需要明確新增入站允許規則才能接收流量。安全群組是有狀態的，允許的出站流量對應的回傳入站流量會自動被允許。",
+    "id": "saa-c03-124"
   },
   {
     "category": "安全性",
@@ -1521,7 +1645,8 @@
       "在資料庫子網的網路 ACL 中允許來自 Web 伺服器安全群組的通訊"
     ],
     "answer": 1,
-    "explanation": "安全群組可指定其他安全群組作為來源，自動允許該群組所有成員的通訊。當 Web 伺服器台數變動時無需修改規則。網路 ACL 只能指定 IP 位址範圍，無法指定安全群組。"
+    "explanation": "安全群組可指定其他安全群組作為來源，自動允許該群組所有成員的通訊。當 Web 伺服器台數變動時無需修改規則。網路 ACL 只能指定 IP 位址範圍，無法指定安全群組。",
+    "id": "saa-c03-125"
   },
   {
     "category": "安全性",
@@ -1533,7 +1658,8 @@
       "僅拒絕所有 TCP 入站通訊"
     ],
     "answer": 0,
-    "explanation": "網路 ACL 按規則編號從小到大依序評估。規則 100 允許 HTTPS；規則 200 拒絕所有 TCP（包含 HTTP），因此規則 300 的 HTTP 允許不會生效。最終結果是僅 HTTPS 被允許。"
+    "explanation": "網路 ACL 按規則編號從小到大依序評估。規則 100 允許 HTTPS；規則 200 拒絕所有 TCP（包含 HTTP），因此規則 300 的 HTTP 允許不會生效。最終結果是僅 HTTPS 被允許。",
+    "id": "saa-c03-126"
   },
   {
     "category": "安全性",
@@ -1551,7 +1677,8 @@
       4,
       5
     ],
-    "explanation": "需要：1) 安全群組入站允許連接埠 80；2) 網路 ACL 入站允許連接埠 80；3) 網路 ACL 出站允許所有（因網路 ACL 是無狀態的）。安全群組不能新增拒絕規則；預設出站已允許全部。"
+    "explanation": "需要：1) 安全群組入站允許連接埠 80；2) 網路 ACL 入站允許連接埠 80；3) 網路 ACL 出站允許所有（因網路 ACL 是無狀態的）。安全群組不能新增拒絕規則；預設出站已允許全部。",
+    "id": "saa-c03-127"
   },
   {
     "category": "網路",
@@ -1563,7 +1690,8 @@
       "可作為從 VPC 外部連線到私有子網的跳板伺服器"
     ],
     "answer": 1,
-    "explanation": "NAT 閘道是託管服務，AWS 在 AZ 內自動冗餘化。從 EC2 建立的是 NAT 執行個體；連接埠轉發和跳板伺服器功能只有 NAT 執行個體支援。若要跨 AZ 高可用，需在多個 AZ 各建一個 NAT 閘道。"
+    "explanation": "NAT 閘道是託管服務，AWS 在 AZ 內自動冗餘化。從 EC2 建立的是 NAT 執行個體；連接埠轉發和跳板伺服器功能只有 NAT 執行個體支援。若要跨 AZ 高可用，需在多個 AZ 各建一個 NAT 閘道。",
+    "id": "saa-c03-128"
   },
   {
     "category": "網路",
@@ -1575,7 +1703,8 @@
       "支援 IPv6 通訊"
     ],
     "answer": 0,
-    "explanation": "NAT 執行個體由 EC2 建立，可設定連接埠轉發，也可作為跳板伺服器連線到私有子網內的資源。它建立在公有子網（非私有）；需使用者自行管理冗餘；僅支援 IPv4。"
+    "explanation": "NAT 執行個體由 EC2 建立，可設定連接埠轉發，也可作為跳板伺服器連線到私有子網內的資源。它建立在公有子網（非私有）；需使用者自行管理冗餘；僅支援 IPv4。",
+    "id": "saa-c03-129"
   },
   {
     "category": "網路",
@@ -1587,7 +1716,8 @@
       "想從網際網路存取公有子網時"
     ],
     "answer": 2,
-    "explanation": "NAT 閘道/執行個體用於讓私有子網的資源存取網際網路（僅出站）。從網際網路到公有子網用 Internet 閘道；VPC 間路由用 VPC 對等；IP 存取控制用安全群組和網路 ACL。"
+    "explanation": "NAT 閘道/執行個體用於讓私有子網的資源存取網際網路（僅出站）。從網際網路到公有子網用 Internet 閘道；VPC 間路由用 VPC 對等；IP 存取控制用安全群組和網路 ACL。",
+    "id": "saa-c03-130"
   },
   {
     "category": "網路",
@@ -1599,7 +1729,8 @@
       "結合 NAT 閘道和 Internet 閘道特性，支援 IPv4 和 IPv6"
     ],
     "answer": 2,
-    "explanation": "Egress-Only Internet 閘道是 IPv6 專用功能，允許 VPC 向外（Egress）連線但阻擋外部向內（Ingress）連線。不支援 IPv4（那是 NAT 閘道的功能）；不是 VPC 端點。"
+    "explanation": "Egress-Only Internet 閘道是 IPv6 專用功能，允許 VPC 向外（Egress）連線但阻擋外部向內（Ingress）連線。不支援 IPv4（那是 NAT 閘道的功能）；不是 VPC 端點。",
+    "id": "saa-c03-131"
   },
   {
     "category": "網路",
@@ -1615,7 +1746,8 @@
       0,
       2
     ],
-    "explanation": "路由表定義資料轉發的目的地和目標。未關聯自訂路由表的子網會使用 VPC 的主路由表（非無法路由）。每個子網只能關聯一個路由表。Internet 閘道作為目標可連線網際網路。"
+    "explanation": "路由表定義資料轉發的目的地和目標。未關聯自訂路由表的子網會使用 VPC 的主路由表（非無法路由）。每個子網只能關聯一個路由表。Internet 閘道作為目標可連線網際網路。",
+    "id": "saa-c03-132"
   },
   {
     "category": "網路",
@@ -1627,7 +1759,8 @@
       "Direct Connect"
     ],
     "answer": 1,
-    "explanation": "虛擬私有閘道（VGW）是 VPC 端的 VPN 集中器，用於與本地建立 Site-to-Site VPN 連線。Internet 閘道連接網際網路；NAT 閘道用於私有子網出站；Direct Connect 是專用網路連線而非 VPN。"
+    "explanation": "虛擬私有閘道（VGW）是 VPC 端的 VPN 集中器，用於與本地建立 Site-to-Site VPN 連線。Internet 閘道連接網際網路；NAT 閘道用於私有子網出站；Direct Connect 是專用網路連線而非 VPN。",
+    "id": "saa-c03-133"
   },
   {
     "category": "網路",
@@ -1639,7 +1772,8 @@
       "對等的 VPC 必須在同一個 AWS 帳戶"
     ],
     "answer": 2,
-    "explanation": "VPC 對等要求兩個 VPC 的 CIDR 範圍不能重疊。VPC 對等可跨區域和跨帳戶建立；支援 TCP 和 UDP 流量。"
+    "explanation": "VPC 對等要求兩個 VPC 的 CIDR 範圍不能重疊。VPC 對等可跨區域和跨帳戶建立；支援 TCP 和 UDP 流量。",
+    "id": "saa-c03-134"
   },
   {
     "category": "運算",
@@ -1655,7 +1789,8 @@
       1,
       3
     ],
-    "explanation": "EC2 建立後可變更執行個體類型（需先停止）和安全群組。VPC、子網和可用區在建立後無法變更，需要重新建立執行個體。"
+    "explanation": "EC2 建立後可變更執行個體類型（需先停止）和安全群組。VPC、子網和可用區在建立後無法變更，需要重新建立執行個體。",
+    "id": "saa-c03-135"
   },
   {
     "category": "網路",
@@ -1667,7 +1802,8 @@
       "同時評估安全群組和網路 ACL"
     ],
     "answer": 2,
-    "explanation": "從網際網路進入 VPC 時，流量先經過網路 ACL（子網層級）再經過安全群組（執行個體層級）。從 VPC 出去時順序相反，先安全群組再網路 ACL。"
+    "explanation": "從網際網路進入 VPC 時，流量先經過網路 ACL（子網層級）再經過安全群組（執行個體層級）。從 VPC 出去時順序相反，先安全群組再網路 ACL。",
+    "id": "saa-c03-136"
   },
   {
     "category": "網路",
@@ -1679,7 +1815,8 @@
       "不需要額外設定"
     ],
     "answer": 3,
-    "explanation": "同一 VPC 內的所有子網（即使跨可用區）預設可互相通訊，不需要額外設定。VPC 對等是連接不同 VPC；Internet 閘道和 NAT 閘道用於網際網路通訊。"
+    "explanation": "同一 VPC 內的所有子網（即使跨可用區）預設可互相通訊，不需要額外設定。VPC 對等是連接不同 VPC；Internet 閘道和 NAT 閘道用於網際網路通訊。",
+    "id": "saa-c03-137"
   },
   {
     "category": "儲存",
@@ -1691,7 +1828,8 @@
       "可掛載到 EC2 作為永久性區塊儲存"
     ],
     "answer": 3,
-    "explanation": "EBS 是可掛載到 EC2 的永久性區塊儲存，即使 EC2 停止資料也會保留。預設單一 EBS 卷只能掛載到一個 EC2（Multi-Attach 除外）。物件儲存是 S3；EC2 停止時資料被刪除的是執行個體存放區。"
+    "explanation": "EBS 是可掛載到 EC2 的永久性區塊儲存，即使 EC2 停止資料也會保留。預設單一 EBS 卷只能掛載到一個 EC2（Multi-Attach 除外）。物件儲存是 S3；EC2 停止時資料被刪除的是執行個體存放區。",
+    "id": "saa-c03-138"
   },
   {
     "category": "儲存",
@@ -1703,7 +1841,8 @@
       "冷 HDD（sc1）"
     ],
     "answer": 1,
-    "explanation": "預置 IOPS SSD 可指定 IOPS 值，適合 I/O 密集型的資料庫工作負載。通用 SSD 適合一般用途；吞吐量優化 HDD 適合大資料和日誌處理；冷 HDD 適合不常存取的歸檔。"
+    "explanation": "預置 IOPS SSD 可指定 IOPS 值，適合 I/O 密集型的資料庫工作負載。通用 SSD 適合一般用途；吞吐量優化 HDD 適合大資料和日誌處理；冷 HDD 適合不常存取的歸檔。",
+    "id": "saa-c03-139"
   },
   {
     "category": "運算",
@@ -1715,7 +1854,8 @@
       "指定 EC2 不會被終止的時段"
     ],
     "answer": 0,
-    "explanation": "Spot Fleet 指定所需執行個體數量後自動啟動 Spot 執行個體，被中斷時會自動補充（包括隨需執行個體）以維持數量。無法指定不終止的時段；補充也包含隨需執行個體；預約是 Spot 請求的概念。"
+    "explanation": "Spot Fleet 指定所需執行個體數量後自動啟動 Spot 執行個體，被中斷時會自動補充（包括隨需執行個體）以維持數量。無法指定不終止的時段；補充也包含隨需執行個體；預約是 Spot 請求的概念。",
+    "id": "saa-c03-140"
   },
   {
     "category": "網路",
@@ -1727,7 +1867,8 @@
       "讓私有子網可以存取網際網路"
     ],
     "answer": 1,
-    "explanation": "Transit Gateway 是將多個 VPC 和本地網路互相連接的 Hub 服務，也支援 Direct Connect 和 VPN 連線。Internet 閘道連接網際網路；安全群組是防火牆；NAT 閘道讓私有子網存取網際網路。"
+    "explanation": "Transit Gateway 是將多個 VPC 和本地網路互相連接的 Hub 服務，也支援 Direct Connect 和 VPN 連線。Internet 閘道連接網際網路；安全群組是防火牆；NAT 閘道讓私有子網存取網際網路。",
+    "id": "saa-c03-141"
   },
   {
     "category": "運算",
@@ -1743,7 +1884,8 @@
       0,
       2
     ],
-    "explanation": "生命週期掛鉤可在擴展/縮減時執行自訂處理：如在新執行個體上執行初始化腳本，或在終止前收集日誌。啟動資源設定用啟動範本；CPU 目標用目標追蹤擴縮；排程用排程擴縮。"
+    "explanation": "生命週期掛鉤可在擴展/縮減時執行自訂處理：如在新執行個體上執行初始化腳本，或在終止前收集日誌。啟動資源設定用啟動範本；CPU 目標用目標追蹤擴縮；排程用排程擴縮。",
+    "id": "saa-c03-142"
   },
   {
     "category": "運算",
@@ -1755,7 +1897,8 @@
       "預測擴縮"
     ],
     "answer": 2,
-    "explanation": "步進擴縮可依同一指標的多個閾值分段調整執行個體數量。簡單擴縮只有一個閾值；目標追蹤維持指標在目標值；預測擴縮用歷史資料預測未來需求。"
+    "explanation": "步進擴縮可依同一指標的多個閾值分段調整執行個體數量。簡單擴縮只有一個閾值；目標追蹤維持指標在目標值；預測擴縮用歷史資料預測未來需求。",
+    "id": "saa-c03-143"
   },
   {
     "category": "運算",
@@ -1767,7 +1910,8 @@
       "目標追蹤擴縮"
     ],
     "answer": 3,
-    "explanation": "目標追蹤擴縮會自動調整執行個體數量，使指定指標（如 CPU 使用率）維持在設定的目標值。AWS 會自動計算需要增減的數量。"
+    "explanation": "目標追蹤擴縮會自動調整執行個體數量，使指定指標（如 CPU 使用率）維持在設定的目標值。AWS 會自動計算需要增減的數量。",
+    "id": "saa-c03-144"
   },
   {
     "category": "網路",
@@ -1779,7 +1923,8 @@
       "稽核通過 VPC 端點的流量"
     ],
     "answer": 0,
-    "explanation": "VPC 端點策略用於限制 VPC 端點可連線的 AWS 服務資源（透過 ARN 指定）。Gateway 型和 Interface 型（PrivateLink）都可使用。它不能限制連線來源，也沒有流量稽核功能。"
+    "explanation": "VPC 端點策略用於限制 VPC 端點可連線的 AWS 服務資源（透過 ARN 指定）。Gateway 型和 Interface 型（PrivateLink）都可使用。它不能限制連線來源，也沒有流量稽核功能。",
+    "id": "saa-c03-145"
   },
   {
     "category": "安全性",
@@ -1791,7 +1936,8 @@
       "實現多個 AWS 帳戶和應用程式單一登入的服務"
     ],
     "answer": 0,
-    "explanation": "IAM Roles Anywhere 讓本地或其他雲端的應用程式透過 X.509 憑證取得臨時安全認證，無需儲存長期存取金鑰。SSL/TLS 憑證管理是 ACM；單一登入是 IAM Identity Center。"
+    "explanation": "IAM Roles Anywhere 讓本地或其他雲端的應用程式透過 X.509 憑證取得臨時安全認證，無需儲存長期存取金鑰。SSL/TLS 憑證管理是 ACM；單一登入是 IAM Identity Center。",
+    "id": "saa-c03-146"
   },
   {
     "category": "運算",
@@ -1803,7 +1949,8 @@
       "用 Elastic Beanstalk 部署 Java 應用，使用託管 Auto Scaling"
     ],
     "answer": 2,
-    "explanation": "App2Container 可自動分析現有 Java 應用並產生容器映像和 CloudFormation 範本，搭配 Fargate 無需管理伺服器。Beanstalk 不能容器化現有應用；EKS 需手動容器化；MGN 是直接遷移非容器化。"
+    "explanation": "App2Container 可自動分析現有 Java 應用並產生容器映像和 CloudFormation 範本，搭配 Fargate 無需管理伺服器。Beanstalk 不能容器化現有應用；EKS 需手動容器化；MGN 是直接遷移非容器化。",
+    "id": "saa-c03-147"
   },
   {
     "category": "運算",
@@ -1815,7 +1962,8 @@
       "建立 EKS 叢集，使用 AWS Fargate 執行 Pod"
     ],
     "answer": 3,
-    "explanation": "EKS + Fargate 是無伺服器方案，不需管理節點、OS 修補或擴縮。EC2 型（含託管節點群組和 Karpenter）都需要使用者管理 OS 修補。"
+    "explanation": "EKS + Fargate 是無伺服器方案，不需管理節點、OS 修補或擴縮。EC2 型（含託管節點群組和 Karpenter）都需要使用者管理 OS 修補。",
+    "id": "saa-c03-148"
   },
   {
     "category": "成本優化",
@@ -1827,7 +1975,8 @@
       "除 EC2 外，Fargate 和 Lambda 也自動適用折扣"
     ],
     "answer": 3,
-    "explanation": "Compute Savings Plans 最靈活，不限區域、執行個體系列和大小，除 EC2 外也適用於 Fargate 和 Lambda。EC2 Instance Savings Plans 限定特定區域和系列；Spot 執行個體是使用閒置容量。"
+    "explanation": "Compute Savings Plans 最靈活，不限區域、執行個體系列和大小，除 EC2 外也適用於 Fargate 和 Lambda。EC2 Instance Savings Plans 限定特定區域和系列；Spot 執行個體是使用閒置容量。",
+    "id": "saa-c03-149"
   },
   {
     "category": "成本優化",
@@ -1839,7 +1988,8 @@
       "在特定區域內對特定執行個體系列的 EC2 使用提供折扣"
     ],
     "answer": 3,
-    "explanation": "EC2 Instance Savings Plans 針對特定區域內的特定執行個體系列提供折扣，同系列內可變更大小和 OS。折扣率高於 Compute Savings Plans 但靈活性較低，不適用於 Fargate/Lambda。"
+    "explanation": "EC2 Instance Savings Plans 針對特定區域內的特定執行個體系列提供折扣，同系列內可變更大小和 OS。折扣率高於 Compute Savings Plans 但靈活性較低，不適用於 Fargate/Lambda。",
+    "id": "saa-c03-150"
   },
   {
     "category": "運算",
@@ -1851,7 +2001,8 @@
       "動態擴縮"
     ],
     "answer": 3,
-    "explanation": "動態擴縮根據即時效能指標自動調整，包含三種類型：簡單擴縮（單一閾值）、步進擴縮（多閾值分段）、目標追蹤擴縮（維持目標值）。排程擴縮按時間；預測擴縮用歷史資料。"
+    "explanation": "動態擴縮根據即時效能指標自動調整，包含三種類型：簡單擴縮（單一閾值）、步進擴縮（多閾值分段）、目標追蹤擴縮（維持目標值）。排程擴縮按時間；預測擴縮用歷史資料。",
+    "id": "saa-c03-151"
   },
   {
     "category": "運算",
@@ -1869,7 +2020,8 @@
       1,
       5
     ],
-    "explanation": "EKS 延續 Kubernetes 工具和知識；Fargate 無需管理伺服器；DocumentDB 與 MongoDB 相容可直接沿用。ECS 需學習新環境；EC2 需管理伺服器；DynamoDB 與 MongoDB 不相容。"
+    "explanation": "EKS 延續 Kubernetes 工具和知識；Fargate 無需管理伺服器；DocumentDB 與 MongoDB 相容可直接沿用。ECS 需學習新環境；EC2 需管理伺服器；DynamoDB 與 MongoDB 不相容。",
+    "id": "saa-c03-152"
   },
   {
     "category": "網路",
@@ -1881,7 +2033,8 @@
       "被網際網路直接存取的 SSH 跳板伺服器"
     ],
     "answer": 0,
-    "explanation": "私有子網放置不需要網際網路直接存取的資源，如 ELB 後端的 Web 伺服器。直接被存取的伺服器放公有子網；S3 是 VPC 外的服務，不放在子網中。"
+    "explanation": "私有子網放置不需要網際網路直接存取的資源，如 ELB 後端的 Web 伺服器。直接被存取的伺服器放公有子網；S3 是 VPC 外的服務，不放在子網中。",
+    "id": "saa-c03-153"
   },
   {
     "category": "安全性",
@@ -1893,7 +2046,8 @@
       "只能設定允許規則，不能設定拒絕規則"
     ],
     "answer": 0,
-    "explanation": "網路 ACL 以子網為單位控制，同一子網內的通訊不受其控制。它是無狀態防火牆（需分別設定入站和出站）；可設定允許和拒絕規則；預設允許所有流量。"
+    "explanation": "網路 ACL 以子網為單位控制，同一子網內的通訊不受其控制。它是無狀態防火牆（需分別設定入站和出站）；可設定允許和拒絕規則；預設允許所有流量。",
+    "id": "saa-c03-154"
   },
   {
     "category": "網路",
@@ -1905,7 +2059,8 @@
       "停止/啟動 AWS 資源後仍使用相同 IP"
     ],
     "answer": 3,
-    "explanation": "私有 IP 在資源停止/啟動後保持不變。公有和私有子網的資源都會被指派私有 IP；私有 IP 無法與網際網路直接通訊；刪除資源時 IP 會被釋放。"
+    "explanation": "私有 IP 在資源停止/啟動後保持不變。公有和私有子網的資源都會被指派私有 IP；私有 IP 無法與網際網路直接通訊；刪除資源時 IP 會被釋放。",
+    "id": "saa-c03-155"
   },
   {
     "category": "網路",
@@ -1917,7 +2072,8 @@
       "VPC: 10.0.0.0/16，子網: 10.0.2.0/24"
     ],
     "answer": 3,
-    "explanation": "AWS 推薦的私有 IP 範圍：10.0.0.0、172.16.0.0、192.168.0.0。VPC CIDR 前綴長度限 /16~/28。子網 CIDR 必須在 VPC CIDR 範圍內。只有 10.0.0.0/16 + 10.0.2.0/24 符合所有條件。"
+    "explanation": "AWS 推薦的私有 IP 範圍：10.0.0.0、172.16.0.0、192.168.0.0。VPC CIDR 前綴長度限 /16~/28。子網 CIDR 必須在 VPC CIDR 範圍內。只有 10.0.0.0/16 + 10.0.2.0/24 符合所有條件。",
+    "id": "saa-c03-156"
   },
   {
     "category": "網路",
@@ -1929,7 +2085,8 @@
       "不被網際網路直接存取的 DB 伺服器"
     ],
     "answer": 0,
-    "explanation": "公有子網放置需要被網際網路直接存取的資源。DB 伺服器和 ELB 後端 Web 伺服器應放私有子網；S3 是 VPC 外的服務。"
+    "explanation": "公有子網放置需要被網際網路直接存取的資源。DB 伺服器和 ELB 後端 Web 伺服器應放私有子網；S3 是 VPC 外的服務。",
+    "id": "saa-c03-157"
   },
   {
     "category": "網路",
@@ -1941,7 +2098,8 @@
       "閘道"
     ],
     "answer": 2,
-    "explanation": "ENI（彈性網路介面）相當於本地的 NIC，指派給 EC2 等 AWS 資源使用。防火牆是安全群組/網路 ACL；流量日誌是 VPC Flow Logs；閘道有 NAT 閘道和 Internet 閘道。"
+    "explanation": "ENI（彈性網路介面）相當於本地的 NIC，指派給 EC2 等 AWS 資源使用。防火牆是安全群組/網路 ACL；流量日誌是 VPC Flow Logs；閘道有 NAT 閘道和 Internet 閘道。",
+    "id": "saa-c03-158"
   },
   {
     "category": "網路",
@@ -1953,7 +2111,8 @@
       "VPC 對等"
     ],
     "answer": 3,
-    "explanation": "VPC 對等可一對一連接兩個 VPC（跨帳戶和跨區域皆可），連接後如同在同一私有網路中通訊。NAT 閘道用於出站網際網路；VPC 端點連接 AWS 服務；安全群組是防火牆。"
+    "explanation": "VPC 對等可一對一連接兩個 VPC（跨帳戶和跨區域皆可），連接後如同在同一私有網路中通訊。NAT 閘道用於出站網際網路；VPC 端點連接 AWS 服務；安全群組是防火牆。",
+    "id": "saa-c03-159"
   },
   {
     "category": "網路",
@@ -1965,7 +2124,8 @@
       "Transit Gateway + NAT 執行個體"
     ],
     "answer": 1,
-    "explanation": "需要：1) VPC 上的 Internet 閘道；2) 公有子網的 NAT 閘道（或 NAT 執行個體），再設定私有子網路由指向 NAT 閘道。VPC 端點、Transit Gateway 和 API Gateway 都不是用於此目的。"
+    "explanation": "需要：1) VPC 上的 Internet 閘道；2) 公有子網的 NAT 閘道（或 NAT 執行個體），再設定私有子網路由指向 NAT 閘道。VPC 端點、Transit Gateway 和 API Gateway 都不是用於此目的。",
+    "id": "saa-c03-160"
   },
   {
     "category": "網路",
@@ -1977,7 +2137,8 @@
       "一個 VPC 可建立多個 Internet 閘道"
     ],
     "answer": 0,
-    "explanation": "路由表設定指向 Internet 閘道的子網即為公有子網。Internet 閘道允許雙向連線（非僅出站）；一個 VPC 只能有一個 Internet 閘道，由多個公有子網共用。"
+    "explanation": "路由表設定指向 Internet 閘道的子網即為公有子網。Internet 閘道允許雙向連線（非僅出站）；一個 VPC 只能有一個 Internet 閘道，由多個公有子網共用。",
+    "id": "saa-c03-161"
   },
   {
     "category": "儲存",
@@ -1989,7 +2150,8 @@
       "版本控制"
     ],
     "answer": 3,
-    "explanation": "版本控制可管理物件的歷史版本。啟用後更新時保留新舊兩個版本；刪除時加上刪除標記而非真正刪除。可還原到任何先前版本。"
+    "explanation": "版本控制可管理物件的歷史版本。啟用後更新時保留新舊兩個版本；刪除時加上刪除標記而非真正刪除。可還原到任何先前版本。",
+    "id": "saa-c03-162"
   },
   {
     "category": "安全性",
@@ -2001,7 +2163,8 @@
       "建立 CloudWatch 警報監控金鑰刪除操作，觸發時取消刪除並用 SNS 通知"
     ],
     "answer": 0,
-    "explanation": "Systems Manager Automation 有預設的 Runbook 可取消 KMS 金鑰刪除，搭配 EventBridge 觸發和 SNS 通知。CloudTrail 只能記錄無法取消操作；Config 可偵測但不能取消刪除；CloudWatch 無法直接監控此操作。"
+    "explanation": "Systems Manager Automation 有預設的 Runbook 可取消 KMS 金鑰刪除，搭配 EventBridge 觸發和 SNS 通知。CloudTrail 只能記錄無法取消操作；Config 可偵測但不能取消刪除；CloudWatch 無法直接監控此操作。",
+    "id": "saa-c03-163"
   },
   {
     "category": "安全性",
@@ -2013,7 +2176,8 @@
       "將認證資訊存入 Parameter Store，IAM 角色附加到 IAM 策略，策略賦予 Lambda"
     ],
     "answer": 0,
-    "explanation": "Parameter Store 安全管理認證參數。正確做法：IAM 策略→附加到 IAM 角色→賦予 Lambda。Session Manager 是遠端登入 EC2 的功能，非儲存認證用。"
+    "explanation": "Parameter Store 安全管理認證參數。正確做法：IAM 策略→附加到 IAM 角色→賦予 Lambda。Session Manager 是遠端登入 EC2 的功能，非儲存認證用。",
+    "id": "saa-c03-164"
   },
   {
     "category": "網路",
@@ -2025,7 +2189,8 @@
       "用主機型路由分別轉發"
     ],
     "answer": 1,
-    "explanation": "ALB 可設定 HTTP 監聽器規則將請求重新導向到 HTTPS。SNI 是憑證技術非重導向；僅允許 HTTPS 會拒絕 HTTP；主機型路由依網域名稱而非協定。"
+    "explanation": "ALB 可設定 HTTP 監聽器規則將請求重新導向到 HTTPS。SNI 是憑證技術非重導向；僅允許 HTTPS 會拒絕 HTTP；主機型路由依網域名稱而非協定。",
+    "id": "saa-c03-165"
   },
   {
     "category": "部署與管理",
@@ -2037,7 +2202,8 @@
       "AWS 服務標準操作程序"
     ],
     "answer": 0,
-    "explanation": "Well-Architected Framework 是雲端設計營運最佳實踐，由一般設計原則和六大支柱組成。"
+    "explanation": "Well-Architected Framework 是雲端設計營運最佳實踐，由一般設計原則和六大支柱組成。",
+    "id": "saa-c03-166"
   },
   {
     "category": "部署與管理",
@@ -2049,7 +2215,8 @@
       "建 Lambda 觸發匯出"
     ],
     "answer": 2,
-    "explanation": "訂閱篩選器可直接即時串流到 OpenSearch，無需中間服務。Data Firehose 和 Lambda 增加管理負擔；S3 匯出非即時。"
+    "explanation": "訂閱篩選器可直接即時串流到 OpenSearch，無需中間服務。Data Firehose 和 Lambda 增加管理負擔；S3 匯出非即時。",
+    "id": "saa-c03-167"
   },
   {
     "category": "應用程式整合",
@@ -2061,7 +2228,8 @@
       "Kinesis Data Streams 擷取 + Managed Service for Apache Flink 分析 + 存 S3"
     ],
     "answer": 3,
-    "explanation": "Kinesis 即時收集，Apache Flink 即時分析，S3 作資料湖。SNS 不適合連續串流；Redshift Spectrum 和 Athena 非即時分析。"
+    "explanation": "Kinesis 即時收集，Apache Flink 即時分析，S3 作資料湖。SNS 不適合連續串流；Redshift Spectrum 和 Athena 非即時分析。",
+    "id": "saa-c03-168"
   },
   {
     "category": "運算",
@@ -2073,7 +2241,8 @@
       "EC2 建立後可變更所屬群組"
     ],
     "answer": 0,
-    "explanation": "配置群組可分為叢集型（低延遲）、分散型（避免同硬體）和分區型（分區隔離）。可建多個；建立後不可變更。"
+    "explanation": "配置群組可分為叢集型（低延遲）、分散型（避免同硬體）和分區型（分區隔離）。可建多個；建立後不可變更。",
+    "id": "saa-c03-169"
   },
   {
     "category": "網路",
@@ -2085,7 +2254,8 @@
       "預設可與其他 VPC 通訊"
     ],
     "answer": 0,
-    "explanation": "VPC 在單一區域內，橫跨所有 AZ。不能跨區域；可建多個子網；預設 VPC 間隔離。"
+    "explanation": "VPC 在單一區域內，橫跨所有 AZ。不能跨區域；可建多個子網；預設 VPC 間隔離。",
+    "id": "saa-c03-170"
   },
   {
     "category": "網路",
@@ -2097,7 +2267,8 @@
       "每 VPC 只能一個"
     ],
     "answer": 1,
-    "explanation": "Elastic IP 是靜態公有 IP，資源停止時不釋放。可指派給 EC2、NAT 閘道等。未關聯時有費用。"
+    "explanation": "Elastic IP 是靜態公有 IP，資源停止時不釋放。可指派給 EC2、NAT 閘道等。未關聯時有費用。",
+    "id": "saa-c03-171"
   },
   {
     "category": "安全性",
@@ -2109,7 +2280,8 @@
       "VPC Flow Logs"
     ],
     "answer": 2,
-    "explanation": "網路 ACL 可設允許和拒絕規則。安全群組只能允許；路由表控制轉發；Flow Logs 只記錄。"
+    "explanation": "網路 ACL 可設允許和拒絕規則。安全群組只能允許；路由表控制轉發；Flow Logs 只記錄。",
+    "id": "saa-c03-172"
   },
   {
     "category": "安全性",
@@ -2121,7 +2293,8 @@
       "安全群組"
     ],
     "answer": 3,
-    "explanation": "同子網內通訊由安全群組控制。網路 ACL 是子網級無法控制子網內；路由表和 NAT 閘道不影響子網內通訊。"
+    "explanation": "同子網內通訊由安全群組控制。網路 ACL 是子網級無法控制子網內；路由表和 NAT 閘道不影響子網內通訊。",
+    "id": "saa-c03-173"
   },
   {
     "category": "部署與管理",
@@ -2133,7 +2306,8 @@
       "Trusted Advisor"
     ],
     "answer": 1,
-    "explanation": "CloudWatch 監控指標和日誌。CloudTrail 記錄 API 操作；Config 追蹤設定變更；Trusted Advisor 提供建議。"
+    "explanation": "CloudWatch 監控指標和日誌。CloudTrail 記錄 API 操作；Config 追蹤設定變更；Trusted Advisor 提供建議。",
+    "id": "saa-c03-174"
   },
   {
     "category": "儲存",
@@ -2145,7 +2319,8 @@
       "S3 Transfer Acceleration"
     ],
     "answer": 2,
-    "explanation": "Storage Lens 提供儲存使用量可視化儀表板。Intelligent-Tiering 自動切換類別；Object Lambda 自訂物件；Transfer Acceleration 加速傳輸。"
+    "explanation": "Storage Lens 提供儲存使用量可視化儀表板。Intelligent-Tiering 自動切換類別；Object Lambda 自訂物件；Transfer Acceleration 加速傳輸。",
+    "id": "saa-c03-175"
   },
   {
     "category": "儲存",
@@ -2157,7 +2332,8 @@
       "S3 Intelligent-Tiering"
     ],
     "answer": 1,
-    "explanation": "Express One Zone 提供個位數毫秒極低延遲。Standard 也低延遲但非個位數毫秒級；Standard-IA 有取出費不適合高頻；Intelligent-Tiering 適合不可預測的存取。"
+    "explanation": "Express One Zone 提供個位數毫秒極低延遲。Standard 也低延遲但非個位數毫秒級；Standard-IA 有取出費不適合高頻；Intelligent-Tiering 適合不可預測的存取。",
+    "id": "saa-c03-176"
   },
   {
     "category": "安全性",
@@ -2173,7 +2349,8 @@
       0,
       2
     ],
-    "explanation": "Access Analyzer 可識別外部共享資源和驗證策略。不會自動修正或建立策略；登入監控是 CloudTrail。"
+    "explanation": "Access Analyzer 可識別外部共享資源和驗證策略。不會自動修正或建立策略；登入監控是 CloudTrail。",
+    "id": "saa-c03-177"
   },
   {
     "category": "資料庫",
@@ -2185,7 +2362,8 @@
       "啟用全域資料表"
     ],
     "answer": 1,
-    "explanation": "DAX 是 DynamoDB 相容快取，讀取延遲從毫秒降到微秒，無需改程式碼。Streams 用於變更捕捉；ElastiCache 需改碼；全域資料表是跨區域複寫。"
+    "explanation": "DAX 是 DynamoDB 相容快取，讀取延遲從毫秒降到微秒，無需改程式碼。Streams 用於變更捕捉；ElastiCache 需改碼；全域資料表是跨區域複寫。",
+    "id": "saa-c03-178"
   },
   {
     "category": "應用程式整合",
@@ -2197,7 +2375,8 @@
       "NLB + TCP 監聽器"
     ],
     "answer": 1,
-    "explanation": "API Gateway 單一端點管理多 API，提供 API 金鑰和節流控制。ALB 無 API 級存取控制；CloudFront 是 CDN；NLB 是四層。"
+    "explanation": "API Gateway 單一端點管理多 API，提供 API 金鑰和節流控制。ALB 無 API 級存取控制；CloudFront 是 CDN；NLB 是四層。",
+    "id": "saa-c03-179"
   },
   {
     "category": "運算",
@@ -2209,7 +2388,8 @@
       "Elastic Beanstalk + 託管 Auto Scaling"
     ],
     "answer": 2,
-    "explanation": "App2Container 自動容器化 Java 應用並產生 CloudFormation 範本，Fargate 無需管伺服器。"
+    "explanation": "App2Container 自動容器化 Java 應用並產生 CloudFormation 範本，Fargate 無需管伺服器。",
+    "id": "saa-c03-180"
   },
   {
     "category": "運算",
@@ -2221,7 +2401,8 @@
       "EKS + Fargate"
     ],
     "answer": 3,
-    "explanation": "Fargate 無伺服器，不需管節點和 OS。EC2 型都需使用者管理 OS。"
+    "explanation": "Fargate 無伺服器，不需管節點和 OS。EC2 型都需使用者管理 OS。",
+    "id": "saa-c03-181"
   },
   {
     "category": "成本優化",
@@ -2233,7 +2414,8 @@
       "EC2 外 Fargate 和 Lambda 也適用"
     ],
     "answer": 3,
-    "explanation": "Compute SP 最靈活，不限區域和系列，也適用 Fargate/Lambda。"
+    "explanation": "Compute SP 最靈活，不限區域和系列，也適用 Fargate/Lambda。",
+    "id": "saa-c03-182"
   },
   {
     "category": "成本優化",
@@ -2245,7 +2427,8 @@
       "特定區域特定系列 EC2 折扣"
     ],
     "answer": 3,
-    "explanation": "EC2 Instance SP 限特定區域和系列，折扣率較高但靈活性低。"
+    "explanation": "EC2 Instance SP 限特定區域和系列，折扣率較高但靈活性低。",
+    "id": "saa-c03-183"
   },
   {
     "category": "運算",
@@ -2257,7 +2440,8 @@
       "動態擴縮"
     ],
     "answer": 3,
-    "explanation": "動態擴縮含簡單/步進/目標追蹤，根據即時指標調整。排程按時間；預測用歷史；手動由使用者操作。"
+    "explanation": "動態擴縮含簡單/步進/目標追蹤，根據即時指標調整。排程按時間；預測用歷史；手動由使用者操作。",
+    "id": "saa-c03-184"
   },
   {
     "category": "運算",
@@ -2275,7 +2459,8 @@
       1,
       5
     ],
-    "explanation": "EKS 延續 K8s；Fargate 免管伺服器；DocumentDB 與 MongoDB 相容。ECS 需學新工具；EC2 需管伺服器；DynamoDB 不相容。"
+    "explanation": "EKS 延續 K8s；Fargate 免管伺服器；DocumentDB 與 MongoDB 相容。ECS 需學新工具；EC2 需管伺服器；DynamoDB 不相容。",
+    "id": "saa-c03-185"
   },
   {
     "category": "網路",
@@ -2287,7 +2472,8 @@
       "SSH 跳板伺服器"
     ],
     "answer": 0,
-    "explanation": "私有子網放不需直接存取的資源。S3 在 VPC 外；需直接存取的放公有子網。"
+    "explanation": "私有子網放不需直接存取的資源。S3 在 VPC 外；需直接存取的放公有子網。",
+    "id": "saa-c03-186"
   },
   {
     "category": "安全性",
@@ -2299,7 +2485,8 @@
       "只能設允許規則"
     ],
     "answer": 0,
-    "explanation": "子網級控制，同子網內不受影響。無狀態；可設允許和拒絕；預設全部允許。"
+    "explanation": "子網級控制，同子網內不受影響。無狀態；可設允許和拒絕；預設全部允許。",
+    "id": "saa-c03-187"
   },
   {
     "category": "網路",
@@ -2311,7 +2498,8 @@
       "停止/啟動後不變"
     ],
     "answer": 3,
-    "explanation": "私有 IP 停止後不變。所有子網都有；不能直接上網；刪除時釋放。"
+    "explanation": "私有 IP 停止後不變。所有子網都有；不能直接上網；刪除時釋放。",
+    "id": "saa-c03-188"
   },
   {
     "category": "網路",
@@ -2323,7 +2511,8 @@
       "閘道"
     ],
     "answer": 2,
-    "explanation": "ENI 是 AWS 資源的網路介面，相當於本地的 NIC。防火牆是安全群組/網路 ACL；日誌是 Flow Logs；閘道有 NAT/Internet 閘道。"
+    "explanation": "ENI 是 AWS 資源的網路介面，相當於本地的 NIC。防火牆是安全群組/網路 ACL；日誌是 Flow Logs；閘道有 NAT/Internet 閘道。",
+    "id": "saa-c03-189"
   },
   {
     "category": "網路",
@@ -2335,7 +2524,8 @@
       "VPC 對等"
     ],
     "answer": 3,
-    "explanation": "VPC 對等一對一連接兩個 VPC，可跨帳戶和區域。"
+    "explanation": "VPC 對等一對一連接兩個 VPC，可跨帳戶和區域。",
+    "id": "saa-c03-190"
   },
   {
     "category": "網路",
@@ -2347,7 +2537,8 @@
       "Transit Gateway + NAT 執行個體"
     ],
     "answer": 1,
-    "explanation": "需要 Internet 閘道（VPC 級）和 NAT 閘道（公有子網），再設定私有子網路由指向 NAT。"
+    "explanation": "需要 Internet 閘道（VPC 級）和 NAT 閘道（公有子網），再設定私有子網路由指向 NAT。",
+    "id": "saa-c03-191"
   },
   {
     "category": "網路",
@@ -2359,7 +2550,8 @@
       "一個 VPC 可建多個"
     ],
     "answer": 0,
-    "explanation": "有 Internet 閘道路由的子網即為公有子網。允許雙向連線；一個 VPC 只能一個，多子網共用。"
+    "explanation": "有 Internet 閘道路由的子網即為公有子網。允許雙向連線；一個 VPC 只能一個，多子網共用。",
+    "id": "saa-c03-192"
   },
   {
     "category": "儲存",
@@ -2371,7 +2563,8 @@
       "執行個體存放區"
     ],
     "answer": 3,
-    "explanation": "執行個體存放區是 EC2 的暫時性區塊儲存，執行個體停止或終止時資料會遺失。EBS 是永久性；S3 是物件儲存；EFS 是檔案儲存。"
+    "explanation": "執行個體存放區是 EC2 的暫時性區塊儲存，執行個體停止或終止時資料會遺失。EBS 是永久性；S3 是物件儲存；EFS 是檔案儲存。",
+    "id": "saa-c03-193"
   },
   {
     "category": "運算",
@@ -2383,7 +2576,8 @@
       "終止後可重新啟動"
     ],
     "answer": 2,
-    "explanation": "EC2 停止後再啟動可能在不同實體主機上運行。停止時計算費用會停止（EBS 費用仍產生）；變更類型需先停止；終止後無法重啟。"
+    "explanation": "EC2 停止後再啟動可能在不同實體主機上運行。停止時計算費用會停止（EBS 費用仍產生）；變更類型需先停止；終止後無法重啟。",
+    "id": "saa-c03-194"
   },
   {
     "category": "運算",
@@ -2395,7 +2589,8 @@
       "將執行個體的安全群組複製到另一個區域"
     ],
     "answer": 0,
-    "explanation": "AMI 可複製到其他區域，然後從複製的 AMI 啟動相同配置的執行個體。僅啟動相同類型不會有相同配置；EBS 快照只是儲存不含完整設定。"
+    "explanation": "AMI 可複製到其他區域，然後從複製的 AMI 啟動相同配置的執行個體。僅啟動相同類型不會有相同配置；EBS 快照只是儲存不含完整設定。",
+    "id": "saa-c03-195"
   },
   {
     "category": "運算",
@@ -2407,7 +2602,8 @@
       "EC2 的購買選項資訊"
     ],
     "answer": 1,
-    "explanation": "中繼資料是執行中 EC2 的相關資訊，如 IP 位址、執行個體 ID、主機名稱等，可從執行個體內部查詢。AMI 是 OS 範本；密鑰對是認證用。"
+    "explanation": "中繼資料是執行中 EC2 的相關資訊，如 IP 位址、執行個體 ID、主機名稱等，可從執行個體內部查詢。AMI 是 OS 範本；密鑰對是認證用。",
+    "id": "saa-c03-196"
   },
   {
     "category": "安全性",
@@ -2419,7 +2615,8 @@
       "設定 S3 儲存貯體策略時"
     ],
     "answer": 1,
-    "explanation": "存取金鑰和秘密存取金鑰用於透過 CLI 或 SDK 程式化存取 AWS API。管理主控台使用帳號密碼登入。"
+    "explanation": "存取金鑰和秘密存取金鑰用於透過 CLI 或 SDK 程式化存取 AWS API。管理主控台使用帳號密碼登入。",
+    "id": "saa-c03-197"
   },
   {
     "category": "運算",
@@ -2431,7 +2628,8 @@
       "所有健康檢查失敗的執行個體都會被替換"
     ],
     "answer": 2,
-    "explanation": "僅啟用 EC2 健康檢查時，只看 EC2 狀態。即使 ELB 判定不健康但 EC2 狀態正常，該執行個體不會被 Auto Scaling 替換。"
+    "explanation": "僅啟用 EC2 健康檢查時，只看 EC2 狀態。即使 ELB 判定不健康但 EC2 狀態正常，該執行個體不會被 Auto Scaling 替換。",
+    "id": "saa-c03-198"
   },
   {
     "category": "儲存",
@@ -2443,7 +2641,8 @@
       "資料庫儲存"
     ],
     "answer": 2,
-    "explanation": "S3 是物件儲存服務。EBS 是區塊儲存；EFS 是檔案儲存；RDS/DynamoDB 是資料庫。"
+    "explanation": "S3 是物件儲存服務。EBS 是區塊儲存；EFS 是檔案儲存；RDS/DynamoDB 是資料庫。",
+    "id": "saa-c03-199"
   },
   {
     "category": "儲存",
@@ -2460,7 +2659,8 @@
       1,
       3
     ],
-    "explanation": "S3 特性：容量無限制、存放在 3 個以上 AZ、持久性 99.999999999%。不能作為 EC2 區塊儲存（那是 EBS）；資料存在多個 AZ 非單一。"
+    "explanation": "S3 特性：容量無限制、存放在 3 個以上 AZ、持久性 99.999999999%。不能作為 EC2 區塊儲存（那是 EBS）；資料存在多個 AZ 非單一。",
+    "id": "saa-c03-200"
   },
   {
     "category": "儲存",
@@ -2472,7 +2672,8 @@
       "版本控制"
     ],
     "answer": 3,
-    "explanation": "版本控制保留物件所有版本，更新保留新舊版本，刪除加標記而非真正刪除，可還原任何版本。"
+    "explanation": "版本控制保留物件所有版本，更新保留新舊版本，刪除加標記而非真正刪除，可還原任何版本。",
+    "id": "saa-c03-201"
   },
   {
     "category": "安全性",
@@ -2484,7 +2685,8 @@
       "CloudWatch 警報取消刪除 + SNS"
     ],
     "answer": 0,
-    "explanation": "Systems Manager Automation 有預設 Runbook 可取消 KMS 金鑰刪除，搭配 EventBridge 觸發和 SNS 通知。CloudTrail 只記錄不能取消；Config 偵測但不能取消。"
+    "explanation": "Systems Manager Automation 有預設 Runbook 可取消 KMS 金鑰刪除，搭配 EventBridge 觸發和 SNS 通知。CloudTrail 只記錄不能取消；Config 偵測但不能取消。",
+    "id": "saa-c03-202"
   },
   {
     "category": "儲存",
@@ -2496,7 +2698,8 @@
       "作為 EC2 的本地儲存使用"
     ],
     "answer": 2,
-    "explanation": "S3 靜態網站託管可將靜態內容（HTML、JS 等）發佈為網站。NFS 共享是 EFS；版本控制需手動啟用；本地儲存是 EBS/執行個體存放區。"
+    "explanation": "S3 靜態網站託管可將靜態內容（HTML、JS 等）發佈為網站。NFS 共享是 EFS；版本控制需手動啟用；本地儲存是 EBS/執行個體存放區。",
+    "id": "saa-c03-203"
   },
   {
     "category": "安全性",
@@ -2508,7 +2711,8 @@
       "SSE-KMS"
     ],
     "answer": 2,
-    "explanation": "用戶端根金鑰加密：上傳前在本地加密，金鑰自行管理不存 AWS。SSE 都是伺服器端加密（資料會暫存 AWS）；KMS 金鑰存在 AWS。"
+    "explanation": "用戶端根金鑰加密：上傳前在本地加密，金鑰自行管理不存 AWS。SSE 都是伺服器端加密（資料會暫存 AWS）；KMS 金鑰存在 AWS。",
+    "id": "saa-c03-204"
   },
   {
     "category": "網路",
@@ -2520,7 +2724,8 @@
       "ALB 和執行個體都裝憑證，ALB 用 HTTPS"
     ],
     "answer": 1,
-    "explanation": "僅 ALB 裝憑證並用 HTTPS，ALB 解密後以明文傳給 Web 伺服器（SSL 卸載）。ALB 到 Web 間是 AWS 內部網路。NLB 不支援 HTTPS；兩端都裝會增加伺服器負荷。"
+    "explanation": "僅 ALB 裝憑證並用 HTTPS，ALB 解密後以明文傳給 Web 伺服器（SSL 卸載）。ALB 到 Web 間是 AWS 內部網路。NLB 不支援 HTTPS；兩端都裝會增加伺服器負荷。",
+    "id": "saa-c03-205"
   },
   {
     "category": "安全性",
@@ -2532,7 +2737,8 @@
       "KMS 金鑰的用戶端加密"
     ],
     "answer": 0,
-    "explanation": "SSE-KMS 在 S3 上加密，金鑰由 KMS 管理，自動記錄金鑰使用狀況。SSE-S3 不記錄使用狀況；SSE-C 金鑰由使用者管理；用戶端加密不在 S3 上進行。"
+    "explanation": "SSE-KMS 在 S3 上加密，金鑰由 KMS 管理，自動記錄金鑰使用狀況。SSE-S3 不記錄使用狀況；SSE-C 金鑰由使用者管理；用戶端加密不在 S3 上進行。",
+    "id": "saa-c03-206"
   },
   {
     "category": "安全性",
@@ -2544,7 +2750,8 @@
       "建立專用 EC2 安裝 AD"
     ],
     "answer": 0,
-    "explanation": "AWS Directory Service 是託管 AD 服務，可直接管理 Windows 執行個體，無需自行管理 AD 基礎設施。無需與本地 AD 連動（本地 AD 只管遷移的伺服器）。"
+    "explanation": "AWS Directory Service 是託管 AD 服務，可直接管理 Windows 執行個體，無需自行管理 AD 基礎設施。無需與本地 AD 連動（本地 AD 只管遷移的伺服器）。",
+    "id": "saa-c03-207"
   },
   {
     "category": "安全性",
@@ -2556,7 +2763,8 @@
       "用 Trusted Advisor 檢查並 EventBridge + SNS 通知"
     ],
     "answer": 0,
-    "explanation": "Config 可建立規則監控 ACM 憑證有效期限，非合規時透過 EventBridge 觸發 SNS 通知。ACM 選項無法直接設定 SNS；Trusted Advisor 不檢查 ACM 憑證；Parameter Store 無法取得憑證天數。"
+    "explanation": "Config 可建立規則監控 ACM 憑證有效期限，非合規時透過 EventBridge 觸發 SNS 通知。ACM 選項無法直接設定 SNS；Trusted Advisor 不檢查 ACM 憑證；Parameter Store 無法取得憑證天數。",
+    "id": "saa-c03-208"
   },
   {
     "category": "運算",
@@ -2568,7 +2776,8 @@
       "提供含 OS 和中介軟體等平台的服務"
     ],
     "answer": 2,
-    "explanation": "SaaS 提供完整應用功能，使用者只需設定選項即可使用。IaaS 提供伺服器功能；PaaS 提供平台。"
+    "explanation": "SaaS 提供完整應用功能，使用者只需設定選項即可使用。IaaS 提供伺服器功能；PaaS 提供平台。",
+    "id": "saa-c03-209"
   },
   {
     "category": "運算",
@@ -2580,7 +2789,8 @@
       "邏輯分組 EC2 以降低延遲或硬體故障影響的功能"
     ],
     "answer": 0,
-    "explanation": "密鑰對是 SSH 連線 EC2 的加密密鑰對（公鑰存 AWS，私鑰存使用者端）。中繼資料是執行個體資訊；AMI 是 OS 範本；配置群組是分組功能。"
+    "explanation": "密鑰對是 SSH 連線 EC2 的加密密鑰對（公鑰存 AWS，私鑰存使用者端）。中繼資料是執行個體資訊；AMI 是 OS 範本；配置群組是分組功能。",
+    "id": "saa-c03-210"
   },
   {
     "category": "運算",
@@ -2592,7 +2802,8 @@
       "無法跨 AZ 配置"
     ],
     "answer": 1,
-    "explanation": "分區配置群組中各分區有獨立機架（電源和網路），互不共享。每分區可放多個 EC2；可跨 AZ；非專用硬體（那是 Dedicated Hosts）。"
+    "explanation": "分區配置群組中各分區有獨立機架（電源和網路），互不共享。每分區可放多個 EC2；可跨 AZ；非專用硬體（那是 Dedicated Hosts）。",
+    "id": "saa-c03-211"
   },
   {
     "category": "運算",
@@ -2604,7 +2815,8 @@
       "Spot 執行個體"
     ],
     "answer": 2,
-    "explanation": "Dedicated Hosts 提供完全專用的實體伺服器，可確認 CPU 插槽、核心數和主機 ID，適合以伺服器為單位的授權。硬體專用執行個體雖隔離但不能確認實體資訊。"
+    "explanation": "Dedicated Hosts 提供完全專用的實體伺服器，可確認 CPU 插槽、核心數和主機 ID，適合以伺服器為單位的授權。硬體專用執行個體雖隔離但不能確認實體資訊。",
+    "id": "saa-c03-212"
   },
   {
     "category": "運算",
@@ -2616,7 +2828,8 @@
       "AZ-a:3 AZ-b:3 AZ-c:3"
     ],
     "answer": 3,
-    "explanation": "各 AZ 3 台共 9 台，任一 AZ 故障仍有 6 台。2+2+2=6 台但故障後只剩 4 台不足；4+2+2 若 AZ-a 故障只剩 4 台；6+6+0 共 12 台成本高。"
+    "explanation": "各 AZ 3 台共 9 台，任一 AZ 故障仍有 6 台。2+2+2=6 台但故障後只剩 4 台不足；4+2+2 若 AZ-a 故障只剩 4 台；6+6+0 共 12 台成本高。",
+    "id": "saa-c03-213"
   },
   {
     "category": "網路",
@@ -2628,7 +2841,8 @@
       "igw 發出的流量路由到 0.0.0.0/0"
     ],
     "answer": 1,
-    "explanation": "10.2.0.1 不在 10.0.0.0/16 範圍內，所以走預設路由 0.0.0.0/0 到 Internet 閘道。10.0.2.1 在範圍內走 local。"
+    "explanation": "10.2.0.1 不在 10.0.0.0/16 範圍內，所以走預設路由 0.0.0.0/0 到 Internet 閘道。10.0.2.1 在範圍內走 local。",
+    "id": "saa-c03-214"
   },
   {
     "category": "安全性",
@@ -2640,7 +2854,8 @@
       "將 mybucket 設為公開存取"
     ],
     "answer": 0,
-    "explanation": "IAM 角色透過執行個體設定檔提供臨時認證，最安全。硬編碼金鑰有洩漏風險；IAM 使用者無法直接關聯應用權限；公開存取不安全。"
+    "explanation": "IAM 角色透過執行個體設定檔提供臨時認證，最安全。硬編碼金鑰有洩漏風險；IAM 使用者無法直接關聯應用權限；公開存取不安全。",
+    "id": "saa-c03-215"
   },
   {
     "category": "網路",
@@ -2652,7 +2867,8 @@
       "私有 IP"
     ],
     "answer": 0,
-    "explanation": "Elastic IP 是使用者可保有的固定公有 IP，資源停止不釋放。一般公有 IP 停止時會釋放；私有 IP 不能上網。"
+    "explanation": "Elastic IP 是使用者可保有的固定公有 IP，資源停止不釋放。一般公有 IP 停止時會釋放；私有 IP 不能上網。",
+    "id": "saa-c03-216"
   },
   {
     "category": "儲存",
@@ -2664,7 +2880,8 @@
       "即時取出"
     ],
     "answer": 1,
-    "explanation": "大量取出最便宜，適合大量資料非緊急的情況，需 12-48 小時。標準取出較快但較貴；Deep Archive 不支援快速取出；即時取出也不支援。"
+    "explanation": "大量取出最便宜，適合大量資料非緊急的情況，需 12-48 小時。標準取出較快但較貴；Deep Archive 不支援快速取出；即時取出也不支援。",
+    "id": "saa-c03-217"
   },
   {
     "category": "網路",
@@ -2676,7 +2893,8 @@
       "使用 Direct Connect"
     ],
     "answer": 1,
-    "explanation": "Transit Gateway 作為中央 Hub 連接多個 VPC，避免複雜的對等網狀連接。對等是一對一，VPC 增加時管理複雜度指數增長。"
+    "explanation": "Transit Gateway 作為中央 Hub 連接多個 VPC，避免複雜的對等網狀連接。對等是一對一，VPC 增加時管理複雜度指數增長。",
+    "id": "saa-c03-218"
   },
   {
     "category": "運算",
@@ -2688,7 +2906,8 @@
       "Amazon DynamoDB"
     ],
     "answer": 1,
-    "explanation": "RDS 是託管關係型資料庫服務（支援 MySQL 等），無需管理伺服器。在 EC2 上安裝需自行管理；S3 是物件儲存非資料庫；DynamoDB 是 NoSQL。"
+    "explanation": "RDS 是託管關係型資料庫服務（支援 MySQL 等），無需管理伺服器。在 EC2 上安裝需自行管理；S3 是物件儲存非資料庫；DynamoDB 是 NoSQL。",
+    "id": "saa-c03-219"
   },
   {
     "category": "安全性",
@@ -2703,7 +2922,8 @@
       0,
       2
     ],
-    "explanation": "使用者負責：客體 OS 修補和資料加密/MFA/TLS 啟用。AWS 負責硬體、全球基礎設施和主機 OS 的保護。"
+    "explanation": "使用者負責：客體 OS 修補和資料加密/MFA/TLS 啟用。AWS 負責硬體、全球基礎設施和主機 OS 的保護。",
+    "id": "saa-c03-220"
   },
   {
     "category": "儲存",
@@ -2715,7 +2935,8 @@
       "S3 Intelligent-Tiering"
     ],
     "answer": 1,
-    "explanation": "One Zone-IA 保存費低於 Standard-IA（僅單一 AZ），可即時取出。題目明確可容忍單一 AZ 風險。Glacier 有取出延遲；Intelligent-Tiering 有監控費。"
+    "explanation": "One Zone-IA 保存費低於 Standard-IA（僅單一 AZ），可即時取出。題目明確可容忍單一 AZ 風險。Glacier 有取出延遲；Intelligent-Tiering 有監控費。",
+    "id": "saa-c03-221"
   },
   {
     "category": "安全性",
@@ -2730,7 +2951,8 @@
       0,
       2
     ],
-    "explanation": "AWS 負責：實體基礎設施安全和硬體修補更換。使用者負責：身分存取管理和資料備份。"
+    "explanation": "AWS 負責：實體基礎設施安全和硬體修補更換。使用者負責：身分存取管理和資料備份。",
+    "id": "saa-c03-222"
   },
   {
     "category": "運算",
@@ -2742,7 +2964,8 @@
       "預留執行個體"
     ],
     "answer": 0,
-    "explanation": "硬體專用執行個體在與其他帳戶隔離的硬體上運行，但無法確認實體 CPU/主機 ID。Dedicated Hosts 可確認但更貴；隨需和預留使用共享硬體。"
+    "explanation": "硬體專用執行個體在與其他帳戶隔離的硬體上運行，但無法確認實體 CPU/主機 ID。Dedicated Hosts 可確認但更貴；隨需和預留使用共享硬體。",
+    "id": "saa-c03-223"
   },
   {
     "category": "網路",
@@ -2754,7 +2977,8 @@
       "VPC 的 DNS 解析服務"
     ],
     "answer": 0,
-    "explanation": "VPC Lattice 簡化跨 VPC 和帳戶的服務間通訊，提供服務發現、連線和流量管理。負載均衡是 ELB；跨區域連接用 Transit Gateway 或 VPC 對等。"
+    "explanation": "VPC Lattice 簡化跨 VPC 和帳戶的服務間通訊，提供服務發現、連線和流量管理。負載均衡是 ELB；跨區域連接用 Transit Gateway 或 VPC 對等。",
+    "id": "saa-c03-224"
   },
   {
     "category": "儲存",
@@ -2766,7 +2990,8 @@
       "Amazon DynamoDB"
     ],
     "answer": 2,
-    "explanation": "Athena 可直接對 S3 資料執行 SQL 查詢，無需遷移或載入。RDS 和 Redshift 需載入資料；DynamoDB 是 NoSQL 不支援標準 SQL。"
+    "explanation": "Athena 可直接對 S3 資料執行 SQL 查詢，無需遷移或載入。RDS 和 Redshift 需載入資料；DynamoDB 是 NoSQL 不支援標準 SQL。",
+    "id": "saa-c03-225"
   },
   {
     "category": "運算",
@@ -2778,7 +3003,8 @@
       "使用 NLB 的跨區域路由"
     ],
     "answer": 1,
-    "explanation": "ALB 的加權目標群組可將流量按比例分配到不同服務版本，適合金絲雀部署。Route 53 是 DNS 級別較粗粒度；CloudFront 來源群組用於故障轉移。"
+    "explanation": "ALB 的加權目標群組可將流量按比例分配到不同服務版本，適合金絲雀部署。Route 53 是 DNS 級別較粗粒度；CloudFront 來源群組用於故障轉移。",
+    "id": "saa-c03-226"
   },
   {
     "category": "運算",
@@ -2790,7 +3016,8 @@
       "使用 CloudFront 加速全球存取"
     ],
     "answer": 2,
-    "explanation": "跨區域災難復原的最完整方案是在另一區域建立備用環境。同 AZ 備份無法防區域級災難；S3 複寫只保護資料不含運算環境；CloudFront 是 CDN 非 DR。"
+    "explanation": "跨區域災難復原的最完整方案是在另一區域建立備用環境。同 AZ 備份無法防區域級災難；S3 複寫只保護資料不含運算環境；CloudFront 是 CDN 非 DR。",
+    "id": "saa-c03-227"
   },
   {
     "category": "安全性",
@@ -2802,7 +3029,8 @@
       "允許列出 mybucket 中的物件"
     ],
     "answer": 1,
-    "explanation": "s3:GetObject 僅允許讀取（下載）物件。不含 PutObject（寫入）或 ListBucket（列出）等其他操作。"
+    "explanation": "s3:GetObject 僅允許讀取（下載）物件。不含 PutObject（寫入）或 ListBucket（列出）等其他操作。",
+    "id": "saa-c03-228"
   },
   {
     "category": "安全性",
@@ -2814,7 +3042,8 @@
       "自動附加到所有 AWS 資源"
     ],
     "answer": 0,
-    "explanation": "IAM 策略用 JSON 定義存取權限，可附加到使用者、群組和角色。建立後可修改；不會自動附加。"
+    "explanation": "IAM 策略用 JSON 定義存取權限，可附加到使用者、群組和角色。建立後可修改；不會自動附加。",
+    "id": "saa-c03-229"
   },
   {
     "category": "儲存",
@@ -2826,7 +3055,8 @@
       "存取控制清單"
     ],
     "answer": 2,
-    "explanation": "預簽名 URL 可產生有時間限制的存取連結，讓無 AWS 帳戶者也能暫時存取非公開物件。儲存貯體策略和 ACL 需 AWS 帳戶；IAM 使用者需建帳戶。"
+    "explanation": "預簽名 URL 可產生有時間限制的存取連結，讓無 AWS 帳戶者也能暫時存取非公開物件。儲存貯體策略和 ACL 需 AWS 帳戶；IAM 使用者需建帳戶。",
+    "id": "saa-c03-230"
   },
   {
     "category": "網路",
@@ -2838,7 +3068,8 @@
       "Internet 閘道"
     ],
     "answer": 1,
-    "explanation": "跳板伺服器放在公有子網，先 SSH 到跳板再轉連到私有子網 EC2。NAT 閘道僅出站；VPC 端點連 AWS 服務；Internet 閘道不能直接連私有子網。"
+    "explanation": "跳板伺服器放在公有子網，先 SSH 到跳板再轉連到私有子網 EC2。NAT 閘道僅出站；VPC 端點連 AWS 服務；Internet 閘道不能直接連私有子網。",
+    "id": "saa-c03-231"
   },
   {
     "category": "儲存",
@@ -2850,7 +3081,8 @@
       "使用 S3 Intelligent-Tiering"
     ],
     "answer": 1,
-    "explanation": "生命週期規則可自動將舊版本物件移至成本更低的儲存類別（如 Glacier）。關閉版本控制無法保護歷史版本；手動刪除費時；Intelligent-Tiering 不專門處理版本。"
+    "explanation": "生命週期規則可自動將舊版本物件移至成本更低的儲存類別（如 Glacier）。關閉版本控制無法保護歷史版本；手動刪除費時；Intelligent-Tiering 不專門處理版本。",
+    "id": "saa-c03-232"
   },
   {
     "category": "儲存",
@@ -2862,7 +3094,8 @@
       "自動將物件移至 Glacier"
     ],
     "answer": 0,
-    "explanation": "物件鎖定（Object Lock）可防止在保留期內刪除或覆寫物件，適合合規要求。加密用 SSE；存取控制用策略/ACL；自動移至 Glacier 用生命週期。"
+    "explanation": "物件鎖定（Object Lock）可防止在保留期內刪除或覆寫物件，適合合規要求。加密用 SSE；存取控制用策略/ACL；自動移至 Glacier 用生命週期。",
+    "id": "saa-c03-233"
   },
   {
     "category": "儲存",
@@ -2874,19 +3107,21 @@
       "S3 Batch Operations"
     ],
     "answer": 1,
-    "explanation": "分段上傳將大檔案分成多個部分平行上傳，5GB 以上的檔案必須使用。Transfer Acceleration 加速傳輸但不處理大檔分割；複寫是區域間；Batch Operations 批量處理。"
+    "explanation": "分段上傳將大檔案分成多個部分平行上傳，5GB 以上的檔案必須使用。Transfer Acceleration 加速傳輸但不處理大檔分割；複寫是區域間；Batch Operations 批量處理。",
+    "id": "saa-c03-234"
   },
   {
     "category": "安全性",
     "question": "多帳戶共用的 S3 儲存貯體，擁有者要確保能存取其他使用者上傳的物件。應使用？",
     "options": [
-      "儲存貯體擁有者強制（Bucket Owner Enforced）",
+      "儲存貯體擁有者強制執行（Bucket Owner Enforced）",
       "跨帳戶 IAM 角色",
       "物件 ACL",
       "儲存貯體策略"
     ],
     "answer": 0,
-    "explanation": "Bucket Owner Enforced 設定會停用物件 ACL，確保儲存貯體擁有者自動擁有所有上傳物件的控制權。物件 ACL 預設上傳者擁有；IAM 角色和策略不能自動轉移擁有權。"
+    "explanation": "Bucket Owner Enforced 設定會停用物件 ACL，確保儲存貯體擁有者自動擁有所有上傳物件的控制權。物件 ACL 預設上傳者擁有；IAM 角色和策略不能自動轉移擁有權。",
+    "id": "saa-c03-235"
   },
   {
     "category": "安全性",
@@ -2898,7 +3133,8 @@
       "生命週期"
     ],
     "answer": 0,
-    "explanation": "IAM 策略以 IAM 使用者為單位設定，可依 IP 控制，但只能對本帳戶的使用者設定。儲存貯體策略可對其他帳戶設定；ACL 不支援 IP 控制。"
+    "explanation": "IAM 策略以 IAM 使用者為單位設定，可依 IP 控制，但只能對本帳戶的使用者設定。儲存貯體策略可對其他帳戶設定；ACL 不支援 IP 控制。",
+    "id": "saa-c03-236"
   },
   {
     "category": "儲存",
@@ -2910,7 +3146,8 @@
       "S3 Standard-IA"
     ],
     "answer": 1,
-    "explanation": "Glacier Instant Retrieval 保存費低、可即時取出、適合低頻長期保存。Flexible Retrieval 有延遲；Deep Archive 延遲更長；Standard-IA 保存費較高。"
+    "explanation": "Glacier Instant Retrieval 保存費低、可即時取出、適合低頻長期保存。Flexible Retrieval 有延遲；Deep Archive 延遲更長；Standard-IA 保存費較高。",
+    "id": "saa-c03-237"
   },
   {
     "category": "儲存",
@@ -2922,7 +3159,8 @@
       "S3 Standard"
     ],
     "answer": 3,
-    "explanation": "S3 Standard 適合高頻存取，免取出費、低延遲、多 AZ 高耐久。Standard-IA 有取出費不適合高頻；One Zone-IA 有遺失風險；Intelligent-Tiering 適合不可預測的存取。"
+    "explanation": "S3 Standard 適合高頻存取，免取出費、低延遲、多 AZ 高耐久。Standard-IA 有取出費不適合高頻；One Zone-IA 有遺失風險；Intelligent-Tiering 適合不可預測的存取。",
+    "id": "saa-c03-238"
   },
   {
     "category": "部署與管理",
@@ -2938,7 +3176,8 @@
       2,
       3
     ],
-    "explanation": "管理主控台（GUI）、CLI（命令列）和 SDK（程式庫）可直接操作 AWS 資源。API Gateway 是 API 管理服務，非直接操作工具。"
+    "explanation": "管理主控台（GUI）、CLI（命令列）和 SDK（程式庫）可直接操作 AWS 資源。API Gateway 是 API 管理服務，非直接操作工具。",
+    "id": "saa-c03-239"
   },
   {
     "category": "安全性",
@@ -2950,7 +3189,8 @@
       "Web 應用防火牆服務"
     ],
     "answer": 0,
-    "explanation": "Network Firewall 提供 VPC 級的進階防火牆，含 IPS 和網域過濾等功能。規則一元管理是 Firewall Manager；DDoS 是 Shield；Web 應用防火牆是 WAF。"
+    "explanation": "Network Firewall 提供 VPC 級的進階防火牆，含 IPS 和網域過濾等功能。規則一元管理是 Firewall Manager；DDoS 是 Shield；Web 應用防火牆是 WAF。",
+    "id": "saa-c03-240"
   },
   {
     "category": "儲存",
@@ -2962,7 +3202,8 @@
       "虛擬伺服器"
     ],
     "answer": 0,
-    "explanation": "S3 是物件儲存服務。虛擬伺服器是 EC2；資料庫是 RDS/DynamoDB；無伺服器運算是 Lambda/Fargate。"
+    "explanation": "S3 是物件儲存服務。虛擬伺服器是 EC2；資料庫是 RDS/DynamoDB；無伺服器運算是 Lambda/Fargate。",
+    "id": "saa-c03-241"
   },
   {
     "category": "儲存",
@@ -2974,7 +3215,8 @@
       "即時自訂 S3 物件"
     ],
     "answer": 0,
-    "explanation": "Multi-Region Access Points 提供全域端點，自動路由到最近的區域儲存貯體。Storage Lens 可視化；跨區域複寫自動存到不同區域；Object Lambda 自訂物件。"
+    "explanation": "Multi-Region Access Points 提供全域端點，自動路由到最近的區域儲存貯體。Storage Lens 可視化；跨區域複寫自動存到不同區域；Object Lambda 自訂物件。",
+    "id": "saa-c03-242"
   },
   {
     "category": "安全性",
@@ -2986,7 +3228,8 @@
       "無狀態防火牆"
     ],
     "answer": 0,
-    "explanation": "安全群組只能設允許規則。預設拒絕所有入站、允許所有出站；以資源為單位設定；是有狀態防火牆。"
+    "explanation": "安全群組只能設允許規則。預設拒絕所有入站、允許所有出站；以資源為單位設定；是有狀態防火牆。",
+    "id": "saa-c03-243"
   },
   {
     "category": "部署與管理",
@@ -2998,7 +3241,8 @@
       "AWS CloudShell"
     ],
     "answer": 2,
-    "explanation": "管理主控台是瀏覽器的 GUI 工具。CLI 是命令列；SDK 是程式庫；CloudShell 是瀏覽器內的命令列環境。"
+    "explanation": "管理主控台是瀏覽器的 GUI 工具。CLI 是命令列；SDK 是程式庫；CloudShell 是瀏覽器內的命令列環境。",
+    "id": "saa-c03-244"
   },
   {
     "category": "運算",
@@ -3013,7 +3257,8 @@
       0,
       3
     ],
-    "explanation": "本地需採購管理設備且初期準備時間長。按需增減和按量計費是雲端特性。"
+    "explanation": "本地需採購管理設備且初期準備時間長。按需增減和按量計費是雲端特性。",
+    "id": "saa-c03-245"
   },
   {
     "category": "網路",
@@ -3025,7 +3270,8 @@
       "Internet 閘道"
     ],
     "answer": 1,
-    "explanation": "路由表定義每個目的地的轉發目標。安全群組和網路 ACL 控制存取；Internet 閘道連接網際網路。"
+    "explanation": "路由表定義每個目的地的轉發目標。安全群組和網路 ACL 控制存取；Internet 閘道連接網際網路。",
+    "id": "saa-c03-246"
   },
   {
     "category": "安全性",
@@ -3040,7 +3286,8 @@
       1,
       2
     ],
-    "explanation": "安全群組（資源級）和網路 ACL（子網級）控制網路存取。路由表控制路由方向；NAT 閘道用於出站。"
+    "explanation": "安全群組（資源級）和網路 ACL（子網級）控制網路存取。路由表控制路由方向；NAT 閘道用於出站。",
+    "id": "saa-c03-247"
   },
   {
     "category": "運算",
@@ -3057,7 +3304,8 @@
       1,
       2
     ],
-    "explanation": "雲端特性：低初期成本、按量計費、可全球部署。硬體由雲端商管理；無需長期合約（可按需使用）。"
+    "explanation": "雲端特性：低初期成本、按量計費、可全球部署。硬體由雲端商管理；無需長期合約（可按需使用）。",
+    "id": "saa-c03-248"
   },
   {
     "category": "運算",
@@ -3069,7 +3317,8 @@
       "Dedicated Hosts"
     ],
     "answer": 2,
-    "explanation": "隨需執行個體適合不定期使用，按啟動時間計費無長期合約。預留需長期合約；Spot 可能被中斷不穩定；Dedicated Hosts 成本最高。"
+    "explanation": "隨需執行個體適合不定期使用，按啟動時間計費無長期合約。預留需長期合約；Spot 可能被中斷不穩定；Dedicated Hosts 成本最高。",
+    "id": "saa-c03-249"
   },
   {
     "category": "安全性",
@@ -3081,7 +3330,8 @@
       "使用 AWS Config 規則"
     ],
     "answer": 1,
-    "explanation": "SCP 可在組織層級限制成員帳戶可用的服務和操作。IAM 策略是帳戶內部；Config 規則是合規檢查非存取控制。"
+    "explanation": "SCP 可在組織層級限制成員帳戶可用的服務和操作。IAM 策略是帳戶內部；Config 規則是合規檢查非存取控制。",
+    "id": "saa-c03-250"
   },
   {
     "category": "安全性",
@@ -3096,7 +3346,8 @@
       0,
       2
     ],
-    "explanation": "Organizations 可集中管理帳單和透過 SCP 控制成員帳戶權限。不能自動建立 VPC 或部署 EC2。"
+    "explanation": "Organizations 可集中管理帳單和透過 SCP 控制成員帳戶權限。不能自動建立 VPC 或部署 EC2。",
+    "id": "saa-c03-251"
   },
   {
     "category": "網路",
@@ -3108,7 +3359,8 @@
       "Gateway Load Balancer"
     ],
     "answer": 2,
-    "explanation": "NLB 支援在每個 AZ 指派 Elastic IP（固定 IP）。ALB 和 CLB 使用動態 IP；GLB 用於第三方網路設備。"
+    "explanation": "NLB 支援在每個 AZ 指派 Elastic IP（固定 IP）。ALB 和 CLB 使用動態 IP；GLB 用於第三方網路設備。",
+    "id": "saa-c03-252"
   },
   {
     "category": "運算",
@@ -3120,7 +3372,8 @@
       "多 AZ 的 Lambda + DynamoDB"
     ],
     "answer": 1,
-    "explanation": "多 AZ EC2 + Auto Scaling 確保高可用和擴縮；ALB 分散流量；RDS 讀取複本提升讀取效能。單一 AZ 或執行個體無高可用。"
+    "explanation": "多 AZ EC2 + Auto Scaling 確保高可用和擴縮；ALB 分散流量；RDS 讀取複本提升讀取效能。單一 AZ 或執行個體無高可用。",
+    "id": "saa-c03-253"
   },
   {
     "category": "運算",
@@ -3132,7 +3385,8 @@
       "全域"
     ],
     "answer": 1,
-    "explanation": "區域（Region）是按地域劃分的 AWS 資料中心群。可用區是區域內的資料中心；邊緣站點用於 CDN；全域指全球範圍。"
+    "explanation": "區域（Region）是按地域劃分的 AWS 資料中心群。可用區是區域內的資料中心；邊緣站點用於 CDN；全域指全球範圍。",
+    "id": "saa-c03-254"
   },
   {
     "category": "運算",
@@ -3144,7 +3398,8 @@
       "在 Elastic Beanstalk 上重新部署"
     ],
     "answer": 1,
-    "explanation": "MGN（Application Migration Service）將 VM 快速直接遷移到 EC2，最少修改。重構、容器化和重新部署都需要大量修改。"
+    "explanation": "MGN（Application Migration Service）將 VM 快速直接遷移到 EC2，最少修改。重構、容器化和重新部署都需要大量修改。",
+    "id": "saa-c03-255"
   },
   {
     "category": "部署與管理",
@@ -3156,7 +3411,8 @@
       "避免實驗以減少失敗風險"
     ],
     "answer": 1,
-    "explanation": "設計原則強調自動化、可擴展、實驗性設計。應根據需求動態調整而非固定容量；使用多個小型資源而非單一大型；鼓勵實驗創新。"
+    "explanation": "設計原則強調自動化、可擴展、實驗性設計。應根據需求動態調整而非固定容量；使用多個小型資源而非單一大型；鼓勵實驗創新。",
+    "id": "saa-c03-256"
   },
   {
     "category": "儲存",
@@ -3168,6 +3424,7 @@
       "可在多個執行個體間共享"
     ],
     "answer": 1,
-    "explanation": "執行個體存放區是暫時性儲存，執行個體停止或終止時資料遺失。與執行個體綁定不可分離；不支援快照；不能共享（那是 EFS）。"
+    "explanation": "執行個體存放區是暫時性儲存，執行個體停止或終止時資料遺失。與執行個體綁定不可分離；不支援快照；不能共享（那是 EFS）。",
+    "id": "saa-c03-257"
   }
 ]
