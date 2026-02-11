@@ -1,0 +1,362 @@
+[
+  {
+    "category": "雲端概念",
+    "question": "以下哪一項最能描述雲端運算的優勢？",
+    "options": [
+      "需要大量的前期資本支出",
+      "將資本支出轉換為營運支出",
+      "需要長期合約承諾",
+      "降低了安全性標準"
+    ],
+    "answer": 1,
+    "explanation": "雲端運算的主要優勢之一是將資本支出 (CapEx) 轉換為營運支出 (OpEx)，用戶只需按使用量付費。"
+  },
+  {
+    "category": "雲端概念",
+    "question": "AWS 的「共享責任模型」中，以下哪一項是客戶的責任？",
+    "options": [
+      "實體資料中心的安全",
+      "客戶資料的加密",
+      "硬體維護",
+      "虛擬化基礎設施的管理"
+    ],
+    "answer": 1,
+    "explanation": "在共享責任模型中，AWS 負責「雲端的安全」（基礎設施），客戶負責「雲端中的安全」，包括資料加密、存取控制等。"
+  },
+  {
+    "category": "雲端概念",
+    "question": "以下哪一項是雲端運算的六大優勢之一？",
+    "options": [
+      "固定的月費用",
+      "自動程式碼部署",
+      "大規模經濟效益",
+      "保證 100% 正常運行時間"
+    ],
+    "answer": 2,
+    "explanation": "六大優勢：將資本支出轉為可變費用、大規模經濟效益、停止猜測容量、提高速度與敏捷性、停止花錢維運資料中心、幾分鐘內全球部署。"
+  },
+  {
+    "category": "雲端概念",
+    "question": "什麼是 Well-Architected Framework 的五大支柱之一？",
+    "options": [
+      "靈活性",
+      "營運卓越 (Operational Excellence)",
+      "可擴展性",
+      "敏捷性"
+    ],
+    "answer": 1,
+    "explanation": "五大支柱：營運卓越、安全性、可靠性、效能效率、成本優化。後來增加了第六支柱：永續性。"
+  },
+  {
+    "category": "雲端概念",
+    "question": "以下哪種雲端部署模型結合了雲端資源和本地資源？",
+    "options": [
+      "公有雲",
+      "私有雲",
+      "混合雲",
+      "社群雲"
+    ],
+    "answer": 2,
+    "explanation": "混合雲結合了公有雲和本地基礎設施，允許企業在雲端和本地之間共享資料和應用程式。"
+  },
+  {
+    "category": "雲端概念",
+    "question": "以下哪一項描述了「高可用性」的概念？",
+    "options": [
+      "系統能自動處理更多的流量",
+      "系統在某些元件故障時仍能持續運作",
+      "系統具有最低的延遲",
+      "系統使用最少的資源"
+    ],
+    "answer": 1,
+    "explanation": "高可用性意味著系統在某些元件發生故障時仍能持續運作。AWS 通過多可用區部署來實現。"
+  },
+  {
+    "category": "雲端概念",
+    "question": "什麼是「基礎設施即程式碼」(IaC)？",
+    "options": [
+      "使用實體硬體來執行應用程式",
+      "透過程式碼來佈建和管理基礎設施",
+      "手動設定伺服器配置",
+      "使用 GUI 管理雲端資源"
+    ],
+    "answer": 1,
+    "explanation": "IaC 是透過程式碼（如 CloudFormation）來自動化佈建和管理基礎設施的做法。"
+  },
+  {
+    "category": "安全性",
+    "question": "哪個 AWS 服務可用來管理用戶身分和存取控制？",
+    "options": [
+      "Amazon Inspector",
+      "AWS IAM",
+      "Amazon GuardDuty",
+      "AWS Config"
+    ],
+    "answer": 1,
+    "explanation": "AWS IAM 是用於管理用戶身分、群組、角色及其對 AWS 資源存取權限的核心服務。"
+  },
+  {
+    "category": "安全性",
+    "question": "以下哪一項是 IAM 的最佳實踐？",
+    "options": [
+      "使用根帳戶進行日常操作",
+      "與同事共享存取金鑰",
+      "啟用多重要素驗證 (MFA)",
+      "給予所有用戶管理員權限"
+    ],
+    "answer": 2,
+    "explanation": "啟用 MFA 是 IAM 最佳實踐之一。其他包括：不使用根帳戶、遵循最小權限原則、定期輪換憑證。"
+  },
+  {
+    "category": "安全性",
+    "question": "AWS Shield 主要保護應對哪種類型的攻擊？",
+    "options": [
+      "SQL 注入攻擊",
+      "跨站腳本攻擊",
+      "DDoS 攻擊",
+      "中間人攻擊"
+    ],
+    "answer": 2,
+    "explanation": "AWS Shield 是託管型 DDoS 防護服務。Standard 免費提供基本防護，Advanced 提供進階緩解。"
+  },
+  {
+    "category": "安全性",
+    "question": "哪個 AWS 服務可以自動評估應用程式的安全漏洞？",
+    "options": [
+      "AWS WAF",
+      "Amazon Inspector",
+      "AWS CloudTrail",
+      "Amazon Macie"
+    ],
+    "answer": 1,
+    "explanation": "Amazon Inspector 是自動化安全評估服務，可檢測 EC2 和容器中的軟體漏洞。"
+  },
+  {
+    "category": "安全性",
+    "question": "哪個 AWS 服務用於記錄 API 呼叫活動？",
+    "options": [
+      "Amazon CloudWatch",
+      "AWS CloudTrail",
+      "AWS Config",
+      "Amazon GuardDuty"
+    ],
+    "answer": 1,
+    "explanation": "CloudTrail 記錄所有 API 呼叫，提供審計追蹤。CloudWatch 監控效能，Config 追蹤組態變更。"
+  },
+  {
+    "category": "安全性",
+    "question": "哪個 AWS 服務可用於加密 S3 中的資料？",
+    "options": [
+      "AWS IAM",
+      "AWS KMS",
+      "AWS Shield",
+      "Amazon Cognito"
+    ],
+    "answer": 1,
+    "explanation": "AWS KMS 是託管式加密金鑰服務，可建立和管理加密金鑰。"
+  },
+  {
+    "category": "技術",
+    "question": "Amazon S3 屬於哪一種儲存類型？",
+    "options": [
+      "區塊儲存",
+      "物件儲存",
+      "檔案儲存",
+      "資料庫儲存"
+    ],
+    "answer": 1,
+    "explanation": "S3 是物件儲存服務。區塊儲存對應 EBS，檔案儲存對應 EFS。"
+  },
+  {
+    "category": "技術",
+    "question": "以下哪個服務是 AWS 的無伺服器運算服務？",
+    "options": [
+      "Amazon EC2",
+      "AWS Lambda",
+      "Amazon ECS",
+      "AWS Elastic Beanstalk"
+    ],
+    "answer": 1,
+    "explanation": "Lambda 是無伺服器運算服務，無需管理伺服器即可執行程式碼，按使用時間付費。"
+  },
+  {
+    "category": "技術",
+    "question": "哪個 AWS 服務提供全球 CDN？",
+    "options": [
+      "Amazon Route 53",
+      "AWS Direct Connect",
+      "Amazon CloudFront",
+      "Elastic Load Balancing"
+    ],
+    "answer": 2,
+    "explanation": "CloudFront 是全球 CDN 服務，在邊緣節點快取內容以低延遲分發。"
+  },
+  {
+    "category": "技術",
+    "question": "Amazon RDS 支援以下哪個資料庫引擎？",
+    "options": [
+      "MongoDB",
+      "Cassandra",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "answer": 2,
+    "explanation": "RDS 支援 MySQL、PostgreSQL、MariaDB、Oracle、SQL Server 和 Aurora。"
+  },
+  {
+    "category": "技術",
+    "question": "以下哪個服務用於建立虛擬私有網路？",
+    "options": [
+      "Amazon VPC",
+      "AWS Direct Connect",
+      "Amazon Route 53",
+      "AWS Transit Gateway"
+    ],
+    "answer": 0,
+    "explanation": "VPC 讓您在 AWS 雲端中建立邏輯上隔離的虛擬網路。"
+  },
+  {
+    "category": "技術",
+    "question": "哪個 AWS 服務是完全託管的 NoSQL 資料庫？",
+    "options": [
+      "Amazon RDS",
+      "Amazon Redshift",
+      "Amazon DynamoDB",
+      "Amazon Aurora"
+    ],
+    "answer": 2,
+    "explanation": "DynamoDB 是完全託管的 NoSQL 資料庫，提供毫秒級延遲。"
+  },
+  {
+    "category": "技術",
+    "question": "Amazon EC2 哪種定價最適合可中斷的工作負載？",
+    "options": [
+      "隨需執行個體",
+      "預留執行個體",
+      "Spot 執行個體",
+      "專用主機"
+    ],
+    "answer": 2,
+    "explanation": "Spot 執行個體利用閒置容量，價格最多低 90%，但可能隨時被收回。"
+  },
+  {
+    "category": "技術",
+    "question": "哪個 AWS 服務提供可調整大小的運算容量？",
+    "options": [
+      "AWS Lambda",
+      "Amazon EC2",
+      "Amazon S3",
+      "Amazon RDS"
+    ],
+    "answer": 1,
+    "explanation": "EC2 提供可調整大小的運算容量，可隨需求擴展或縮減。"
+  },
+  {
+    "category": "技術",
+    "question": "哪個 AWS 服務可用於將本地資料遷移到 AWS？",
+    "options": [
+      "AWS Snowball",
+      "Amazon CloudFront",
+      "Amazon SQS",
+      "AWS CloudFormation"
+    ],
+    "answer": 0,
+    "explanation": "Snowball 適合將大量資料（TB 到 PB 級別）從本地遷移到 AWS。"
+  },
+  {
+    "category": "技術",
+    "question": "Amazon Aurora 與哪些資料庫引擎相容？",
+    "options": [
+      "Oracle 和 SQL Server",
+      "MySQL 和 PostgreSQL",
+      "MongoDB 和 Cassandra",
+      "Redis 和 Memcached"
+    ],
+    "answer": 1,
+    "explanation": "Aurora 與 MySQL 和 PostgreSQL 相容，效能最高達標準 MySQL 的 5 倍。"
+  },
+  {
+    "category": "技術",
+    "question": "以下哪個 AWS 服務是訊息佇列服務？",
+    "options": [
+      "Amazon SNS",
+      "Amazon SQS",
+      "Amazon SES",
+      "AWS Step Functions"
+    ],
+    "answer": 1,
+    "explanation": "SQS 是完全託管的訊息佇列服務。SNS 是通知服務，SES 是郵件服務。"
+  },
+  {
+    "category": "技術",
+    "question": "Elastic Load Balancing 的主要用途是什麼？",
+    "options": [
+      "儲存靜態檔案",
+      "在多個目標之間自動分配傳入流量",
+      "管理 DNS 記錄",
+      "監控 AWS 資源效能"
+    ],
+    "answer": 1,
+    "explanation": "ELB 自動將流量分配到多個目標，提高可用性和容錯能力。"
+  },
+  {
+    "category": "計費與定價",
+    "question": "哪個 AWS 工具可以用來估算服務費用？",
+    "options": [
+      "AWS Budgets",
+      "AWS Pricing Calculator",
+      "AWS Cost Explorer",
+      "AWS Billing Dashboard"
+    ],
+    "answer": 1,
+    "explanation": "Pricing Calculator 用來估算月費用。Cost Explorer 分析過去費用，Budgets 設定預算警報。"
+  },
+  {
+    "category": "計費與定價",
+    "question": "哪個支援方案提供 24/7 技術支援和 15 分鐘回應時間？",
+    "options": [
+      "Basic",
+      "Developer",
+      "Business",
+      "Enterprise"
+    ],
+    "answer": 3,
+    "explanation": "Enterprise 方案提供 24/7 支援、15 分鐘回應時間和指定 TAM。"
+  },
+  {
+    "category": "計費與定價",
+    "question": "AWS 免費方案中，S3 提供多少免費儲存空間？",
+    "options": [
+      "1 GB",
+      "5 GB",
+      "10 GB",
+      "50 GB"
+    ],
+    "answer": 1,
+    "explanation": "免費方案前 12 個月提供 5 GB S3 標準儲存空間。"
+  },
+  {
+    "category": "計費與定價",
+    "question": "哪個服務可以整合多個 AWS 帳戶的帳單？",
+    "options": [
+      "AWS Cost Explorer",
+      "AWS Organizations",
+      "AWS Budgets",
+      "AWS Trusted Advisor"
+    ],
+    "answer": 1,
+    "explanation": "Organizations 提供整合帳單功能，可合併多帳戶帳單並享受批量折扣。"
+  },
+  {
+    "category": "計費與定價",
+    "question": "AWS Trusted Advisor 提供哪些類別的建議？",
+    "options": [
+      "僅安全性建議",
+      "成本優化、效能、安全性、容錯和服務限額",
+      "僅成本優化建議",
+      "僅效能建議"
+    ],
+    "answer": 1,
+    "explanation": "Trusted Advisor 提供五大類別最佳實踐建議：成本優化、效能、安全性、容錯和服務限額。"
+  }
+]
