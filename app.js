@@ -406,6 +406,25 @@ function renderStart(app){
       </div>
     </div>
 
+    ${hasHistory?`<div class="card mb-4">
+      <div class="card-body flex-col gap-3" style="display:flex">
+        <div class="flex items-center gap-2">
+          <span class="font-medium text-sm">學習進度</span>
+          <span class="text-xs text-fg-dim">${loadSeen(e.id).length} / ${b.length} 題已做</span>
+          <span class="text-xs text-fg-dim" style="margin-left:auto">${(()=>{const t=weaknesses.reduce((s,w)=>s+w.total,0),c=weaknesses.reduce((s,w)=>s+w.correct,0);return t?Math.round(c/t*100):0})()}% 正確率</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          ${weaknesses.map(w=>`<div class="flex items-center gap-2" style="font-size:.75rem">
+            <span class="text-fg-muted" style="min-width:72px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${w.cat}</span>
+            <div style="flex:1;height:6px;border-radius:3px;background:var(--color-sep);overflow:hidden">
+              <div style="width:${w.pct}%;height:100%;border-radius:3px;background:${w.pct>=70?'var(--color-success-fg)':w.pct>=40?'var(--color-warning-fg)':'var(--color-danger-fg)'}"></div>
+            </div>
+            <span class="text-fg-dim" style="min-width:56px;text-align:right">${w.correct}/${w.total} · ${w.pct}%</span>
+          </div>`).join('')}
+        </div>
+      </div>
+    </div>`:''}
+
     ${wl.length?`<div class="card mb-4">
       <div class="card-body flex items-center justify-between flex-wrap gap-3">
         <div class="flex items-center gap-3">
