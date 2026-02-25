@@ -343,7 +343,7 @@ function renderLanding(app){
   const tiers=['foundational','associate','professional','specialty'];
   app.innerHTML=`
     <div class="text-center" style="padding:32px 0 24px">
-      <div style="font-size:2rem;margin-bottom:8px">${I.cloud}</div>
+      <div style="font-size:2rem;margin-bottom:8px;display:flex;justify-content:center">${I.cloud}</div>
       <h1 style="font-size:1.35rem;font-weight:700;letter-spacing:-.02em">AWS 認證模擬考</h1>
       <p class="text-sm text-fg-muted mt-2">選擇考試，開始練習</p>
     </div>
