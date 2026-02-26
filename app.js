@@ -344,8 +344,7 @@ function renderLanding(app){
   app.innerHTML=`
     <div class="text-center" style="padding:32px 0 24px">
       <div style="font-size:2rem;margin-bottom:8px;display:flex;justify-content:center">${I.cloud}</div>
-      <h1 style="font-size:1.35rem;font-weight:700;letter-spacing:-.02em">AWS 認證模擬考</h1>
-      <p class="text-sm text-fg-muted mt-2">選擇考試，開始練習</p>
+      <h1 style="font-size:1.35rem;font-weight:700;letter-spacing:-.02em">AWS Certification Quiz</h1>
     </div>
     ${tiers.map(t=>{
       const te=exams.filter(e=>e.tier===t);
@@ -380,7 +379,6 @@ function renderStart(app){
   const wl=loadWrong(e.id);
   const weaknesses=getWeaknesses(e.id);
   const hasHistory=weaknesses.length>0;
-  const weakCats=getWeakestCats(e.id);
 
   app.innerHTML=`
     <div class="breadcrumb"><a onclick="goHome()">首頁</a><span class="bc-sep">›</span><span>${e.code}</span></div>
@@ -406,6 +404,16 @@ function renderStart(app){
       </div>
     </div>
 
+    ${wl.length?`<div class="card mb-4">
+      <div class="card-body flex-col gap-3" style="display:flex">
+        <div class="flex items-center gap-2">
+          <span class="font-medium text-sm">錯題本</span>
+          <span class="text-xs text-fg-dim">${wl.length} 題</span>
+          <button class="btn btn-primary btn-sm" style="margin-left:auto" onclick="startWrongQuiz()">${I.play} 練習錯題</button>
+        </div>
+      </div>
+    </div>`:''}
+
     ${hasHistory?`<div class="card mb-4">
       <div class="card-body flex-col gap-3" style="display:flex">
         <div class="flex items-center gap-2">
@@ -417,43 +425,14 @@ function renderStart(app){
           ${weaknesses.map(w=>`<div class="flex items-center gap-2" style="font-size:.75rem">
             <span class="text-fg-muted" style="min-width:72px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${w.cat}</span>
             <div style="flex:1;height:6px;border-radius:3px;background:var(--color-sep);overflow:hidden">
-              <div style="width:${w.pct}%;height:100%;border-radius:3px;background:${w.pct>=70?'var(--color-success-fg)':w.pct>=40?'var(--color-warning-fg)':'var(--color-danger-fg)'}"></div>
+              <div style="width:${w.pct}%;height:100%;border-radius:3px;background:${w.pct>=70?'var(--color-success-fg)':w.pct>=40?'var(--color-skip)':'var(--color-danger-fg)'}"></div>
             </div>
             <span class="text-fg-dim" style="min-width:56px;text-align:right">${w.correct}/${w.total} · ${w.pct}%</span>
           </div>`).join('')}
         </div>
       </div>
     </div>`:''}
-
-    ${wl.length?`<div class="card mb-4">
-      <div class="card-body flex items-center justify-between flex-wrap gap-3">
-        <div class="flex items-center gap-3">
-          <span style="font-size:1.3rem">${I.book}</span>
-          <div>
-            <div class="font-medium text-sm">錯題本 · ${wl.length} 題</div>
-            <div class="text-xs text-fg-muted">答對會自動移除</div>
-          </div>
-        </div>
-        <div class="flex gap-2">
-          <button class="btn btn-primary btn-sm" onclick="startWrongQuiz()">${I.play} 練習錯題</button>
-        </div>
-      </div>
-      ${hasHistory?`<div class="card-footer flex items-center gap-3" style="font-size:.75rem">
-        <span class="text-fg-dim">累計作答</span>
-        <span style="color:var(--color-success-fg)">✓ ${weaknesses.reduce((s,w)=>s+w.correct,0)}</span>
-        <span style="color:var(--color-danger-fg)">✗ ${weaknesses.reduce((s,w)=>s+w.total-w.correct,0)}</span>
-        <span class="text-fg-dim">${(()=>{const t=weaknesses.reduce((s,w)=>s+w.total,0),c=weaknesses.reduce((s,w)=>s+w.correct,0);return t?Math.round(c/t*100):0})()}%</span>
-      </div>`:''}
-    </div>`:''}
-    <div class="exam-card exam-disabled" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-      <div style="min-width:0">
-        <div class="text-xs font-semibold text-fg-muted" style="letter-spacing:.06em">AI</div>
-        <div class="font-medium text-sm mt-1" style="line-height:1.4">弱點補強</div>
-      </div>
-      <div style="flex-shrink:0;text-align:right">
-        <span class="badge badge-muted">即將推出</span>
-      </div>
-    </div>`;
+`;
 }
 
 function renderQuiz(app){
