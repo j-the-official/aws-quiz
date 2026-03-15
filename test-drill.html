@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script>localStorage.setItem('aws_quiz_theme','light')</script>
+</head>
+<body>
+<button class="theme-toggle" onclick="toggleTheme()" id="themeBtn"></button>
+<div id="app"></div>
+<script src="app.js"></script>
+<script>setTimeout(()=>{selectExam('clf-c02');setTimeout(()=>{startQuiz();setTimeout(()=>selectOption(1),500)},500)},1500)</script>
+</body>
+</html>

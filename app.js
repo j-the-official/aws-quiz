@@ -297,7 +297,7 @@ function setCount(n){S.questionCount=n;render()}
 
 
 const I={
-  cloud:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>',
+  cloud:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.852 19.772-.383.924"/><path d="m13.148 14.228.383-.923"/><path d="M13.148 19.772a3 3 0 1 0-2.296-5.544l-.383-.923"/><path d="m13.53 20.696-.382-.924a3 3 0 1 1-2.296-5.544"/><path d="m14.772 15.852.923-.383"/><path d="m14.772 18.148.923.383"/><path d="M4.2 15.1a7 7 0 1 1 9.93-9.858A7 7 0 0 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2"/><path d="m9.228 15.852-.923-.383"/><path d="m9.228 18.148-.923.383"/></svg>',
   book:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>',
   bot:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>',
   info:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>',
@@ -343,7 +343,7 @@ function renderLanding(app){
   const tiers=['foundational','associate','professional','specialty'];
   app.innerHTML=`
     <div class="text-center" style="padding:32px 0 24px">
-      <div style="font-size:2rem;margin-bottom:8px;display:flex;justify-content:center">${I.cloud}</div>
+      <div style="font-size:2rem;margin-bottom:8px;display:flex;justify-content:center;color:var(--color-primary)">${I.cloud}</div>
       <h1 style="font-size:1.35rem;font-weight:700;letter-spacing:-.02em">AWS Certification Quiz</h1>
     </div>
     ${tiers.map(t=>{
@@ -497,11 +497,11 @@ function renderQuiz(app){
         </div>
         ${multi&&!S.answered?`<button class="btn btn-primary w-full mt-3" onclick="submitMulti()" ${S.selectedOpts.length!==reqCount?'disabled':''}>確認答案（${S.selectedOpts.length}/${reqCount}）</button>`:''}
         ${S.answered?`<div class="explanation"><h4>${I.info} 解析</h4><p>${q.explanation}</p></div>`:''}
-        <div class="flex items-center mt-4" style="padding-top:12px;border-top:1px solid var(--color-sep)">
+        ${S.currentQ>0||S.answered?`<div class="flex items-center mt-4" style="padding-top:12px;border-top:1px solid var(--color-sep)">
           ${S.currentQ>0?`<button class="btn btn-ghost btn-sm" onclick="prevQuestion()">${I.arrowLeft} 上一題</button>`:''}
           <div style="flex:1"></div>
           ${S.answered?`<button class="btn btn-ghost btn-sm" onclick="nextQuestion()">${S.currentQ+1>=tot?'查看結果':'下一題 '+I.arrowRight}</button>`:''}
-        </div>
+        </div>`:''}
       </div>
     </div>`;
 }
